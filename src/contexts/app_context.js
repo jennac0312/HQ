@@ -14,6 +14,10 @@ const AppContextProvider = ( { children } ) => {
     const [ search, setSearch ] = useState("")
     const [ currentPage, setCurrentPage ] = useState("headquarters")
 
+    const updateCurrentPage = (page) => {
+        setCurrentPage(page)
+    }
+
 
     const pageCategories = ['HTML', "CSS", "Javascript", "React",]
     // const pageCategories = ['HTML', "CSS", "Javascript", "React", "Mongodb", "Express", "Node"]
@@ -26,9 +30,9 @@ const AppContextProvider = ( { children } ) => {
             showSearch, setShowSearch,
             showNav, setShowNav,
             search, setSearch,
-            currentPage, setCurrentPage,
+            currentPage, setCurrentPage, updateCurrentPage,
 
-            pageCategories, 
+            pageCategories,
 
         }}>
             { children }

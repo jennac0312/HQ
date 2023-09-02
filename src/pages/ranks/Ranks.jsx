@@ -8,7 +8,12 @@ import * as userApi from '../../utilities/users-api'
 
 const Ranks = () => {
 
-const [ allUsers, setAllUsers ] = useState(null)
+  const { updateCurrentPage } = useContext(AppContext)
+  useEffect(() => {
+    updateCurrentPage("ranks")
+  })
+
+  const [ allUsers, setAllUsers ] = useState(null)
   // on load, get all users
     // map into individual ranks
 

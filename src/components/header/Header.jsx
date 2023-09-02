@@ -8,7 +8,6 @@ const Header = ({ page }) => {
 	const { currentPage, showSearch, setShowSearch, showNav, setShowNav } = useContext(AppContext);
 	const [ searchBurner, setSearchBurner ] = useState("")
 
-
 	const handleSearchClick = () => {
 		if( showNav ){
 			setShowNav(false) // hide nav if open
@@ -36,7 +35,7 @@ const Header = ({ page }) => {
 				<p className="hover icon-30" onClick={() => setShowNav(!showNav)}>
 					🗄️
 				</p>
-				<p onClick={() => setShowNav(false)}>HEADER channel name</p>
+				<p onClick={() => setShowNav(false)}>{currentPage}</p>
 				<p className="hover icon-30" onClick={ handleSearchClick }>🔍</p>
 			</header>
 		);

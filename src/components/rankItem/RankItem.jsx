@@ -11,7 +11,7 @@ const RankItem = ({ user }) => {
         <p>RANK: {user.rank}</p>
       </div>
 
-      <img src="" alt="" className='avi'/>
+      <img src={user.image} alt="" className='avi'/>
 
       <div className="userDeets">
         <p>{user.name}</p>
@@ -19,7 +19,8 @@ const RankItem = ({ user }) => {
       </div>
 
       <div className="message">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione voluptatem ut nesciunt qui.</p>
+        <p>{user.rankMessage}</p>
+        <p className="signature">-{user.name}</p>
       </div>
     </div>
   )

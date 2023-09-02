@@ -32,6 +32,12 @@ const userSchema = new Schema(
       type: Number,
       default: 0,
     },
+    rankMessage : {
+      type: String,
+    },
+    image: {
+      type: String,
+    }
 },
   {
     timestamps: true,
