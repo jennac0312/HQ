@@ -1,4 +1,4 @@
-// import axios from 'axios';
+import axios from 'axios';
 
 // // This is the base path of the Express route we'll define
 // const BASE_URL = '/api/users';
@@ -63,6 +63,17 @@ export function checkToken() {
   return sendRequest(`${BASE_URL}/check-token`);
 }
 
+export const getAllUsers = async () => {
+  try {
+    const res = await axios.get(BASE_URL)
+    const allUsers = sortUsers(res.data)
+    console.log(res.data)
+    return allUsers
+  } catch (error) {
+    console.log('GET ALL USERS ERROR:', error)
+  }
+}
+
 /*--- Helper Functions ---*/
 
 async function sendRequest(url, method = 'GET', payload = null) {
@@ -86,4 +97,10 @@ async function sendRequest(url, method = 'GET', payload = null) {
   // res.ok will be false if the status code set to 4xx in the controller action
   if (res.ok) return res.json();
   throw new Error('Bad Request');
+}
+
+function sortUsers(users){
+  users?.sort((acc, cur) => acc.rank + cur.rank)
+  console.log('SORTED', users)
+  return users
 }

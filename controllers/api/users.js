@@ -48,8 +48,18 @@ function checkToken(req, res) {
   res.json(req.exp);
 }
 
+const getAllUsers = async( req, res ) => {
+  try {
+    const allUSers = await User.find({})
+    res.send( allUSers )
+  } catch (error) {
+    res.status(500).send(error)
+  }
+}
+
 module.exports = {
   create,
   login,
   checkToken,
+  getAllUsers
 };
