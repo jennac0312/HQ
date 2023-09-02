@@ -1,0 +1,29 @@
+footer {
+    border: 1px solid lime;
+    background-color: rgba(0, 255, 255, 0.192);
+    min-height: 70px;
+    width: 820px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+footer input {
+    width: 90%;
+    height: fit-content;
+    min-height: 40px;
+}
+
+input::target-text{
+    color: rebeccapurple;
+}
+footer textarea {
+    width: 90%;
+    height: fit-content;
+    min-height: 40px;
+    font-size: 2em;
+}

@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom';
 import * as userService from '../../utilities/users-service'
+import { useContext } from 'react';
+import { AppContext } from '../../contexts/app_context';
 
-export default function NavBar({ user, setUser }) {
+export default function NavBar() {
   function handleLogOut() {
     userService.logOut();
 
     setUser(null);
   }
+
+  const { user, setUser } = useContext(AppContext)
 
   return (
     <nav>
