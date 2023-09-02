@@ -7,6 +7,9 @@ const logger = require('morgan');
 
 const app = express();
 
+const hqRoute = require('./routes/hq/hq')
+const intelRoute = require('./routes/intelligence/intelligence')
+
 app.use(logger('dev'));
 app.use(express.json());
 
@@ -18,6 +21,12 @@ app.use(require('./config/checkToken'));
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
+
+// hq posts
+app.use('/hq', hqRoute)
+
+// intelligence
+app.use('/intelligence', intelRoute)
 
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
