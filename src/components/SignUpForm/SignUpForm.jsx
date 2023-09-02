@@ -4,7 +4,7 @@ import { signUp } from '../../utilities/users-service';
 export default function SignUpForm({ setUser }) {
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    username: '',
     password: '',
     confirm: '',
     error: '',
@@ -29,7 +29,7 @@ export default function SignUpForm({ setUser }) {
       delete newFormData.error;
       delete newFormData.confirm;
       // or
-      // const {name, email, password} = formData
+      // const {name, username, password} = formData
 
       const user = await signUp(newFormData);
       setUser(user);
@@ -52,11 +52,11 @@ export default function SignUpForm({ setUser }) {
             onChange={handleChange}
             required
           />
-          <label>Email</label>
+          <label>Username</label>
           <input
-            type='email'
-            name='email'
-            value={formData.email}
+            type='username'
+            name='username'
+            value={formData.username}
             onChange={handleChange}
             required
           />

@@ -21,8 +21,8 @@ const create = async (req, res) => {
 
 const login = async (req, res) => {
   try {
-    // Find the user by their email
-    const user = await User.findOne({ email: req.body.email });
+    // Find the user by their username
+    const user = await User.findOne({ username: req.body.username });
 
     const isMatch = await bcrypt.compare(req.body.password, user.password);
 

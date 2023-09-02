@@ -7,8 +7,11 @@ const SALT_ROUNDS = 6; // 6 is a reasonable value
 
 const userSchema = new Schema(
   {
-    name: { type: String, required: true },
-    email: {
+    name: { 
+      type: String, 
+      required: true 
+    },
+    username: {
       type: String,
       unique: true,
       trim: true,
@@ -21,7 +24,15 @@ const userSchema = new Schema(
       minLength: 3,
       required: true,
     },
-  },
+    role: {
+      type: String,
+      default: "agent",
+    },
+    rank: {
+      type: Number,
+      default: 0,
+    },
+},
   {
     timestamps: true,
     // Even though it's hashed - don't serialize the password
