@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { AppContext } from '../../contexts/app_context'
 import Header from '../../components/header/Header'
 import * as usersApi from '../../utilities/users-api'
+import { useLocation } from 'react-router-dom'
 
 const Edit = () => {
 
@@ -23,8 +24,10 @@ const Edit = () => {
         const previousUser = user
         const updatedUser = await usersApi.updateUser(previousUser, formData)
         console.log(updatedUser)
+        // console.log(URL)
     }
 
+    const URL = useLocation()
   return (
     <div>
         <Header page="edit"/>

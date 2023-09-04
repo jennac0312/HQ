@@ -68,7 +68,8 @@ const Header = ({ page }) => {
 				</p>
 				<h3 className="titleSafe">you are safe here agent {user.name}</h3>
 				{/* edit user profile */}
-				<p className="hover icon-30" onClick={ navigate('/safehouse/edit') }>✏️</p>
+				<p className="hover icon-30" onClick={ navigate(`/safehouse/edit`) }>✏️</p>
+				{/* <p className="hover icon-30" onClick={ navigate(`/safehouse/edit/${user._id}`) }>✏️</p> */}
 			</header>
 		)
 	}
