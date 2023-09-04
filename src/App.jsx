@@ -18,6 +18,8 @@ import Ranks from './pages/ranks/Ranks';
 import Operations from './pages/operations/Operations'
 import Intelligence from './pages/intelligence/Intelligence'
 import Missions from './pages/missions/Missions'
+import Safehouse from './pages/safehouse/SafeHouse'
+import Edit from './pages/edit/Edit';
 
 function App() {
   // array destructuring
@@ -37,6 +39,10 @@ function App() {
           <Routes>
             <Route path='/' element={<Loading />} />
             <Route path='/welcome' element={<Welcome />} />
+
+            <Route path='/safehouse' element={<Safehouse />} />
+            <Route path='/safehouse/edit' element={<Edit />} />
+
             <Route path='/headquarters' element={<Headquarters />} />
             <Route path='/ranks' element={<Ranks />} />
             <Route path='/operations' element={<Operations />} />

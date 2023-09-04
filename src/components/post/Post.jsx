@@ -21,8 +21,8 @@ const Post = ({ post }) => {
         </div>
         <div className="right">
             <div className="top">
-                <p className='username'>agent @{post.user.username}</p>
-                <p className="date">08/31/2023</p>
+                <p className='username'><span className="italic">agent</span> @{post.user.username}</p>
+                <p className="date">{post.user.createdAt}</p>
                 <p className="delete hover">🗑️</p>
             </div>
             <div className="content">

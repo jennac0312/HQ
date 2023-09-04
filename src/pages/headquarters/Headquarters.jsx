@@ -24,12 +24,12 @@ const Headquarters = () => {
     }
 
     // interval to get updates from db every 5 seconds. not sure if this is a good idea
-    setInterval(() => {
+    // setInterval(() => {
       getPosts()
-    }, 5000);
-    return() => {
-      clearInterval()
-    }
+    // }, 5000);
+    // return() => {
+    //   clearInterval()
+    // }
   }, []) // on load get all posts
 
   return (

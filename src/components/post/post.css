@@ -32,11 +32,13 @@ div.post {
     border: 1px solid purple;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 10px;
 }
 
 .post .right .top > * {
     border: 1px solid green;
+
     width: fit-content;
 }
 

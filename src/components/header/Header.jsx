@@ -5,7 +5,7 @@ import Search from "../search/Search";
 
 const Header = ({ page }) => {
 
-	const { currentPage, showSearch, setShowSearch, showNav, setShowNav } = useContext(AppContext);
+	const { user, currentPage, showSearch, setShowSearch, showNav, setShowNav, navigate } = useContext(AppContext);
 	const [ searchBurner, setSearchBurner ] = useState("")
 
 	const handleSearchClick = () => {
@@ -66,9 +66,23 @@ const Header = ({ page }) => {
 				<p className="hover icon-30" onClick={() => setShowNav(!showNav)}>
 					🗄️
 				</p>
-				<h3 className="title">you are safe here agent</h3>
+				<h3 className="titleSafe">you are safe here agent {user.name}</h3>
 				{/* edit user profile */}
-				<p className="hover icon-30" onClick={ handleBurnerClick }>✏️</p>
+				<p className="hover icon-30" onClick={ navigate('/safehouse/edit') }>✏️</p>
+			</header>
+		)
+	}
+
+	// for edit page
+	const edit = () => {
+		return (
+			<header>
+				<p className="hover icon-30" onClick={() => setShowNav(!showNav)}>
+					🔙
+				</p>
+				<h3 className="titleSafe">editing agent @{user.username}</h3>
+				{/* edit user profile */}
+				<p className="hover icon-30" onClick={() => navigate('/safehouse/edit') }>☑️✅✔️</p>
 			</header>
 		)
 	}
@@ -78,6 +92,8 @@ const Header = ({ page }) => {
 			return burner()
 		case "safehouse":
 			return safehouse()
+		case "edit":
+			return edit()
 		default:
 			return main()
 	}
