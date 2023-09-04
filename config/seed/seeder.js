@@ -8,6 +8,7 @@ const users = require("./users/users"); //seed data
 
 (
     async function() {
+        // USERS
         await User.deleteMany({}) //delete all users
         const allUsers = await User.create(users)
 
@@ -22,6 +23,7 @@ const users = require("./users/users"); //seed data
         //     mongoose.disconnect(); // Close the MongoDB connection
         // })
 
+        // INTELLIGENCE POSTS
         console.log( allUsers )
         process.exit()
     }

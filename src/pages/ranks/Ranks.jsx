@@ -9,6 +9,7 @@ import * as userApi from '../../utilities/users-api'
 const Ranks = () => {
 
   const { updateCurrentPage } = useContext(AppContext)
+
   useEffect(() => {
     updateCurrentPage("ranks")
   })
@@ -40,7 +41,6 @@ const Ranks = () => {
     <div>
       <Header />
       <main>
-        <h1>ranks</h1>
         { 
           allUsers ?
           allUsers?.map((user, index) => {

@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
+import './loading.css'
 
 const Loading = ({user, setUser }) => {
 
@@ -12,9 +13,8 @@ const Loading = ({user, setUser }) => {
       }, 3000);
     }, [])
   return (
-    <div>
-      <h1>LOADING PAGE</h1>
-      <p>insert hq logo</p>
+    <div className='loading'>
+      <h1>{'< HQ />'}</h1>
     </div>
   )
 }

@@ -35,7 +35,7 @@ const Header = ({ page }) => {
 				<p className="hover icon-30" onClick={() => setShowNav(!showNav)}>
 					🗄️
 				</p>
-				<p onClick={() => setShowNav(false)}>{currentPage}</p>
+				<h2 className="title" onClick={() => setShowNav(false)}>{currentPage}</h2>
 				<p className="hover icon-30" onClick={ handleSearchClick }>🔍</p>
 			</header>
 		);
@@ -66,7 +66,7 @@ const Header = ({ page }) => {
 				<p className="hover icon-30" onClick={() => setShowNav(!showNav)}>
 					🗄️
 				</p>
-				<h3>you are safe here agent</h3>
+				<h3 className="title">you are safe here agent</h3>
 				{/* edit user profile */}
 				<p className="hover icon-30" onClick={ handleBurnerClick }>✏️</p>
 			</header>

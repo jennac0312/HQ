@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Major+Mono+Display&family=VT323&display=swap');
+
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Courier Prime', monospace;
+  /* font-family: 'Major Mono Display', monospace; */
 }
 
 .App {
@@ -14,8 +20,9 @@
   
   max-width: 820px;
   width: 820px;
-  
-  background-color: slategray;
+  /* background-color: slategray; */
+  /* background-color: rgb(19, 3, 3); */
+  background-color: #7D98A1;
   
   display: flex;
   overflow-x: hidden;

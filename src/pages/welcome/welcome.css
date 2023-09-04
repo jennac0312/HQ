@@ -1,0 +1,23 @@
+.welcome {
+    border: 1px solid rebeccapurple;
+    margin: auto;
+}
+.welcome h1{
+    font-family: 'VT323', monospace;
+    letter-spacing: 5px;
+    font-size: 160px;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.flash {
+    animation: flash 700ms infinite;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}

@@ -12,6 +12,12 @@ header {
     overflow: hidden;
 }
 
+header .title {
+    font-family: 'VT323', monospace;
+    letter-spacing: 3px;
+    font-size: 40px;
+}
+
 header p {
     /* font-size: 2em; */
     border: 1px solid springgreen;
