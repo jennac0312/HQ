@@ -77,7 +77,7 @@ const Header = ({ page }) => {
 	const edit = () => {
 		return (
 			<header>
-				<p className="hover icon-30" onClick={() => setShowNav(!showNav)}>
+				<p className="hover icon-30" onClick={() => navigate(-1)}>
 					🔙
 				</p>
 				<h3 className="titleSafe">editing agent @{user.username}</h3>

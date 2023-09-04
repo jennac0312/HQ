@@ -57,9 +57,22 @@ const getAllUsers = async( req, res ) => {
   }
 }
 
+const updateUser = async ( req, res ) => {
+  try {
+    const { previousUser, user } = req.body  
+    const updatedUser = await User.findByIdAndUpdate(previousUser._id, user) 
+    
+    console.log(updatedUser)
+    res.send(updatedUser)
+  } catch (error) {
+    res.status(500).send(error)
+  }
+}
+
 module.exports = {
   create,
   login,
   checkToken,
-  getAllUsers
+  getAllUsers,
+  updateUser
 };

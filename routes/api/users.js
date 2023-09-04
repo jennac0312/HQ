@@ -15,5 +15,8 @@ router.get('/check-token', ensureLoggedIn, usersCtrl.checkToken);
 // GET all users
 router.get('/', usersCtrl.getAllUsers)
 
+// update user
+router.put('/', usersCtrl.updateUser)
+
 
 module.exports = router;

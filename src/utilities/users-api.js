@@ -74,6 +74,19 @@ export const getAllUsers = async () => {
   }
 }
 
+export const updateUser = async (previousUser, newUser) => {
+  try {
+    const updatedUser = await axios.put(BASE_URL, { previousUser, newUser }, {
+      headers: "application/json"
+    })
+    console.log(updatedUser)
+    return updatedUser
+    
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 /*--- Helper Functions ---*/
 
 async function sendRequest(url, method = 'GET', payload = null) {
