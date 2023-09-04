@@ -5,7 +5,7 @@ import { AppContext } from '../../contexts/app_context'
 const Search = () => {
     // need to decide if i want exit button to also clear search
 
-    const { search, setSearch, setShowSearch } = useContext( AppContext )
+    const { search, setSearch, setShowSearch, currentPage } = useContext( AppContext )
 
     const clearSearch = () => {
         setSearch("")
@@ -28,7 +28,7 @@ const Search = () => {
     <div className={styles.search}>
         <p className={`${styles.icon} hover`} onClick={() => setSearch("")}>🧹</p>
         <div className="middle">
-            <h3>Searching channel name</h3>
+            <h3>Searching {currentPage}</h3>
             <textarea type="text" placeholder={`search channel name`} value={search} onChange={(e) => handleChange(e)}/>
         </div>
         <p className={`${styles.icon} hover`} onClick={handleExit}>✖️</p>

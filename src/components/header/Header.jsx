@@ -35,7 +35,7 @@ const Header = ({ page }) => {
 				<p className="hover icon-30" onClick={() => setShowNav(!showNav)}>
 					🗄️
 				</p>
-				<h2 className="title" onClick={() => setShowNav(false)}>{currentPage}</h2>
+				<h2 className="title" onClick={() => setShowNav(false)}>{currentPage.toUpperCase()}</h2>
 				<p className="hover icon-30" onClick={ handleSearchClick }>🔍</p>
 			</header>
 		);

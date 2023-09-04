@@ -37,6 +37,7 @@ const userSchema = new Schema(
     },
     image: {
       type: String,
+      default: "https://static.wikia.nocookie.net/phineasandferb/images/0/0e/My_Secret_Agent_%28feat._Traci_Hines%29_-_Single_1.png/revision/latest/thumbnail/width/360/height/450?cb=20120701053955"
     }
 },
   {

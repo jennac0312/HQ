@@ -1,6 +1,9 @@
 .search {
     border: 1px solid purple;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
+    background-color: #AF1B3F;
+    /* background-color: #DF9B6D ; */
+    /* background-color: #31081F; */
     height: 70px;
     width: 100%;
     display: flex;

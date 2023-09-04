@@ -1,0 +1,54 @@
+div.post {
+    border: 2px solid orangered;
+    /* margin: 10px; */
+    height: fit-content;
+    width: 750px;
+    margin: 20px auto;
+    display: flex;
+
+    position: relative;
+}
+
+.post:hover{
+    background-color: rgb(160, 132, 132);
+}
+.post > * {
+    border: 1px solid lime;
+}
+
+.post .avi {
+    border: 1px solid white;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.post .right {
+    width: 100%;
+}
+
+.post .right .top {
+    border: 1px solid purple;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.post .right .top > * {
+    border: 1px solid green;
+    width: fit-content;
+}
+
+.post .content {
+    border: 1px solid orange;
+    text-align: left;
+    margin: 10px;
+}
+
+.post .reactions {
+    border: 1px solid yellow;
+    margin-bottom: 10px;
+    display: flex;
+
+}
