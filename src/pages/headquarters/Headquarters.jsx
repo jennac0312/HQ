@@ -7,7 +7,7 @@ import Post from '../../components/post/Post'
 import EditPost from '../../components/editPost/EditPost'
 
 const Headquarters = () => {
-  const { updateCurrentPage, hqSearch, setHqSearch } = useContext(AppContext)
+  const { updateCurrentPage, hqSearch, setHqSearch, showPostEdit, currentPost } = useContext(AppContext)
   updateCurrentPage("headquarters")
 
   const [ hqInput, setHqInput ] = useState("")
@@ -61,9 +61,10 @@ const Headquarters = () => {
 //   console.log(filteredPosts)
 // }, [hqSearch]) //delayed by 1 letter
 
+  console.log(showPostEdit)
   return (
     <div>
-      {/* <EditPost /> */}
+      { showPostEdit && <EditPost post={currentPost}/>}
         <Header />
         <main>
             <h1>headquarters{count}</h1>

@@ -17,10 +17,10 @@ const Post = ({ edit, post }, props) => {
     // console.log(currentPost)
 
     // when post is clicked, update currentPost
-    const handlePostClick = () => {
-        setCurrentPost(post)
-        console.log('CURRENT POST',currentPost) // delayed by 1 grr
-    }
+    // const handlePostClick = () => {
+    //     setCurrentPost(post)
+    //     console.log('CURRENT POST',currentPost) // delayed by 1 grr
+    // }
         
         
     // currentPost.showPostEdit = showPostEdit
@@ -36,17 +36,27 @@ const Post = ({ edit, post }, props) => {
     const handleDelete = () => {
     }
 // active usestate. when click sets active to specific object... to make indepedent 
+const updateCurrentPost = () => {
+    setCurrentPost(post)
+    console.log('CURRENT POST',currentPost) // delayed by 1 grr
+}
 
 const handleEdit = () => {
-    currentPost.setShowPostEdit(true)
+    updateCurrentPost()
+    setShowPostEdit(true)
+    console.log(showPostEdit)
+}
+const handleDeleteClick = () => {
+    updateCurrentPost()
+    setShowPopUp(true)
 }
     // array of posts
     const main = () => {
         return (
             <>
-        { isMyPost && showPopUp && <PopUp post={post} message={`"${post.content}"`}/> }
-        { isMyPost && showPostEdit && <EditPost setShowPostEdit={setShowPostEdit} post={currentPost.current}/> }
-        <div className='post' onClick={handlePostClick}>
+        { isMyPost && showPopUp && <PopUp post={currentPost} message={`"${currentPost.content}"`}/> }
+        {/* { isMyPost && showPostEdit && <EditPost setShowPostEdit={setShowPostEdit} post={currentPost}/> } */}
+        <div className='post'>
             {/* { isHover && <Reaction /> } */}
             <div className="left">
                 <img src={post.user.image} alt="" className='avi'/>
@@ -57,7 +67,7 @@ const handleEdit = () => {
                     <p className="date">{post.user.createdAt}</p>
                     { isMyPost && 
                         <div style={{ display: "flex" }}>
-                            <p className="delete hover" onClick={() => setShowPopUp(true)}>🗑️</p> 
+                            <p className="delete hover" onClick={() => handleDeleteClick()}>🗑️</p> 
                             <p className='edit hover' onClick={() => handleEdit()}>✏️</p>
                         </div>
                     }
@@ -105,9 +115,10 @@ const handleEdit = () => {
         }
 
         const handleExit = () => {
-            currentPost.setShowPostEdit(false)
-            console.log(currentPost)
-            window.location.reload() // eh works but dont want to do it this way
+            setShowPostEdit(false)
+            console.log(showPostEdit)
+            console.log('currentpost', currentPost)
+            // window.location.reload() // eh works but dont want to do it this way
         }
 
         return (
