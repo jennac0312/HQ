@@ -80,7 +80,7 @@ export const updateUser = async (previousUser, newUser) => {
       headers: "application/json"
     })
     console.log(updatedUser)
-    return updatedUser
+    return updatedUser.data
     
   } catch (error) {
     console.error(error)

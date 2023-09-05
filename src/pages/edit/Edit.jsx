@@ -26,12 +26,11 @@ const Edit = () => {
         console.log(updatedUser)
         // console.log(URL)
     }
-
-    const URL = useLocation()
+    
   return (
     <div>
         <Header page="edit"/>
-        <h1 onClick={() => navigate('/headquarters')}>EDIT PAGE</h1>
+        <h1>EDIT PAGE</h1>
         <form action="" onSubmit={handleSubmit}>
             <div className="">
                 <label htmlFor="">Name:</label>
@@ -50,7 +49,7 @@ const Edit = () => {
                 <textarea type="text" name="rankMessage" onChange={handleChange}/>
             </div>
             <div>
-                <input type="submit" value="Update" onClick={() => navigate('/safehouse')}/>
+                <input type="submit" value="Update"/>
             </div>
 
         </form>

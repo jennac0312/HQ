@@ -59,8 +59,9 @@ const getAllUsers = async( req, res ) => {
 
 const updateUser = async ( req, res ) => {
   try {
-    const { previousUser, user } = req.body  
-    const updatedUser = await User.findByIdAndUpdate(previousUser._id, user) 
+    const { previousUser, newUser } = req.body  
+    console.log('NEW USER', newUser)
+    const updatedUser = await User.findByIdAndUpdate(previousUser._id, newUser, { new: true }) 
     
     console.log(updatedUser)
     res.send(updatedUser)
