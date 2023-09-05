@@ -20,7 +20,7 @@ const createPost = async ( req, res ) => {
         console.log(newPost)
     
         // res.send("post created")
-        res.redirect('/')
+        res.redirect('/') // doesnt work
     } catch (error) {
         res.status(500).send(error)
     }
