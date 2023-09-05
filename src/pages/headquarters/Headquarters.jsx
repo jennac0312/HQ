@@ -4,14 +4,16 @@ import Footer from '../../components/footer/Footer'
 import { AppContext } from '../../contexts/app_context'
 import * as hq from '../../utilities/hq'
 import Post from '../../components/post/Post'
+import EditPost from '../../components/editPost/EditPost'
 
 const Headquarters = () => {
-  const { updateCurrentPage } = useContext(AppContext)
+  const { updateCurrentPage, hqSearch, setHqSearch } = useContext(AppContext)
   updateCurrentPage("headquarters")
 
   const [ hqInput, setHqInput ] = useState("")
   const [ allPosts, setAllPosts ] = useState([])
-
+  const [ filteredPosts, setFilteredPosts ] = useState(allPosts)
+  
   const [ count, setCount ] = useState(0) // for refresh
 
   useEffect(() => { // "destroy is not a function call"
@@ -35,14 +37,44 @@ const Headquarters = () => {
     // }
   }, []) // on load get all posts
 
+  const filterAllPosts = () => {
+    console.log(hqSearch)
+    let filteredPosts =  allPosts.filter((post) => {
+      return post.content.includes(hqSearch)
+    })
+
+    setFilteredPosts(filteredPosts)
+    console.log(filteredPosts)
+  }
+
+  useEffect(() => {
+    filterAllPosts()
+  }, [hqSearch])
+
+// console.log(filterPosts())
+// useEffect(() => {
+//   let filtered =  allPosts.filter((post) => {
+//     return post.content.includes(hqSearch)
+//   })
+
+//   setFilteredPosts(filtered)
+//   console.log(filteredPosts)
+// }, [hqSearch]) //delayed by 1 letter
+
   return (
     <div>
+      {/* <EditPost /> */}
         <Header />
         <main>
             <h1>headquarters{count}</h1>
             {/* <p>render posts from hq channel</p>
             <p>general posts</p> */}
             {
+              hqSearch !== "" ? // if search not empty
+              filteredPosts?.map((post) => {
+                return <Post post={post}/>
+              })
+              :
               allPosts?.map((post) => {
                 return <Post post={post}/>
               })

@@ -30,6 +30,8 @@ function App() {
     setUser( getUser() )
   }, [])
 
+  console.log('CURRENT USER', user)
+
   return (
     <main className='App'>
       {user ? (

@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import styles from './search.module.css'
 import { AppContext } from '../../contexts/app_context'
 
 const Search = () => {
     // need to decide if i want exit button to also clear search
 
-    const { search, setSearch, setShowSearch, currentPage } = useContext( AppContext )
+    const { search, setSearch, setShowSearch, currentPage, hqSearch, setHqSearch } = useContext( AppContext )
 
     const clearSearch = () => {
         setSearch("")
@@ -23,6 +23,10 @@ const Search = () => {
         setShowSearch(false) // hide
         // do i want to clear previous search ?
     }
+
+    useEffect(() => {
+        setHqSearch(search)
+    }, [search]) //when search changes update
 
   return (
     <div className={styles.search}>

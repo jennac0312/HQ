@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useRef, useState } from 'react'
 import './post.css'
 import { AppContext } from '../../contexts/app_context'
 import PopUp from '../popup/PopUp'
@@ -6,31 +6,47 @@ import EditPost from '../editPost/EditPost'
 // import Reaction from '../reaction/Reaction'
 import * as hq from '../../utilities/hq'
 
-const Post = ({ edit, post }) => {
+const Post = ({ edit, post }, props) => {
     // only show trash can if post belongs to user
-    const { user, showPopUp, setShowPopUp, showPostEdit, setShowPostEdit } = useContext(AppContext)
+    const { user, showPopUp, setShowPopUp, currentPost, setCurrentPost } = useContext(AppContext)
     const [ isHover, setIsHover ] = useState(false)
     const isMyPost = post.user._id === user._id
 
+    const [ showPostEdit, setShowPostEdit  ] = useState(false)
+    // setCurrentPost(useRef(post))
+    // console.log(currentPost)
 
-
+    // when post is clicked, update currentPost
+    const handlePostClick = () => {
+        setCurrentPost(post)
+        console.log('CURRENT POST',currentPost) // delayed by 1 grr
+    }
+        
+        
+    // currentPost.showPostEdit = showPostEdit
+    // currentPost.setShowPostEdit = setShowPostEdit
+        
     const handleHover = () => {
-        console.log('post hovered')
+        console.log('post hovered', currentPost)
         // toggle add comment / like / dislike
         setIsHover(!isHover)
+        // console.log(currentPost)
     }
 
     const handleDelete = () => {
-
     }
+// active usestate. when click sets active to specific object... to make indepedent 
 
+const handleEdit = () => {
+    currentPost.setShowPostEdit(true)
+}
     // array of posts
     const main = () => {
         return (
             <>
         { isMyPost && showPopUp && <PopUp post={post} message={`"${post.content}"`}/> }
-        { isMyPost && showPostEdit && <EditPost post={post}/> }
-        <div className='post' onMouseEnter={handleHover} onMouseLeave={handleHover}>
+        { isMyPost && showPostEdit && <EditPost setShowPostEdit={setShowPostEdit} post={currentPost.current}/> }
+        <div className='post' onClick={handlePostClick}>
             {/* { isHover && <Reaction /> } */}
             <div className="left">
                 <img src={post.user.image} alt="" className='avi'/>
@@ -42,7 +58,7 @@ const Post = ({ edit, post }) => {
                     { isMyPost && 
                         <div style={{ display: "flex" }}>
                             <p className="delete hover" onClick={() => setShowPopUp(true)}>🗑️</p> 
-                            <p className='edit hover' onClick={() => setShowPostEdit(true)}>✏️</p>
+                            <p className='edit hover' onClick={() => handleEdit()}>✏️</p>
                         </div>
                     }
                 </div>
@@ -85,6 +101,13 @@ const Post = ({ edit, post }) => {
         const handleSubmit = async () => {
             const updatedPost = await hq.updatePost(formData)
             console.log(updatedPost)
+            setShowPostEdit(false)
+        }
+
+        const handleExit = () => {
+            currentPost.setShowPostEdit(false)
+            console.log(currentPost)
+            window.location.reload() // eh works but dont want to do it this way
         }
 
         return (
@@ -92,7 +115,7 @@ const Post = ({ edit, post }) => {
         {/* { showPostEdit && <EditPost post={post}/> } */}
         {/* omg this was causing infinite loop lololol */}
         <div className="">
-            <p className='exitEdit hover icon-30' onClick={() => setShowPostEdit(false)}>back ❌</p>
+            <p className='exitEdit hover icon-30' onClick={() => handleExit()}>back ❌</p>
             <p className="confirm hover icon-30" onClick={handleSubmit}>save ✅</p>
         </div>
         <div className='post editPost'>

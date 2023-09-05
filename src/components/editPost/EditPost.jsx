@@ -1,13 +1,18 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import './editPost.css'
 import Post from '../post/Post'
 import { AppContext } from '../../contexts/app_context'
 
-const EditPost = ({ post }) => {
-    console.log(post)
+const EditPost = ({ setShowPostEdit, post }) => {
+    // console.log(setShowPostEdit)
+    // console.log(post)
 
-    const {showPostEdit, setShowPostEdit} = useContext(AppContext)
-
+    // const {showPostEdit, setShowPostEdit} = useContext(AppContext)
+    useEffect(() => {
+        return() => {
+            // setShowPostEdit(false)
+        }
+    })
   return (
     <div className='editPopUp'>
       {/* <form action="">

@@ -8,7 +8,7 @@ const AppContextProvider = ( { children } ) => {
     const test = 'testing'
 
     const navigate = useNavigate()
-    const [ user, setUser ] = useState(true)
+    const [ user, setUser ] = useState(null)
     const [ showNav, setShowNav ] = useState(false)
     const [ showSearch, setShowSearch ] = useState(false)
     const [ search, setSearch ] = useState("")
@@ -16,6 +16,9 @@ const AppContextProvider = ( { children } ) => {
 
     const [ showPopUp, setShowPopUp ] = useState(false)
     const [ showPostEdit, setShowPostEdit ] = useState(false)
+    const [ currentPost, setCurrentPost ] = useState({})
+
+    const [ hqSearch, setHqSearch ] = useState("")
 
 
 
@@ -42,6 +45,9 @@ const AppContextProvider = ( { children } ) => {
             showPopUp, setShowPopUp,
             showEdit, setShowEdit,
             showPostEdit, setShowPostEdit,
+            currentPost, setCurrentPost,
+
+            hqSearch, setHqSearch,
 
             pageCategories,
 
