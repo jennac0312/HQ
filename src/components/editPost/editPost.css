@@ -1,3 +1,6 @@
 .editPost {
     border: 1px solid red;
+    position: absolute;
+    background-color: yellow;
+    z-index: 20;
 }

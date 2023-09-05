@@ -11,4 +11,5 @@
     left: 300px;
     right: 300px;
     background-color: wheat;
+    z-index: 10;
 }

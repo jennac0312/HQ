@@ -5,13 +5,12 @@ import PopUp from '../popup/PopUp'
 import EditPost from '../editPost/EditPost'
 // import Reaction from '../reaction/Reaction'
 
-const Post = ({ post }) => {
+const Post = ({ edit, post }) => {
     // only show trash can if post belongs to user
-    const { user, showPopUp, setShowPopUp } = useContext(AppContext)
+    const { user, showPopUp, setShowPopUp, showPostEdit, setShowPostEdit } = useContext(AppContext)
     const [ isHover, setIsHover ] = useState(false)
     const isMyPost = post.user._id === user._id
 
-    const [ showPostEdit, setShowPostEdit ] = useState(false)
 
 
     const handleHover = () => {
@@ -24,10 +23,10 @@ const Post = ({ post }) => {
 
     }
 
-
-
-  return (
-    <>
+    // array of posts
+    const main = () => {
+        return (
+            <>
         { showPopUp && <PopUp post={post} message={`"${post.content}"`}/> }
         { showPostEdit && <EditPost post={post}/> }
         <div className='post' onMouseEnter={handleHover} onMouseLeave={handleHover}>
@@ -67,7 +66,51 @@ const Post = ({ post }) => {
             </div>
         </div>
     </>
-  )
+        )
+    }
+
+    // edit post
+    const editing = () => {
+        return (
+            <>
+        { showPostEdit && <EditPost post={post}/> }
+
+        <div className='post'>
+            {/* { isHover && <Reaction /> } */}
+            <div className="left">
+                <img src={post.user.image} alt="" className='avi'/>
+            </div>
+            <div className="right">
+                <div className="top">
+                    <p className='username'><span className="italic">agent</span> @{post.user.username}</p>
+                    <p className="date">{post.user.createdAt}</p>
+                    {/* <p className='exitEdit hover' onClick={() => setShowPostEdit(false)}>❌</p> */}
+                </div>
+                <div className="content">
+                    <p>{post.content}</p>
+                </div>
+                
+                    {/* show conditionally */}
+                <div className="reactions">
+                    <p>
+                        <span className="icon-20 hover">👍</span> <span className='number'>0</span>
+                    </p>
+                    <p>
+                        <span className="icon-20 hover">👎</span> <span className='number'>0</span>
+                    </p>
+                    <p>link to comments:
+                        <span className="icon-20 hover">🗨️</span>
+                        <span>0</span>
+                    </p>
+                    {/* comments will open below post */}
+                </div>
+            </div>
+        </div>
+    </>
+        )
+    }
+
+    return edit ? editing() : main()
 }
 
 export default Post
