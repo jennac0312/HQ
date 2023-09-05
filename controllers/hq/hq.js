@@ -41,7 +41,20 @@ const updatePost = async ( req, res ) => {
 }
 
 const deletePost = async ( req, res ) => {
-    await res.send('deleting post...')
+    // await res.send('deleting post...')
+    // await Post.deleteMany({})
+    // res.send('deleted all')
+    // const { post } = req.body // undefined cant grab post from body for some reason. its just a nameless object (or the name is req.body)
+    try {
+        console.log('REQ BODY',req.body)
+        // console.log('POST', post)
+        // const foundPost = await Post.findById(req.body._id)
+        // const deletedPost = await Post.findByIdAndDelete(req.params.id)
+        const deletedPost = await Post.findByIdAndDelete(req.body.id)
+        res.send(deletedPost)
+    } catch (error) {
+        res.status(500).send(error)
+    }
 }
 
 module.exports = {

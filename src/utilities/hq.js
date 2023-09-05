@@ -19,3 +19,21 @@ export const getAllPosts = async() => {
         console.error(error)
     }
 }
+
+
+
+export const deletePost = async (post) => {
+    try {
+        console.log(post)
+        const deletedPost = await axios.delete('/hq', {
+            headers: {
+                "Content-Type" : 'application/json'
+            },
+            data : { id: post._id }
+        })
+        // const deletedPost = await axios.delete(`/hq/${post._id}`) // works
+        console.log(deletedPost)
+    } catch (error) {
+        console.error(error)
+    }
+}
