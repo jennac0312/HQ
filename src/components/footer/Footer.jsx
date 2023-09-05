@@ -20,6 +20,8 @@ const Footer = ({ input, setInput }) => {
       console.log( user )
       const res = await hq.sendPost(input, user)
       console.log(res)
+
+      setInput('')
     }
 
   return (

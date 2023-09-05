@@ -1,11 +1,13 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import './post.css'
+import { AppContext } from '../../contexts/app_context'
 // import Reaction from '../reaction/Reaction'
 
 const Post = ({ post }) => {
     // only show trash can if post belongs to user
-
+    const { user } = useContext(AppContext)
     const [ isHover, setIsHover ] = useState(false)
+    const isMyPost = post.user._id === user._id
 
     const handleHover = () => {
         console.log('post hovered')
@@ -23,7 +25,7 @@ const Post = ({ post }) => {
             <div className="top">
                 <p className='username'><span className="italic">agent</span> @{post.user.username}</p>
                 <p className="date">{post.user.createdAt}</p>
-                <p className="delete hover">🗑️</p>
+                { isMyPost && <p className="delete hover">🗑️</p> }
             </div>
             <div className="content">
                 <p>{post.content}</p>

@@ -12,6 +12,8 @@ const Headquarters = () => {
   const [ hqInput, setHqInput ] = useState("")
   const [ allPosts, setAllPosts ] = useState([])
 
+  const [ count, setCount ] = useState(0) // for refresh
+
   useEffect(() => { // "destroy is not a function call"
     const getPosts = async () => {
       try {
@@ -21,6 +23,7 @@ const Headquarters = () => {
       } catch (error) {
         console.error(error)
       }
+      setCount(prev => prev + 1) //refresh
     }
 
     // interval to get updates from db every 5 seconds. not sure if this is a good idea
@@ -36,7 +39,7 @@ const Headquarters = () => {
     <div>
         <Header />
         <main>
-            <h1>headquarters</h1>
+            <h1>headquarters{count}</h1>
             {/* <p>render posts from hq channel</p>
             <p>general posts</p> */}
             {
