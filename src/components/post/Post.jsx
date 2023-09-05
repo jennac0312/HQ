@@ -28,7 +28,7 @@ const Post = ({ edit, post }) => {
     const main = () => {
         return (
             <>
-        { showPopUp && <PopUp post={post} message={`"${post.content}"`}/> }
+        { isMyPost && showPopUp && <PopUp post={post} message={`"${post.content}"`}/> }
         { isMyPost && showPostEdit && <EditPost post={post}/> }
         <div className='post' onMouseEnter={handleHover} onMouseLeave={handleHover}>
             {/* { isHover && <Reaction /> } */}
