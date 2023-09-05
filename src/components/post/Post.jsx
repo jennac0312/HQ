@@ -8,7 +8,7 @@ import * as hq from '../../utilities/hq'
 
 const Post = ({ edit, post }, props) => {
     // only show trash can if post belongs to user
-    const { user, showPopUp, setShowPopUp, currentPost, setCurrentPost } = useContext(AppContext)
+    const { user, showPopUp, setShowPopUp, currentPost, setCurrentPost, editPostFormData, setEditPostFormData } = useContext(AppContext)
     const [ isHover, setIsHover ] = useState(false)
     const isMyPost = post.user._id === user._id
 
@@ -50,12 +50,26 @@ const handleDeleteClick = () => {
     updateCurrentPost()
     setShowPopUp(true)
 }
+
+// const [ formData, setFormData ] = useState({})
+
+// function to send update
+const handleChange = (e) => {
+    setEditPostFormData({
+        ...post,
+        [e.target.name]: e.target.value
+    })
+    console.log(editPostFormData)
+}
+
     // array of posts
     const main = () => {
         return (
             <>
         { isMyPost && showPopUp && <PopUp post={currentPost} message={`"${currentPost.content}"`}/> }
         {/* { isMyPost && showPostEdit && <EditPost setShowPostEdit={setShowPostEdit} post={currentPost}/> } */}
+      { showPostEdit && <EditPost post={currentPost} setShowPostEdit={setShowPostEdit}/>}
+
         <div className='post'>
             {/* { isHover && <Reaction /> } */}
             <div className="left">
@@ -96,39 +110,13 @@ const handleDeleteClick = () => {
         )
     }
 
-    const [ formData, setFormData ] = useState({})
+    // const [ formData, setFormData ] = useState({})
     // edit post
-    const editing = () => {
-        // function to send update
-        const handleChange = (e) => {
-            setFormData({
-                ...post,
-                [e.target.name]: e.target.value
-            })
-            console.log(formData)
-        }
-
-        const handleSubmit = async () => {
-            const updatedPost = await hq.updatePost(formData)
-            console.log(updatedPost)
-            setShowPostEdit(false)
-        }
-
-        const handleExit = () => {
-            setShowPostEdit(false)
-            console.log(showPostEdit)
-            console.log('currentpost', currentPost)
-            // window.location.reload() // eh works but dont want to do it this way
-        }
-
+    const editing = () => {      
         return (
             <>
         {/* { showPostEdit && <EditPost post={post}/> } */}
         {/* omg this was causing infinite loop lololol */}
-        <div className="">
-            <p className='exitEdit hover icon-30' onClick={() => handleExit()}>back ❌</p>
-            <p className="confirm hover icon-30" onClick={handleSubmit}>save ✅</p>
-        </div>
         <div className='post editPost'>
             {/* { isHover && <Reaction /> } */}
             <div className="left">
@@ -143,7 +131,7 @@ const handleDeleteClick = () => {
 
                 <form className="content">
                     {/* <p>{post.content}</p> */}
-                    <textarea type="text" placeholder={post.content} autoFocus onChange={handleChange} value={formData.content || ""} name="content"/>
+                    <textarea type="text" placeholder={post.content} autoFocus onChange={handleChange} value={editPostFormData.content || ""} name="content"/>
                 </form>
                 
                     {/* show conditionally */}

@@ -17,6 +17,7 @@ const AppContextProvider = ( { children } ) => {
     const [ showPopUp, setShowPopUp ] = useState(false)
     const [ showPostEdit, setShowPostEdit ] = useState(false)
     const [ currentPost, setCurrentPost ] = useState({})
+    const [ editPostFormData, setEditPostFormData ] = useState({})
 
     const [ hqSearch, setHqSearch ] = useState("")
 
@@ -46,6 +47,7 @@ const AppContextProvider = ( { children } ) => {
             showEdit, setShowEdit,
             showPostEdit, setShowPostEdit,
             currentPost, setCurrentPost,
+            editPostFormData, setEditPostFormData,
 
             hqSearch, setHqSearch,
 

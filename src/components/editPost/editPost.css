@@ -3,6 +3,8 @@
     position: absolute;
     background-color: rgb(12, 177, 149);
     z-index: 20;
+    top: 0;
+    left: 20px;
 }
 
 .editPost {

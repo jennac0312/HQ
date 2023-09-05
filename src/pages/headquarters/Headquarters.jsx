@@ -64,7 +64,7 @@ const Headquarters = () => {
   console.log(showPostEdit)
   return (
     <div>
-      { showPostEdit && <EditPost post={currentPost}/>}
+      {/* { showPostEdit && <EditPost post={currentPost}/>} */}
         <Header />
         <main>
             <h1>headquarters{count}</h1>
