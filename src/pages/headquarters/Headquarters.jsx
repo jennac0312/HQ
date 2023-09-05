@@ -43,7 +43,7 @@ const Headquarters = () => {
             {/* <p>render posts from hq channel</p>
             <p>general posts</p> */}
             {
-              allPosts.map((post) => {
+              allPosts?.map((post) => {
                 return <Post post={post}/>
               })
             }

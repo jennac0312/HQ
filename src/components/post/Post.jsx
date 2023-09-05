@@ -5,15 +5,22 @@ import { AppContext } from '../../contexts/app_context'
 
 const Post = ({ post }) => {
     // only show trash can if post belongs to user
-    const { user } = useContext(AppContext)
+    const { user, showPopUp, setShowPopUp } = useContext(AppContext)
     const [ isHover, setIsHover ] = useState(false)
     const isMyPost = post.user._id === user._id
+
 
     const handleHover = () => {
         console.log('post hovered')
         // toggle add comment / like / dislike
         setIsHover(!isHover)
     }
+
+    const handleDelete = () => {
+
+    }
+
+
 
   return (
     <div className='post' onMouseEnter={handleHover} onMouseLeave={handleHover}>

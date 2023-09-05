@@ -7,6 +7,4 @@ router.get( '/', hqCtrl.getAllPosts )
 router.put( '/', hqCtrl.updatePost )
 router.delete( '/', hqCtrl.deletePost )
 
-app.get( 'PATH', (req, res) => {})
-
 module.exports = router
