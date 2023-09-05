@@ -23,7 +23,7 @@ const Headquarters = () => {
       } catch (error) {
         console.error(error)
       }
-      setCount(prev => prev + 1) //refresh
+      setCount(count + 1) //refresh
     }
 
     // interval to get updates from db every 5 seconds. not sure if this is a good idea

@@ -41,7 +41,7 @@ function App() {
             <Route path='/welcome' element={<Welcome />} />
 
             <Route path='/safehouse' element={<Safehouse />} />
-            <Route path={`/safehouse/edit`} element={<Edit />} />
+            {/* <Route path={`/safehouse/edit`} element={<Edit />} /> */}
             {/* <Route path={`/safehouse/edit/${user._id}`} element={<Edit />} /> */}
 
             <Route path='/headquarters' element={<Headquarters />} />

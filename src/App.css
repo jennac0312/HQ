@@ -71,6 +71,10 @@ main {
   font-size: 20px;
 }
 
+.icon-10{
+  font-size: 10px;
+}
+
 ::-webkit-scrollbar{
   /* display: none; */
 }

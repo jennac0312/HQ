@@ -34,13 +34,13 @@ const Post = ({ post }) => {
                 {/* show conditionally */}
             <div className="reactions">
                 <p>
-                    <span className="icon-30 hover">👍</span> <span className='number'>0</span>
+                    <span className="icon-20 hover">👍</span> <span className='number'>0</span>
                 </p>
                 <p>
-                    <span className="icon-30 hover">👎</span> <span className='number'>0</span>
+                    <span className="icon-20 hover">👎</span> <span className='number'>0</span>
                 </p>
                 <p>link to comments:
-                    <span className="icon-30 hover">🗨️</span>
+                    <span className="icon-20 hover">🗨️</span>
                     <span>0</span>
                 </p>
                 {/* comments will open below post */}

@@ -61,6 +61,9 @@ const Nav = () => {
 				<p className="hover" onClick={() => navigate("/safehouse")}>
 					🏡 safehouse
 				</p>
+				{/* <Link to="/safehouse">
+					<p className="hover" >🏡 safehouse</p>
+				</Link> */}
 			</div>
 			<p className="hover" onClick={() => navigate('/headquarters')}>{"< hq />"}</p>
 			<p className="hover" onClick={() => navigate('/ranks')}>ranks</p>
