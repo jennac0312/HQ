@@ -73,7 +73,8 @@ const Post = ({ edit, post }) => {
     const editing = () => {
         return (
             <>
-        { showPostEdit && <EditPost post={post}/> }
+        {/* { showPostEdit && <EditPost post={post}/> } */}
+        {/* omg this was causing infinite loop lololol */}
 
         <div className='post'>
             {/* { isHover && <Reaction /> } */}
