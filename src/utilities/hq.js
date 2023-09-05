@@ -48,3 +48,13 @@ export const deletePost = async (post) => {
         console.error(error)
     }
 }
+
+export const updatePost = async (post) => {
+    try {
+        const updatedPost = await axios.put('./hq', {post, content: post.content, user: post.user})
+        console.log(updatedPost)
+
+    } catch (error) {
+        console.error(error)
+    }
+}

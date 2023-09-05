@@ -7,18 +7,17 @@ const EditPost = ({ post }) => {
     console.log(post)
 
     const {showPostEdit, setShowPostEdit} = useContext(AppContext)
-    
+
   return (
-    <div className='editPost'>
-        <p className='exitEdit hover' onClick={() => setShowPostEdit(false)}>❌</p>
-      <form action="">
+    <div className='editPopUp'>
+      {/* <form action="">
         <div>
             <label htmlFor=""></label>
-            <input type="text" />
+            <input type="text" value={post.content || ""}/>
         </div>
+      </form> */}
         <Post edit={true} post={post}/>
 
-      </form>
     </div>
   )
 }

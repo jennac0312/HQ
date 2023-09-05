@@ -37,7 +37,13 @@ const getAllPosts = async ( req, res ) => {
 }
 
 const updatePost = async ( req, res ) => {
-    await res.send("updating post")
+    // console.log(req.body)
+    // await res.send("updating post")
+    const id = req.body.post._id
+    console.log('ID',id)
+    const updated = await Post.findByIdAndUpdate(id, req.body.post, { new: true})
+    console.log(updated)
+    res.send(updated)
 }
 
 // using body
