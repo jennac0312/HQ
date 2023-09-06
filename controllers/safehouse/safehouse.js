@@ -35,7 +35,18 @@ const filterNotes = (what, id) => {
     return filtered
 }
 
+const deleteNote = async (req, res) => {
+    try {
+        const id = req.params.id
+        await Note.findByIdAndDelete(id)
+        res.send('success, note deleted')
+    } catch (error) {
+        res.status(500).send(error)
+    }
+}
+
 module.exports = {
     createNote,
     getNotes,
+    deleteNote,
 }

@@ -32,6 +32,15 @@ const AppContextProvider = ( { children } ) => {
         setCurrentPage(page)
     }
 
+    const normalizeTimeStamp = (time) => {
+        const norm = new Date(time)
+
+        const hours = norm.getHours(norm)
+        const minutes = norm.getMinutes(norm)
+
+        return {hours, minutes}
+    }
+
 
     const pageCategories = ['HTML', "CSS", "Javascript", "React",]
     // const pageCategories = ['HTML', "CSS", "Javascript", "React", "Mongodb", "Express", "Node"]
@@ -60,6 +69,8 @@ const AppContextProvider = ( { children } ) => {
 
             quizQuestions, setQuizQuestions,
             quizCount, setQuizCount,
+
+            normalizeTimeStamp,
 
         }}>
             { children }

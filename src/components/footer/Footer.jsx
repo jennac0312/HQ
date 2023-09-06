@@ -30,7 +30,7 @@ const Footer = ({ input, setInput }) => {
         res = await intel.sendPost(input, user)
       }
       if(currentPage === "safehouse"){
-        res = await sh.sendPost(input, user)
+        res = await sh.sendMessage(input, user)
       }
       console.log(res)
 

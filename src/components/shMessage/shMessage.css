@@ -3,4 +3,28 @@
     margin: 20px;
     text-align: left;
     padding: 20px;
+    position: relative;
+}
+
+.shMessage .top {
+    position: relative;
+    /* display: flex; */
+}
+.shMessage .time {
+    border: 1px solid lime;
+    /* position: absolute; */
+    height: fit-content;
+    width: fit-content;
+    margin-top: -15px;
+    margin-bottom: 5px;
+}
+.shMessage .delete {
+    border: 1px solid lightblue;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    /* right: -730px; */
+    /* top: -15px; */
+    right: -14px;
+    top: 0;
 }
