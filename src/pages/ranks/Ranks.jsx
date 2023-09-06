@@ -8,7 +8,7 @@ import * as userApi from '../../utilities/users-api'
 
 const Ranks = () => {
 
-  const { updateCurrentPage } = useContext(AppContext)
+  const { updateCurrentPage, user } = useContext(AppContext)
 
   useEffect(() => {
     updateCurrentPage("ranks")
@@ -33,12 +33,11 @@ const Ranks = () => {
       // sortUsers()
     }, [])
 
-    const { user } = useContext(AppContext)
-
   return (
     <div>
       <Header />
       <main>
+        <h3 className='rankTitle'>You rank number {allUsers?.findIndex((el) => el._id === user._id) + 1} out of {allUsers?.length} agents</h3>
         { 
           allUsers ?
           allUsers?.map((user, index) => {
@@ -48,7 +47,7 @@ const Ranks = () => {
           <h1>loading</h1>
         }
       </main>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
