@@ -14,10 +14,12 @@ const Operations = () => {
     const getAllQuestions = async () => {
       const questions = await quiz.getAllQuestions()
       console.log(questions)
+
+      setQuizQuestions(questions)
     }
 
     getAllQuestions()
-  })
+  }, [])
 
   const filterAllQuestions = (by) => {
     const filtered = quizQuestions.filter((question) => { question.category.matches(by)})
