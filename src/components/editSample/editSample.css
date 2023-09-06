@@ -9,7 +9,7 @@
 }
 
 .sampleEdit {
-    border: 1px solid orange;
+    border: 2px solid rgba(240, 248, 255, 0.37);
     border-radius: 10px;
     background-color: #1E2824;
     /* width: 450px; */
@@ -37,6 +37,10 @@
     margin-top: 5px;
     padding-top: 10px;
 }
+
+.sampleEdit .deets p {
+    margin-bottom: 3px;
+}
 .sampleEdit .right {
     padding-left: 10px;
 }
@@ -46,10 +50,13 @@
     background-color: rgba(240, 248, 255, 0.37);
     border-radius: 50%;
     height: 200px;
+    width: 200px;
 }
 
 .sampleEdit .right p{
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
+    background-color: #283630;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     /* width: 200px; */

@@ -12,7 +12,7 @@ const EditSample = ({ formData }) => {
         <div className='sampleEdit'>
             <div className="left">
                 <img src={formData.image ? formData.image : user.image} alt="" className='avi'/>
-                <div className="">
+                <div className="deets">
                     <p className="name">{formData.name ? formData.name : user.name}</p>
                     <p className="username">@{formData.username ? formData.username : user.username}</p>
                     <p><span className='bold'>RANK:</span>{user.rank}</p>

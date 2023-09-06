@@ -5,6 +5,8 @@ import * as usersApi from '../../utilities/users-api'
 import { useLocation } from 'react-router-dom'
 import EditSample from '../../components/editSample/EditSample'
 import './edit.css'
+import { getUser } from '../../utilities/users-service';
+
 
 const Edit = () => {
 
@@ -29,6 +31,8 @@ const Edit = () => {
         setUser(updatedUser)
         console.log('UPDATED IN EDIT',user)
         // console.log(URL)
+        setUser(getUser()) // user not updating hmm
+        console.log('UPDATED USER', user)
     }
     
   return (
@@ -47,13 +51,13 @@ const Edit = () => {
                 </div>
                 <div className="">
                     <label htmlFor="">Profile Picture:</label>
-                    <input type="text" name="image" onChange={handleChange} autoComplete="off"/>
+                    <input type="text" name="image" onChange={handleChange}/>
                 </div>
                 <div className="">
                     <label htmlFor="">Rank Message:</label>
                     <textarea type="text" name="rankMessage" onChange={handleChange} autoComplete="off"/>
                 </div>
-                <input className='submit' type="submit" value="Update"/>
+                <input className='submit' type="submit" value="Update" placeholder={user.rankMessage || ""}/>
 
             </form>
 
