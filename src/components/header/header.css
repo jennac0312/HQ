@@ -26,13 +26,20 @@ header .title {
 
 header p {
     /* font-size: 2em; */
-    border: 1px solid springgreen;
+    /* border: 1px solid springgreen; */
     display: flex;
     /* align-items: center; */
     /* justify-content: center; */
     height: fit-content;
     width: fit-content;
-    margin: 0 10px;
+    /* margin: 0 10px; */
+    padding: 10px;
+    /* border-radius: 10px; */
+}
+header p:hover {
+    background-color: #5d3c1885;
+    background-color: #0d060f46;
+    background-color: #766b6528;
 }
 
 header input {

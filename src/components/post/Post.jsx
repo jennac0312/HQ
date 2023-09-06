@@ -72,24 +72,28 @@ const handleChange = (e) => {
         {/* { isMyPost && showPostEdit && <EditPost setShowPostEdit={setShowPostEdit} post={currentPost}/> } */}
       { showPostEdit && <EditPost post={currentPost} setShowPostEdit={setShowPostEdit}/>}
 
-        <div className='post'>
+        <div className='post' style={{ backgroundColor: isMyPost ? "#5d3c18a9" : null }}>
             {/* { isHover && <Reaction /> } */}
             <div className="left">
                 <img src={post.user.image} alt="" className='avi'/>
             </div>
             <div className="right">
+                    { isMyPost && 
+                        <div className='options'>
+                            <p className="delete hover icon-20" onClick={() => handleDeleteClick()}>🗑️</p> 
+                            <p className='edit hover icon-20' onClick={() => handleEdit()}>✏️</p>
+                        </div>
+                    }
                 <div className="top">
-                    <p className='username'><span className="italic">agent</span> @{post.user.username}</p>
+                    <p className='username'>
+                        <span className="italic bold">{post.user.role}</span> 
+                        <span className="name"> {post.user.name},</span>
+                        <span className='username'> @{post.user.username}</span>
+                    </p>
                     <p className="time">{post.user.createdAt}</p>
                     {/* <p className="time">{time.hours}:{time.minutes}{time.suffix}</p> */}
                     {/* doesnt work either.. repeats prev post */}
                     {/* <p className="time">{normalizeTimeStamp(post.user.createdAt).hours}:{normalizeTimeStamp(post.user.createdAt).minutes}{normalizeTimeStamp(post.user.createdAt).suffix}</p> */}
-                    { isMyPost && 
-                        <div style={{ display: "flex" }}>
-                            <p className="delete hover" onClick={() => handleDeleteClick()}>🗑️</p> 
-                            <p className='edit hover' onClick={() => handleEdit()}>✏️</p>
-                        </div>
-                    }
                 </div>
                 <div className="content">
                     <p>{post.content}</p>
@@ -103,7 +107,7 @@ const handleChange = (e) => {
                     <p>
                         <span className="icon-20 hover">👎</span> <span className='number'>0</span>
                     </p>
-                    <p>link to comments:
+                    <p className='comment'>
                         <span className="icon-20 hover">🗨️</span>
                         <span>0</span>
                     </p>

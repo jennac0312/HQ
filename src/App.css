@@ -24,6 +24,7 @@
   /* background-color: rgb(19, 3, 3); */
   background-color: #7E846B;
   /* background-color: black; */
+  background-color: #1E2824;
   
   display: flex;
   overflow-x: hidden;
@@ -39,7 +40,7 @@
 /* for between header and footer on every page */
 main {
   border: 1px solid orange;
-  background-color: #7E846B;
+  background-color: #0D060F;
   /* purple ish */
   /* background-color: #1F271B; */
   height: 1035px;

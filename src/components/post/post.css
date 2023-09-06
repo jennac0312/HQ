@@ -1,5 +1,8 @@
 div.post {
-    border: 2px solid orangered;
+    /* border: 2px solid orangered; */
+    border-radius: 10px;
+    padding: 15px 10px;
+    background-color: #1E2824;
     /* margin: 10px; */
     height: fit-content;
     width: 750px;
@@ -7,50 +10,110 @@ div.post {
     display: flex;
 
     position: relative;
+    color: rgba(245, 245, 245, 0.911);
 }
 
 .post:hover{
-    background-color: rgb(160, 132, 132);
+    /* background-color: rgb(160, 132, 132); */
+    background-color: #5d3c18a9;
+    background-color: #344055 !important;
 }
 .post > * {
-    border: 1px solid lime;
+    /* border: 1px solid lime; */
 }
 
 .post .avi {
-    border: 1px solid white;
+    border: 2px solid rgba(240, 248, 255, 0.37);
     height: 80px;
     width: 80px;
     border-radius: 50%;
     margin: 10px;
+    background-color: rgba(240, 248, 255, 0.37);
 }
 
 .post .right {
     width: 100%;
 }
+.post .right .options {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: right;
+}
 
+.post .options > * {
+    /* border: 1px solid lightblue; */
+    border-radius: 5px;
+    width: fit-content;
+    margin-left: 10px;
+    padding: 5px;
+    margin-top: -10px;
+}
+.post .options > *:hover {
+    background-color: #1E2824;
+}
+
+.post:hover .top {
+    color: white !important;
+}
 .post .right .top {
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
+    color: rgba(245, 245, 245, 0.658);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.308);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px;
+    /* margin: 0 10px; */
+    padding: 0 10px;
 }
 
 .post .right .top > * {
-    border: 1px solid green;
-
+    /* border: 1px solid green; */
+    font-size: 1.1em;
     width: fit-content;
 }
 
 .post .content {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     text-align: left;
-    margin: 10px;
+    /* margin: 0 10px; */
+    padding: 10px;
+    margin: 0 10px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .post .reactions {
-    border: 1px solid yellow;
-    margin-bottom: 10px;
-    display: flex;
+    /* border: 1px solid yellow; */
+    border-top: 1px solid rgba(0, 0, 0, 0.308);
 
+    /* margin-bottom: 10px; */
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+    position: relative;
+    
+}
+.post .reactions > * {
+    /* border: 1px solid white; */
+    border-radius: 5px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* doesnt do anything */
+    padding: 5px;
+    margin-right: 10px;
+}
+.post .reactions > *:hover {
+    background-color: #1E2824;
+}
+
+.post .reactions .comment{
+    /* border: 1px solid white; */
+    /* align-content: flex-end; */
+    /* align-self: flex-end; */
+    position: absolute;
+    height: inherit;
+    right: -10px;
 }
