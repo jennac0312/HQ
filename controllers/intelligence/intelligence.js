@@ -26,6 +26,7 @@ const getAllPosts = async ( req, res ) => {
 
     try {
         const allPosts = await Post.find({category: "intelligence"})
+        res.setHeader('Content-Type', 'application/json')
         res.send(allPosts)
     } catch (error) {
         res.status(500).send(error)
