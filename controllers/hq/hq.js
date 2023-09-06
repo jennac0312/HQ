@@ -40,11 +40,15 @@ const getAllPosts = async ( req, res ) => {
 const updatePost = async ( req, res ) => {
     // console.log(req.body)
     // await res.send("updating post")
-    const id = req.body.post._id
-    console.log('ID',id)
-    const updated = await Post.findByIdAndUpdate(id, req.body.post, { new: true})
-    console.log(updated)
-    res.send(updated)
+    try {
+        const id = req.body.post._id
+        console.log('ID',id)
+        const updated = await Post.findByIdAndUpdate(id, req.body.post, { new: true})
+        console.log(updated)
+        res.send(updated)
+    } catch (error) {
+        res.status(500).send(error)
+    }
 }
 
 // using body
