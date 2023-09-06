@@ -4,7 +4,6 @@ import Header from '../../components/header/Header'
 import Footer from '../../components/footer/Footer'
 import { AppContext } from '../../contexts/app_context'
 import * as quiz from '../../utilities/quiz'
-import { getByAltText } from '@testing-library/react'
 
 const Operations = () => {
 
@@ -12,9 +11,12 @@ const Operations = () => {
   updateCurrentPage("operations")
 
   useEffect(() => {
-    const getAllQuestions = () => {
-
+    const getAllQuestions = async () => {
+      const questions = await quiz.getAllQuestions()
+      console.log(questions)
     }
+
+    getAllQuestions()
   })
 
   const filterAllQuestions = (by) => {
