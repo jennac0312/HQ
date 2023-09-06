@@ -54,7 +54,7 @@ const Operations = () => {
 
   return (
     <div className='operations'>
-      <Header />
+      <Header title="operations"/>
       <main>
         <h1>operation get a job</h1>
         <h4>choose a topic, answer some questions</h4>

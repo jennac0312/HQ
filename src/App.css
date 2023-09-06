@@ -54,7 +54,7 @@ main {
   overflow-y: scroll;
 
   /* to fix the overlap when search is toggled */
-  position: absolute;
+  /* position: absolute; */
   top: 70px;
 
 }

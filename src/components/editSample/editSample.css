@@ -1,11 +1,20 @@
 .title {
-    margin-top: 200px;
+    margin: auto;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid rgba(240, 248, 255, 0.37);
+    width: fit-content;
+    padding: 0 180px;
+    letter-spacing: 1px;
 }
 
 .sampleEdit {
     border: 1px solid orange;
+    border-radius: 10px;
+    background-color: #1E2824;
     /* width: 450px; */
-    width: fit-content;
+    /* width: fit-content; */
+    width: 550px;
     padding: 10px;
     margin: auto;
     display: flex;
@@ -13,20 +22,37 @@
 }
 
 .sampleEdit > * {
-    border: 1px solid pink;
-    margin: 10px;
+    /* border: 1px solid pink; */
+    width: 50%;
+    /* margin: 10px; */
     padding: 5px;
 }
 
+.sampleEdit .left {
+    border-right: 2px solid rgba(240, 248, 255, 0.37);
+}
+
+.sampleEdit .left div{
+    border-top: 2px solid rgba(240, 248, 255, 0.37);
+    margin-top: 5px;
+    padding-top: 10px;
+}
+.sampleEdit .right {
+    padding-left: 10px;
+}
+
 .sampleEdit .avi {
-    border: 1px solid white;
+    border: 3px solid rgba(240, 248, 255, 0.37);
+    background-color: rgba(240, 248, 255, 0.37);
     border-radius: 50%;
     height: 200px;
 }
 
 .sampleEdit .right p{
+    border: 1px solid yellow;
     display: flex;
     align-items: center;
-    width: 200px;
+    /* width: 200px; */
     justify-content: center;
+    overflow: scroll;
 }

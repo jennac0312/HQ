@@ -4,6 +4,7 @@ import Header from '../../components/header/Header'
 import * as usersApi from '../../utilities/users-api'
 import { useLocation } from 'react-router-dom'
 import EditSample from '../../components/editSample/EditSample'
+import './edit.css'
 
 const Edit = () => {
 
@@ -31,33 +32,33 @@ const Edit = () => {
     }
     
   return (
-    <div>
+    <div className='editPage'>
         <Header page="edit"/>
-        <h1>EDIT PAGE</h1>
-        <form action="" onSubmit={handleSubmit}>
-            <div className="">
-                <label htmlFor="">Name:</label>
-                <input type="text" name="name" placeholder={user.name || ""}  onChange={handleChange} autoComplete="off"/>
-            </div>
-            <div className="">
-                <label htmlFor="">Username:</label>
-                <input type="text" name="username" placeholder={user.username || ""}  onChange={handleChange} autoComplete="off"/>
-            </div>
-            <div className="">
-                <label htmlFor="">Profile Picture:</label>
-                <input type="text" name="image" onChange={handleChange} autoComplete="off"/>
-            </div>
-            <div className="">
-                <label htmlFor="">Rank Message:</label>
-                <textarea type="text" name="rankMessage" onChange={handleChange} autoComplete="off"/>
-            </div>
-            <div>
-                <input type="submit" value="Update"/>
-            </div>
+        {/* <h1>EDIT PAGE</h1> */}
+        <main>
+            <form action="" onSubmit={handleSubmit}>
+                <div className="">
+                    <label htmlFor="">Name:</label>
+                    <input type="text" name="name" placeholder={user.name || ""}  onChange={handleChange} autoComplete="off"/>
+                </div>
+                <div className="">
+                    <label htmlFor="">Username:</label>
+                    <input type="text" name="username" placeholder={user.username || ""}  onChange={handleChange} autoComplete="off"/>
+                </div>
+                <div className="">
+                    <label htmlFor="">Profile Picture:</label>
+                    <input type="text" name="image" onChange={handleChange} autoComplete="off"/>
+                </div>
+                <div className="">
+                    <label htmlFor="">Rank Message:</label>
+                    <textarea type="text" name="rankMessage" onChange={handleChange} autoComplete="off"/>
+                </div>
+                <input className='submit' type="submit" value="Update"/>
 
-        </form>
+            </form>
 
         <EditSample formData={formData}/>
+        </main>
 
     </div>
   )
