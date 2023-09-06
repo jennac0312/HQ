@@ -66,7 +66,7 @@ const Header = ({ page }) => {
 				<p className="hover icon-30" onClick={() => setShowNav(!showNav)}>
 					🗄️
 				</p>
-				<h3 className="titleSafe">you are safe here agent {user.name}</h3>
+				<h3 className="titleSafe">you are safe here. Feel free to jot down some notes. pure confidentiality agent {user.name}.</h3>
 				{/* edit user profile */}
 				<p className="hover icon-30" onClick={() => navigate(`/safehouse/edit`)}>✏️</p>
 				{/* <p className="hover icon-30" onClick={ navigate(`/safehouse/edit/${user._id}`) }>✏️</p> */}

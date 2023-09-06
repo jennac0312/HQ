@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Header from '../../components/header/Header'
 import Footer from '../../components/footer/Footer'
 import { AppContext } from '../../contexts/app_context'
@@ -6,6 +6,8 @@ import { AppContext } from '../../contexts/app_context'
 const SafeHouse = () => {
 
   const { user } = useContext(AppContext)
+  const [ shInput, setShInput ] = useState("")
+
   console.log('SAFE HOUSE USER',user)
   return (
     <div>
@@ -13,7 +15,7 @@ const SafeHouse = () => {
       <main>
         <h1>SAFE HOUSE</h1>
       </main>
-      <Footer />
+      <Footer input={shInput} setInput={setShInput}/>
     </div>
   )
 }
