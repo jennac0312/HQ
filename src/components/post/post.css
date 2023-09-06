@@ -3,6 +3,7 @@ div.post {
     border-radius: 10px;
     padding: 15px 10px;
     background-color: #1E2824;
+    border: 2px solid rgba(240, 248, 255, 0.37);
     /* margin: 10px; */
     height: fit-content;
     width: 750px;

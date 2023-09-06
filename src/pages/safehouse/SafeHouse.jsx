@@ -4,6 +4,7 @@ import Footer from '../../components/footer/Footer'
 import { AppContext } from '../../contexts/app_context'
 import * as sh from '../../utilities/safehouse'
 import ShMessage from '../../components/shMessage/ShMessage'
+import './safeHouse.css'
 
 const SafeHouse = () => {
 
@@ -30,10 +31,10 @@ const SafeHouse = () => {
   }, [count])
 
   return (
-    <div>
+    <div className='safehouse'>
       <Header page={"safehouse"} />
       <main>
-        <h1>SAFE HOUSE</h1>
+        {/* <h1>SAFE HOUSE</h1> */}
         {
           allMessages ?
           allMessages.map((message, index) => {

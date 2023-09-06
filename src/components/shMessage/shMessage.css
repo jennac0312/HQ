@@ -1,30 +1,64 @@
 .shMessage {
-    border: 1px solid red;
-    margin: 20px;
+    border: 2px solid rgba(240, 248, 255, 0.37);
+    background-color: #1E2824;
+    border-radius: 10px;
+    padding: 30px 10px;
+    /* padding-top: 50px; */
+    /* margin: 20px; */
+    width: 750px;
+    margin: 20px auto;
     text-align: left;
-    padding: 20px;
+    /* padding: 20px; */
     position: relative;
+    color: rgba(245, 245, 245, 0.911);
+
+}
+
+.shMessage:hover {
+    /* cursor: pointer; */
+    background-color: #344055 !important;
 }
 
 .shMessage .top {
-    position: relative;
+    /* border: 1px solid yellow; */
+    border-bottom: 2px solid rgba(240, 248, 255, 0.37);
+    /* width: 200px; */
+    display: flex;
+    justify-content: space-between;
+    /* position: relative; */
+    margin-top: -15px;
+    margin-bottom: 5px;
     /* display: flex; */
 }
-.shMessage .time {
-    border: 1px solid lime;
+.shMessage .time, .shMessage .date {
+    /* border: 1px solid lime; */
     /* position: absolute; */
     height: fit-content;
     width: fit-content;
-    margin-top: -15px;
-    margin-bottom: 5px;
+    margin-right: 10px;
+}
+
+.shMessage .date {
+    margin-right: 50px;
 }
 .shMessage .delete {
-    border: 1px solid lightblue;
+    /* border: 1px solid lightblue; */
+    border-radius: 5px;
+    padding: 5px;
     width: fit-content;
     height: fit-content;
     position: absolute;
     /* right: -730px; */
     /* top: -15px; */
-    right: -14px;
-    top: 0;
+    right: 3px;
+    top: 3px;
+}
+.shMessage .delete:hover {
+    background-color: #1E2824;
+}
+
+.shMessage .message {
+    margin: 10px auto;
+    /* border: 1px solid yellow; */
+    width: 740px;
 }
