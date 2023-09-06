@@ -26,5 +26,6 @@
 .sampleEdit .right p{
     display: flex;
     align-items: center;
-    max-width: 200px;
+    width: 200px;
+    justify-content: center;
 }

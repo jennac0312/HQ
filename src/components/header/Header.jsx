@@ -78,7 +78,7 @@ const Header = ({ page }) => {
 	const edit = () => {
 		return (
 			<header>
-				<p className="hover icon-30" onClick={() => navigate(-1)}>
+				<p className="hover icon-30 back" onClick={() => navigate(-1)}>
 					🔙
 				</p>
 				<h3 className="titleSafe">editing agent {user.name.toUpperCase()}</h3>

@@ -10,6 +10,8 @@ header {
     /* align-content: center; */
 
     overflow: hidden;
+
+    position: relative;
 }
 
 header .title {
@@ -37,4 +39,16 @@ header input {
     /* border: none; */
     text-align: center;
     font-size: 1.1em;
+}
+
+.titleSafe {
+    border: 1px solid rebeccapurple;
+    /* position: absolute; */
+    /* left: 50%;
+    right: 50%; */
+    /* width: 100%; */
+}
+
+.back {
+    z-index: 10;
 }

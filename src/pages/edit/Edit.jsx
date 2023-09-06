@@ -37,19 +37,19 @@ const Edit = () => {
         <form action="" onSubmit={handleSubmit}>
             <div className="">
                 <label htmlFor="">Name:</label>
-                <input type="text" name="name" placeholder={user.name || ""}  onChange={handleChange}/>
+                <input type="text" name="name" placeholder={user.name || ""}  onChange={handleChange} autoComplete="off"/>
             </div>
             <div className="">
                 <label htmlFor="">Username:</label>
-                <input type="text" name="username" placeholder={user.username || ""}  onChange={handleChange}/>
+                <input type="text" name="username" placeholder={user.username || ""}  onChange={handleChange} autoComplete="off"/>
             </div>
             <div className="">
                 <label htmlFor="">Profile Picture:</label>
-                <input type="text" name="image" onChange={handleChange}/>
+                <input type="text" name="image" onChange={handleChange} autoComplete="off"/>
             </div>
             <div className="">
                 <label htmlFor="">Rank Message:</label>
-                <textarea type="text" name="rankMessage" onChange={handleChange}/>
+                <textarea type="text" name="rankMessage" onChange={handleChange} autoComplete="off"/>
             </div>
             <div>
                 <input type="submit" value="Update"/>
