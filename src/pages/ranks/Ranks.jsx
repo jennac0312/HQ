@@ -21,7 +21,10 @@ const Ranks = () => {
     const getAllUsers = async () => {
       console.log('getting users')
       const users = await userApi.getAllUsers()
-      setAllUsers( users )
+      const sorted =  users.sort((acc, cur) => cur.rank - acc.rank) // from greatest to least
+      console.log('SORTED', sorted)
+      setAllUsers(sorted)
+      // setAllUsers( users )
       console.log('ALL USERS', users)
     }
 
@@ -29,11 +32,6 @@ const Ranks = () => {
       getAllUsers()
       // sortUsers()
     }, [])
-
-    // const sortUsers = () => {
-    //   allUsers?.sort((acc, cur) => acc - cur.rank)
-    //   console.log('SORTED', allUsers)
-    // }
 
     const { user } = useContext(AppContext)
 

@@ -2,7 +2,9 @@ import axios from "axios";
 
 export const sendPost = async (post, user) => {
     const postReq = await axios.post('/hq', {user, post}, {
-        headers: "application.json"
+        headers: {
+            'Content-Type': 'application/json',
+          }
     })
 
     console.log(postReq)
