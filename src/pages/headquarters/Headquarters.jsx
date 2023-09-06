@@ -73,12 +73,12 @@ const Headquarters = () => {
             <p>general posts</p> */}
             {
               hqSearch !== "" ? // if search not empty
-              filteredPosts?.map((post) => {
-                return <Post post={post}/>
+              filteredPosts?.map((post, index) => {
+                return <Post key={index} post={post}/>
               })
               :
-              allPosts?.map((post) => {
-                return <Post post={post}/>
+              allPosts?.map((post, index) => {
+                return <Post key={index} post={post}/>
               })
             }
         </main>
