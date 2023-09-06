@@ -40,7 +40,9 @@ const AppContextProvider = ( { children } ) => {
     const normalizeTimeStamp = (time) => {
         const norm = new Date(time)
 
-        const hours = norm.getHours(norm)
+        let hours = norm.getHours(norm)
+        hours = hours >= 10 ? hours : '0'.concat(hours)
+
         let minutes = norm.getMinutes(norm)
         minutes = minutes >= 10 ? minutes : '0'.concat(minutes)
         const suffix = hours >= 11 ? "am" : "pm"

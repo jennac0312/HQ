@@ -14,6 +14,13 @@ const Missions = () => {
       <Header title="missions"/>
       <main>
         <h1>missions coming soon</h1>
+        <p>
+            battle among other agents for
+            <br /> 
+            <span className="bold">ALL OR NOTHING</span> 
+            <br />
+            rank points
+        </p>
       </main>
       {/* <Footer /> */}
     </div>

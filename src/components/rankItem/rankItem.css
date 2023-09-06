@@ -1,5 +1,5 @@
 .rankItem {
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     background-color: #1E2824;
     border-radius: 10px;
     padding: 15px 10px;
@@ -9,11 +9,12 @@
     width: 750px;
 
     min-height: 100px;
-    padding: 10px 0;
+    padding: 10px;
 
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    color: rgba(245, 245, 245, 0.911);
 }
 
 .rankItem:hover {
@@ -21,33 +22,60 @@
     /* background-color: rgb(160, 132, 132); */
     background-color: #5d3c18a9;
     background-color: #344055 !important;
+    color: white !important;
+
 }
 
 .ranking{
-    border: 1px solid lime;
+    /* border: 1px solid lime; */
+    font-size: 1.5em;
+}
+
+.ranking span.rank {
+    border-bottom: 2px solid rgba(240, 248, 255, 0.37);
+    padding-bottom: -5px;
+    margin-bottom: 20px !important;
+    /* color: rebeccapurple; */
+}
+.ranking .rankNumber {
+    padding: 10px;
 }
 
 .rankItem img {
-    border: 1px solid white;
+    border: 2px solid rgba(240, 248, 255, 0.37);
     border-radius: 50%;
-    height: 40px;
-    width: 40px;
+    height: 100px;
+    width: 100px;
 
-    background-color: wheat;
+    background-color: rgba(240, 248, 255, 0.37);
 }
 
 .rankItem .userDeets {
-    border: 1px solid purple;
-    width: 200px;
-    font-weight: bold;
+    /* border: 1px solid purple; */
+    width: 250px;
+    /* font-weight: bold; */
+}
+
+.userDeets .names {
+    /* border: 1px solid white; */
+    border-top: 1px solid rgba(245, 245, 245, 0.336);
+    display: flex;
+    padding-top: 8px;
+
 }
 
 .rankItem .message {
-    border: 1px solid brown;
+    border: 1px solid rgba(245, 245, 245, 0.336);
+    padding: 20px 10px;
     width: 400px;
+    position: relative;
+    text-align: left;
 }
 
 .signature {
     text-align: right;
     font-style: italic;
+    position: absolute;
+    top: 85px;
+    right: 10px;
 }

@@ -8,19 +8,24 @@ const RankItem = ({ person, isMe }) => {
     <div className='rankItem' style={{ backgroundColor: isMe ? "#5d3c18a9" : null }}>
 
       <div className="ranking">
-        <p>RANK: {person.rank}</p>
+          <span className="bold rank">RANK</span>
+          <br />
+          <span className="rankNumber">
+            {person.rank}
+          </span>
       </div>
 
-      <img src={person.image} alt="" className='avi'/>
-
       <div className="userDeets">
-        <p>{person.name}</p>
-        <p>@{person.username}</p>
+        <img src={person.image} alt="" className='avi'/>
+        <div className="names">
+          {/* <p>{person.name}</p> */}
+          <p>@{person.username}</p>
+        </div>
       </div>
 
       <div className="message">
-        <p>{person.rankMessage}</p>
-        <p className="signature">-{person.name}</p>
+        <p>"{person.rankMessage}"</p>
+        <p className="signature">- {person.role} {person.name}</p>
       </div>
     </div>
   )
