@@ -12,6 +12,8 @@ header {
     overflow: hidden;
 
     position: relative;
+
+    color: white;
 }
 
 header .title {

@@ -1,7 +1,7 @@
 const Post = require('../../models/Post')
 
 const createPost = async ( req, res ) => {
-    await res.send('creating post')
+    // await res.send('creating post')
     const { user, post } = req.body
     
     // await res.send('creating post')

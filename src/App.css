@@ -22,7 +22,8 @@
   width: 820px;
   /* background-color: slategray; */
   /* background-color: rgb(19, 3, 3); */
-  background-color: #7D98A1;
+  background-color: #7E846B;
+  /* background-color: black; */
   
   display: flex;
   overflow-x: hidden;
@@ -38,7 +39,7 @@
 /* for between header and footer on every page */
 main {
   border: 1px solid orange;
-  background-color: rgba(162, 0, 255, 0.274);
+  background-color: #7E846B;
   /* purple ish */
   /* background-color: #1F271B; */
   height: 1035px;

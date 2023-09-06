@@ -7,6 +7,7 @@ const Header = ({ page }) => {
 
 	const { user, currentPage, showSearch, setShowSearch, showNav, setShowNav, navigate, setShowEdit, showEdit } = useContext(AppContext);
 	const [ searchBurner, setSearchBurner ] = useState("")
+	console.log('currentpage', currentPage)
 
 	const handleSearchClick = () => {
 		if( showNav ){
