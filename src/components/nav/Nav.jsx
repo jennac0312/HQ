@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import * as userService from '../../utilities/users-service'
 
 const Nav = () => {
-	const { navigate, setShowNav, currentPage, setCurrentPage, pageCategories, setUser } = useContext(AppContext);
+	const { navigate, setShowNav, currentPage, setCurrentPage, pageCategories, setUser, user } = useContext(AppContext);
 	const [toggleList, setToggleList] = useState(0);
 
 	// click on anything nav disappear
@@ -65,8 +65,8 @@ const Nav = () => {
 					<p className="hover" >🏡 safehouse</p>
 				</Link> */}
 			</div>
-			<p className="hover" onClick={() => navigate('/headquarters')}>{"< hq />"}</p>
 			<p className="hover" onClick={() => navigate('/ranks')}>ranks</p>
+			<p className="hover" onClick={() => navigate('/headquarters')}>{"< hq />"}</p>
 
 			<p className="hover showNav" onClick={() => handleClick( 'intelligence', 1 )}>
 				{/* <span className="arrow">{toggleList === 1 ? "⬇️" : "➡️"}</span> */}
@@ -101,7 +101,8 @@ const Nav = () => {
 					})}
 			</div> */}
 			<div className="logOut">
-				<Link to='/authorize' onClick={handleLogOut}>
+				<p className="name">{user.name}</p>
+				<Link to='/authorize' onClick={handleLogOut} className="auth">
 					Log Out
 				</Link>
 			</div>

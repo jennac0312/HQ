@@ -9,6 +9,11 @@
   /* font-family: 'Major Mono Display', monospace; */
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .App {
   margin: -65px auto;
   text-align: center;

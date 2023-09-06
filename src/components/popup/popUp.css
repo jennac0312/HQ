@@ -1,15 +1,57 @@
 .popUp {
-    border: 5px solid red;
+    border: 5px solid #7C162E;
     height: fit-content;
     /* width: fit-content; */
     /* height: 50px; */
-    width: 200px;
+    width: 500px;
     padding: 20px;
     position: absolute;
     top: 50%;
     bottom: 50%;
-    left: 300px;
-    right: 300px;
-    background-color: wheat;
-    z-index: 10;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #766B65;
+    z-index: 20;
+    /*  offset x, y, blur, spread */
+    box-shadow: -2px 3px 10px 10px rgba(255, 0, 0, 0.171);
+}
+
+.popUp .delete, .popUp .confirm {
+    color: #720714;
+    /* border: 1px solid yellow; */
+}
+
+.popUp .content {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 10px auto;
+    border: 1px solid #66412d;
+    padding: 20px;
+    max-width: 450px;
+}
+
+.popUp .confirm {
+    /* margin-bottom: -10px; */
+    margin-bottom: -10px;
+}
+.popUp .buttons {
+    /* border: 1px solid lime; */
+    margin: auto;
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+.popUp button {
+    cursor: pointer;
+    width: 100px;
+    background-color: #66412d;
+    background-color: black;
+    border: 2px solid rgba(245, 245, 245, 0.781);
+    color: whitesmoke;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+.popUp button:hover {
+    background-color: rgba(0, 0, 0, 0.507);
 }

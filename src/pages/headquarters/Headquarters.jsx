@@ -68,7 +68,7 @@ const Headquarters = () => {
       {/* { showPostEdit && <EditPost post={currentPost}/>} */}
         <Header title="headquarters"/>
         <main>
-            <h1>headquarters{count}</h1>
+            {/* <h1>headquarters{count}</h1> */}
             {/* <p>render posts from hq channel</p>
             <p>general posts</p> */}
             {

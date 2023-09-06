@@ -53,7 +53,7 @@ const Intelligence = () => {
     <div>
         <Header title="intelligence"/>
         <main>
-            <h1>intelligence</h1>
+            {/* <h1>intelligence</h1> */}
             {
               intelSearch !== "" ?
               filteredPosts.map((post, index) => {

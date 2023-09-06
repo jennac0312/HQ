@@ -92,6 +92,8 @@ div.post {
     /* justify-content: space-around; */
     align-items: center;
     position: relative;
+    margin-bottom: -10px;
+    padding-top: 5px;
     
 }
 .post .reactions > * {

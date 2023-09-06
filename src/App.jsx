@@ -24,7 +24,7 @@ import Edit from './pages/edit/Edit';
 function App() {
   // array destructuring
   // const [user, setUser] = useState(getUser());
-  const { user, setUser, showNav } = useContext(AppContext)
+  const { user, setUser, showNav, showPopUp } = useContext(AppContext)
 
   useEffect(() => {
     setUser( getUser() )

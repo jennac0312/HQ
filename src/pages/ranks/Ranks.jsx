@@ -4,6 +4,7 @@ import Footer from '../../components/footer/Footer'
 import RankItem from '../../components/rankItem/RankItem'
 import { AppContext } from '../../contexts/app_context'
 import * as userApi from '../../utilities/users-api'
+import './ranks.css'
 
 
 const Ranks = () => {
@@ -34,14 +35,15 @@ const Ranks = () => {
     }, [])
 
   return (
-    <div>
-      <Header />
+    <div className='ranks'>
+      <Header title="ranks" />
       <main>
         <h3 className='rankTitle'>You rank number {allUsers?.findIndex((el) => el._id === user._id) + 1} out of {allUsers?.length} agents</h3>
         { 
           allUsers ?
-          allUsers?.map((user, index) => {
-            return <RankItem key={index} user={user}/>
+          allUsers?.map((person, index) => {
+            const isMe = person._id === user._id
+            return <RankItem key={index} person={person} isMe={isMe}/>
           }) 
           :
           <h1>loading</h1>

@@ -90,8 +90,8 @@ const handleChange = (e) => {
                         <span className="name"> {post.user.name},</span>
                         <span className='username'> @{post.user.username}</span>
                     </p>
-                    <p className="time">{post.user.createdAt}</p>
-                    {/* <p className="time">{time.hours}:{time.minutes}{time.suffix}</p> */}
+                    {/* <p className="time">{post.user.createdAt}</p> */}
+                    <p className="time">{time.hours}:{time.minutes}</p>
                     {/* doesnt work either.. repeats prev post */}
                     {/* <p className="time">{normalizeTimeStamp(post.user.createdAt).hours}:{normalizeTimeStamp(post.user.createdAt).minutes}{normalizeTimeStamp(post.user.createdAt).suffix}</p> */}
                 </div>

@@ -40,7 +40,12 @@ const userSchema = new Schema(
     image: {
       type: String,
       default: "https://i.pinimg.com/736x/bd/7f/da/bd7fda264ecd53d587f17b610b731cef.jpg"
-    }
+    },
+    date: {
+      type: Date,
+      required: true,
+      default: Date.now
+    },
 },
   {
     timestamps: true,

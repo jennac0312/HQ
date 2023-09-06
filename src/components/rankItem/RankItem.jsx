@@ -1,26 +1,26 @@
 import React from 'react'
 import './rankItem.css'
 
-const RankItem = ({ user }) => {
+const RankItem = ({ person, isMe }) => {
 
     
   return (
-    <div className='rankItem'>
+    <div className='rankItem' style={{ backgroundColor: isMe ? "#5d3c18a9" : null }}>
 
       <div className="ranking">
-        <p>RANK: {user.rank}</p>
+        <p>RANK: {person.rank}</p>
       </div>
 
-      <img src={user.image} alt="" className='avi'/>
+      <img src={person.image} alt="" className='avi'/>
 
       <div className="userDeets">
-        <p>{user.name}</p>
-        <p>@{user.username}</p>
+        <p>{person.name}</p>
+        <p>@{person.username}</p>
       </div>
 
       <div className="message">
-        <p>{user.rankMessage}</p>
-        <p className="signature">-{user.name}</p>
+        <p>{person.rankMessage}</p>
+        <p className="signature">-{person.name}</p>
       </div>
     </div>
   )

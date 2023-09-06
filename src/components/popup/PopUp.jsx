@@ -20,11 +20,13 @@ const PopUp = ({ message, post }) => {
 
   return (
     <div className='popUp'>
-        <p>delete:</p>
-        <h3>{message}</h3>
-        <p>Click to Confirm</p>
-        <button className="yes" onClick={() => handleDelete()}>OKAY</button>
-        <button className="no" onClick={() => setShowPopUp(false)}>CANCEL</button>
+        <h2 className='delete'>DELETE</h2>
+        <p className='content'>{message}</p>
+        <h3 className='confirm'>Click to Confirm</h3>
+        <div className="buttons">
+            <button className="yes" onClick={() => handleDelete()}>OKAY</button>
+            <button className="no" onClick={() => setShowPopUp(false)}>CANCEL</button>
+        </div>
     </div>
   )
 }
