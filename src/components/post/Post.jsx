@@ -81,6 +81,8 @@ const handleChange = (e) => {
                 <div className="top">
                     <p className='username'><span className="italic">agent</span> @{post.user.username}</p>
                     <p className="time">{time.hours}:{time.minutes}{time.suffix}</p>
+                    {/* doesnt work either.. repeats prev post time */}
+                    {/* <p className="time">{normalizeTimeStamp(post.user.createdAt).hours}:{normalizeTimeStamp(post.user.createdAt).minutes}{normalizeTimeStamp(post.user.createdAt).suffix}</p> */}
                     { isMyPost && 
                         <div style={{ display: "flex" }}>
                             <p className="delete hover" onClick={() => handleDeleteClick()}>🗑️</p> 
