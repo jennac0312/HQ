@@ -34,7 +34,7 @@ const Search = () => {
         <p className={`${styles.icon} hover`} onClick={() => setSearch("")}>🧹</p>
         <div className="middle">
             <h3>Searching {currentPage}</h3>
-            <textarea type="text" placeholder={`search channel name`} value={search} onChange={(e) => handleChange(e)}/>
+            <textarea type="text" placeholder={`search channel name`} value={search} onChange={(e) => handleChange(e)} autofocus/>
         </div>
         <p className={`${styles.icon} hover`} onClick={handleExit}>✖️</p>
     </div>
