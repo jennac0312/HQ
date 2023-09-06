@@ -64,7 +64,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Loading />} />
           <Route path='/authorize' element={<AuthPage setUser={setUser}/>} />
-          <Route path='/*' element={<AuthPage setUser={setUser}/>} />
+          {/* <Route path='/*' element={<AuthPage setUser={setUser}/>} /> */}
+          <Route path='/*' element={<h1>Off course agent</h1>} />
         </Routes>
       )}
     </main>

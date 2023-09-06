@@ -21,6 +21,7 @@ const AppContextProvider = ( { children } ) => {
 
     const [ hqSearch, setHqSearch ] = useState("")
     const [intelSearch, setIntelSearch] = useState("")
+    const [ rankSearch, setRankSearch ] = useState("")
 
     const [ showEdit, setShowEdit ] = useState(false)
 
@@ -41,8 +42,13 @@ const AppContextProvider = ( { children } ) => {
 
         const hours = norm.getHours(norm)
         const minutes = norm.getMinutes(norm)
+        const suffix = hours >= 11 ? "am" : "pm"
 
-        return {hours, minutes}
+        const day = norm.getDate()
+        const month = norm.getMonth() // um behind by 1?
+        const year = norm.getFullYear()
+
+        return {hours, minutes, suffix, day, month, year}
     }
 
 
@@ -68,6 +74,7 @@ const AppContextProvider = ( { children } ) => {
 
             hqSearch, setHqSearch,
             intelSearch, setIntelSearch,
+            rankSearch, setRankSearch,
 
             pageCategories,
 

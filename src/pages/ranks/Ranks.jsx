@@ -12,7 +12,7 @@ const Ranks = () => {
 
   useEffect(() => {
     updateCurrentPage("ranks")
-  })
+  }, [])
 
   const [ allUsers, setAllUsers ] = useState(null)
   // on load, get all users
@@ -21,7 +21,7 @@ const Ranks = () => {
     const getAllUsers = async () => {
       console.log('getting users')
       const users = await userApi.getAllUsers()
-      const sorted =  users.sort((acc, cur) => cur.rank - acc.rank) // from greatest to least
+      const sorted =  users?.sort((acc, cur) => cur.rank - acc.rank) // from greatest to least
       console.log('SORTED', sorted)
       setAllUsers(sorted)
       // setAllUsers( users )

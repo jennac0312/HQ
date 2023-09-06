@@ -15,8 +15,8 @@ const createPost = async ( req, res ) => {
         })
         console.log(newPost)
     
-        // res.send("post created")
-        res.redirect('/') // doesnt work
+        res.send("post created")
+        // res.redirect('/') // doesnt work
     } catch (error) {
         res.status(500).send(error)
     }
@@ -26,7 +26,7 @@ const getAllPosts = async ( req, res ) => {
 
     try {
         const allPosts = await Post.find({category: "intelligence"})
-        res.setHeader('Content-Type', 'application/json')
+        // res.setHeader('Content-Type', 'application/json') // front end only
         res.send(allPosts)
     } catch (error) {
         res.status(500).send(error)

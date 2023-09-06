@@ -7,7 +7,7 @@ import Post from '../../components/post/Post'
 
 const Intelligence = () => {
 
-  const { updateCurrentPage, intelSearch } = useContext(AppContext)
+  const { updateCurrentPage, intelSearch, count } = useContext(AppContext)
   updateCurrentPage("intelligence")
 
   const [ intelInput, setIntelInput ] = useState("")
@@ -33,7 +33,7 @@ const Intelligence = () => {
     // return() => {
     //   clearInterval()
     // }
-  }, []) // on load get all posts
+  }, [count]) // on load get all posts
 
   const filterAllPosts = () => {
     console.log(intelSearch)

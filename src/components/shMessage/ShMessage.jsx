@@ -8,6 +8,7 @@ const ShMessage = ({ message }) => {
     const { normalizeTimeStamp } = useContext(AppContext)
 
     const time = normalizeTimeStamp(message.createdAt)
+    console.log(time)
 
     const handleDelete = async () => {
         try {
@@ -21,7 +22,7 @@ const ShMessage = ({ message }) => {
     <div className='shMessage'>
         <div className="top">
             <p className="time">
-                {time.hours}:{time.minutes}{ time.hours >= 10 ? 'pm' : 'am' } 
+                {time.hours}:{time.minutes}{time.suffix} 
             </p>
             <p className="delete hover" onClick={handleDelete}>❌</p>
         </div>

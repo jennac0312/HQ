@@ -8,7 +8,7 @@ import * as hq from '../../utilities/hq'
 
 const Post = ({ edit, post }, props) => {
     // only show trash can if post belongs to user
-    const { user, showPopUp, setShowPopUp, currentPost, setCurrentPost, editPostFormData, setEditPostFormData } = useContext(AppContext)
+    const { user, showPopUp, setShowPopUp, currentPost, setCurrentPost, editPostFormData, setEditPostFormData, normalizeTimeStamp } = useContext(AppContext)
     const [ isHover, setIsHover ] = useState(false)
     const isMyPost = post.user._id === user._id
 
@@ -78,7 +78,7 @@ const handleChange = (e) => {
             <div className="right">
                 <div className="top">
                     <p className='username'><span className="italic">agent</span> @{post.user.username}</p>
-                    <p className="date">{post.user.createdAt}</p>
+                    <p className="time">{post.user.createdAt}</p>
                     { isMyPost && 
                         <div style={{ display: "flex" }}>
                             <p className="delete hover" onClick={() => handleDeleteClick()}>🗑️</p> 
