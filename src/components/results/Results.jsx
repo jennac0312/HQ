@@ -1,10 +1,13 @@
 import React from 'react'
 import './results.css'
 
-const Results = () => {
+const Results = ({ quizResults }) => {
+    
+    console.log(quizResults)
   return (
-    <div>
-      RESULTS
+    <div className='resultsContainer'>
+      <div className="right"></div>
+      <div className="wrong"></div>
     </div>
   )
 }

@@ -14,15 +14,9 @@ const Question = ({ question, count, setCount, isEnd, quizResults, setQuizResult
     <div className='questionBox'>
       {/* QUESTION: {question?.question} */}
 
-        {
-            !isEnd ?
-            <h3 className='question'>{question?.question}</h3>
-            :
-            <div className="results">
-                <h3>QUIZ RESULTS</h3>
-                <Results quizResults={quizResults}/>
-            </div>
-        }
+
+        <h3 className='question'>{question?.question}</h3>
+        
 
         {
             !isEnd &&

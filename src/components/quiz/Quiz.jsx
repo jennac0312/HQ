@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import './quiz.css'
 import Question from '../question/Question'
 import { AppContext } from '../../contexts/app_context'
+import Results from '../results/Results'
 
 const Quiz = ({ questions }) => {
 
@@ -25,7 +26,15 @@ const Quiz = ({ questions }) => {
 
   return (
     <div className='quiz'>
-      <h3>{questions[0]?.category} QUIZ</h3>
+        {
+            !isEnd ?
+            <h3>{questions[0]?.category} QUIZ</h3>
+            :
+            <div className="results">
+                <h3>{questions[0]?.category} QUIZ RESULTS</h3>
+                <Results quizResults={quizResults}/>
+            </div>
+        }
       
       {/* questions container */}
       {/* <div className='questionsContainer'>
