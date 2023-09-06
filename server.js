@@ -9,6 +9,7 @@ const app = express();
 
 const hqRoute = require('./routes/hq/hq')
 const intelRoute = require('./routes/intelligence/intelligence')
+const quizRoute = require('./routes/quiz/quiz')
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -28,6 +29,8 @@ app.use('/hq', hqRoute)
 // intelligence
 app.use('/intelligence', intelRoute)
 
+// quiz
+app.use('/quiz', quizRoute)
 // The following "catch all" route (note the *) is necessary
 // to return the index.html on all non-AJAX requests
 app.get('/*', function (req, res) {

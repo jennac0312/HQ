@@ -22,9 +22,10 @@ const AppContextProvider = ( { children } ) => {
     const [ hqSearch, setHqSearch ] = useState("")
     const [intelSearch, setIntelSearch] = useState("")
 
-
-
     const [ showEdit, setShowEdit ] = useState(false)
+
+    // quiz
+    const [ quizQuestions, setQuizQuestions ] = useState([])
 
     const updateCurrentPage = (page) => {
         setCurrentPage(page)
@@ -55,6 +56,8 @@ const AppContextProvider = ( { children } ) => {
             intelSearch, setIntelSearch,
 
             pageCategories,
+
+            quizQuestions, setQuizQuestions,
 
         }}>
             { children }

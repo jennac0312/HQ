@@ -6,6 +6,9 @@ const User = require('../../models/User'); // model
 const users = require("./users/users"); //seed data
 // need ; when immediately invoked function for some reason
 
+const Quiz = require("../../models/Quiz");
+const htmlQuestions = require("./quiz/html");
+
 (
     async function() {
         // USERS
@@ -24,7 +27,13 @@ const users = require("./users/users"); //seed data
         // })
 
         // INTELLIGENCE POSTS
+
+        // QUIZ QUESTIONS
+        await Quiz.deleteMany({})
+        const htmlQs = await Quiz.create(htmlQuestions)
+
         console.log( allUsers )
+        console.log( htmlQs )
         process.exit()
     }
 )()
