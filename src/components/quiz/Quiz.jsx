@@ -14,7 +14,8 @@ const Quiz = ({ questions }) => {
     const [ quizResults, setQuizResults ] = useState({
         correctQuestions: [],
         incorrectQuestions: [],
-        correctNumber: 0
+        correctNumber: 0,
+        incorrectNumber: 0
     })
 
     const checkForEnd = () => {

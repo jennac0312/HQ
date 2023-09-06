@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './results.css'
+import { AppContext } from '../../contexts/app_context'
+import { Link } from 'react-router-dom'
 
 const Results = ({ question, quizResults }) => {
-    
+    const { user } = useContext(AppContext)
+
     console.log(quizResults)
+    const correct = quizResults.correctQuestions.length
+    const incorrect = quizResults.incorrectQuestions.length
+    const totalQuestions = correct + incorrect
+    const score = correct/totalQuestions
+    console.log(score)
+    console.log(totalQuestions)
     return (
+        <>
         <div className='resultsContainer'>
         <div className="right">
             <h3>CORRECT:</h3>
@@ -34,7 +44,37 @@ const Results = ({ question, quizResults }) => {
             })
         }
       </div>
-    </div>
+        </div>
+
+        <div>
+            { 
+                score === 1 && 
+                <>
+                    <h1 className=''>A PERFECT SCORE!</h1>
+                    <h3>Enjoy 10 additional rank points for your hard work agent {user.name.toUpperCase()}!</h3>
+                </>
+            }
+            {
+                score < 1 && score > .49  && 
+                <>
+                    <h1>You scored {score * 100}%</h1>
+                    <h3>Enjoy 2 additional rank points for participation agent {user.name.toUpperCase()}</h3>
+                </>
+            }
+            {
+                score < .5 && 
+                <>
+                    <h1>You scored {score * 100}%</h1>
+                    <h3>Do better agent {user.name.toUpperCase()}. Deducting 10 rank points!</h3>
+                </>
+            }
+            <button>
+                <Link to='/ranks'>
+                    view rank
+                </Link>
+            </button>
+        </div>
+        </>
   )
 }
 

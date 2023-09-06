@@ -9,6 +9,10 @@
     border: 1px solid red;
     width: 40%;
     /* height: fit-content; */
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+    display: none;
 }
 
 .resultsContainer .right div{
@@ -20,4 +24,10 @@
     border: 1px solid purple;
     margin-top: 10px;
     /* height: 150px; */
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
 }

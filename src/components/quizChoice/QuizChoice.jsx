@@ -38,8 +38,8 @@ const QuizChoice = ({ question, choice, count, setCount, quizResults, setQuizRes
             setQuizResults({
                 ...quizResults,
                 incorrectQuestions : incorrects,
-                selected: question.choices[selected]
-
+                selected: question.choices[selected],
+                incorrectNumber: quizResults.incorrectNumber++
             })
             console.log('QUIZ RESULTS',quizResults)
         }
