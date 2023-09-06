@@ -51,7 +51,7 @@ const Intelligence = () => {
 
   return (
     <div>
-        <Header />
+        <Header title="intelligence"/>
         <main>
             <h1>intelligence</h1>
             {

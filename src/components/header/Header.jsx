@@ -3,11 +3,12 @@ import { AppContext } from "../../contexts/app_context";
 import "./header.css";
 import Search from "../search/Search";
 
-const Header = ({ page }) => {
+const Header = ({ page, title }) => {
 
 	const { user, currentPage, showSearch, setShowSearch, showNav, setShowNav, navigate, setShowEdit, showEdit } = useContext(AppContext);
 	const [ searchBurner, setSearchBurner ] = useState("")
 	console.log('currentpage', currentPage)
+	console.log('TITLE', title)
 
 	const handleSearchClick = () => {
 		if( showNav ){
@@ -36,7 +37,7 @@ const Header = ({ page }) => {
 				<p className="hover icon-30" onClick={() => setShowNav(!showNav)}>
 					🗄️
 				</p>
-				<h2 className="title" onClick={() => setShowNav(false)}>{currentPage.toUpperCase()}</h2>
+				<h2 className="title" onClick={() => setShowNav(false)}>{title.toUpperCase()}</h2>
 				<p className="hover icon-30" onClick={ handleSearchClick }>🔍</p>
 			</header>
 		);

@@ -11,7 +11,7 @@ const Missions = () => {
 
   return (
     <div className='missions'>
-      <Header />
+      <Header title="missions"/>
       <main>
         <h1>missions coming soon</h1>
       </main>
