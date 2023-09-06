@@ -10,9 +10,7 @@ export const sendPost = async (post, user) => {
 
 export const getAllPosts = async() => {
     try {
-        const allPosts = await axios.get('/hq', {
-            headers: "application/json"
-        })
+        const allPosts = await axios.get('/hq')
         console.log(allPosts)
         return allPosts.data
     } catch (error) {
