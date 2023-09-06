@@ -15,7 +15,9 @@ const Quiz = ({ questions }) => {
         correctQuestions: [],
         incorrectQuestions: [],
         correctNumber: 0,
-        incorrectNumber: 0
+        incorrectNumber: 0,
+        answers: [],
+        incorrectAnswers: []
     })
 
     const checkForEnd = () => {

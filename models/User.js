@@ -35,7 +35,7 @@ const userSchema = new Schema(
     },
     rankMessage : {
       type: String,
-      default: `I am a loser` 
+      default: `I am a loser. I should probably update my rank message...` 
     },
     image: {
       type: String,

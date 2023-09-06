@@ -42,11 +42,11 @@ const Results = ({ question, quizResults }) => {
         <div className="right">
             <h3>CORRECT:</h3>
             {
-                quizResults.correctQuestions.map((question) => {
+                quizResults.correctQuestions.map((question, index) => {
                     return (
-                        <div>
+                        <div key={index}>
                             <p className='italic bold'>{question.question}</p>
-                            <p className='green'>{quizResults.selected}</p>
+                            <p className='green'>{question.choices[question.correctIndex]}</p>
                         </div>
                     )
                 })
@@ -55,13 +55,13 @@ const Results = ({ question, quizResults }) => {
       <div className="wrong">
         <h3>INCORRECT:</h3>
         {
-            quizResults.incorrectQuestions.map((question) => {
+            quizResults.incorrectQuestions.map((question, index) => {
                 const correctAnswer = question.choices[question.correctIndex]
                 return (
-                    <div>
+                    <div key={index}>
                         <p className='italic bold'>{question.question}</p>
+                        <p className="red">{quizResults.incorrectAnswers[index]}</p>
                         <p className='green'>{correctAnswer}</p>
-                        <p className="red">{quizResults.selected}</p>
                     </div>
                 )
             })

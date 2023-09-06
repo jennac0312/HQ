@@ -29,7 +29,8 @@ const QuizChoice = ({ question, choice, count, setCount, quizResults, setQuizRes
                 ...quizResults,
                 correctQuestions : corrects,
                 correctNumber: quizResults.correctNumber++,
-                selected: question.choices[selected]
+                selected: question.choices[selected],
+                answers: [...quizResults.answers, question.choices[selected]]
             })
             console.log('QUIZ RESULTS',quizResults)
         } else {
@@ -39,7 +40,9 @@ const QuizChoice = ({ question, choice, count, setCount, quizResults, setQuizRes
                 ...quizResults,
                 incorrectQuestions : incorrects,
                 selected: question.choices[selected],
-                incorrectNumber: quizResults.incorrectNumber++
+                incorrectNumber: quizResults.incorrectNumber++,
+                answers: [...quizResults.answers, question.choices[selected]],
+                incorrectAnswers: [...quizResults.incorrectAnswers, question.choices[selected]]
             })
             console.log('QUIZ RESULTS',quizResults)
         }

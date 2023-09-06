@@ -13,7 +13,8 @@ export const getAllQuestions = async() => {
 
 export const updatePoints = async (user, adjustment) => {
     try {
-        await axios.put('/quiz', {user, adjustment})
+        const updated = await axios.put('/quiz', {user, adjustment})
+        console.log(updated)
     } catch (error) {
         console.error(error)
     }
