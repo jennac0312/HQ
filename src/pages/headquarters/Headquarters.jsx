@@ -7,7 +7,7 @@ import Post from '../../components/post/Post'
 import EditPost from '../../components/editPost/EditPost'
 
 const Headquarters = () => {
-  const { updateCurrentPage, hqSearch, setHqSearch, showPostEdit, currentPost } = useContext(AppContext)
+  const { updateCurrentPage, hqSearch, setHqSearch, showPostEdit, currentPost, count } = useContext(AppContext)
 
   updateCurrentPage("headquarters") //dont know why i did it like this but okay... oh maybe to stop infinite loop.. but i could have just used a useffect
 
@@ -15,7 +15,7 @@ const Headquarters = () => {
   const [ allPosts, setAllPosts ] = useState([])
   const [ filteredPosts, setFilteredPosts ] = useState(allPosts)
   
-  const [ count, setCount ] = useState(0) // for refresh
+  // const [ count, setCount ] = useState(0) // for refresh
 
   useEffect(() => { // "destroy is not a function call"
     const getPosts = async () => {
@@ -26,7 +26,7 @@ const Headquarters = () => {
       } catch (error) {
         console.error(error)
       }
-      setCount(count + 1) //refresh
+      // setCount(count + 1) //refresh
     }
 
     // interval to get updates from db every 5 seconds. not sure if this is a good idea
@@ -36,7 +36,7 @@ const Headquarters = () => {
     // return() => {
     //   clearInterval()
     // }
-  }, []) // on load get all posts
+  }, [count]) // on load get all posts
 
   const filterAllPosts = () => {
     console.log(hqSearch)

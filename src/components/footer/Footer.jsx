@@ -7,7 +7,7 @@ import * as sh from '../../utilities/safehouse'
 
 const Footer = ({ input, setInput }) => {
 
-    const { user, setShowNav, currentPage } = useContext( AppContext )
+    const { user, setShowNav, currentPage, setCount } = useContext( AppContext )
 
     const handleChange = (e) => {
       setInput(() => e.target.value)
@@ -25,12 +25,15 @@ const Footer = ({ input, setInput }) => {
       
       if(currentPage === "headquarters"){
         res = await hq.sendPost(input, user)
+        setCount(prev => prev + 1)
       }
       if(currentPage === "intelligence"){
         res = await intel.sendPost(input, user)
+        setCount(prev => prev + 1)
       }
       if(currentPage === "safehouse"){
         res = await sh.sendMessage(input, user)
+        setCount(prev => prev + 1)
       }
       console.log(res)
 

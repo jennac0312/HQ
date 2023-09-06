@@ -29,6 +29,9 @@ const AppContextProvider = ( { children } ) => {
     const [ quizCount, setQuizCount ] = useState(0)
     const [ quizCategory, setQuizCategory ] = useState("")
 
+
+    const [ count, setCount ] = useState(0)
+
     const updateCurrentPage = (page) => {
         setCurrentPage(page)
     }
@@ -73,6 +76,8 @@ const AppContextProvider = ( { children } ) => {
             quizCategory, setQuizCategory,
 
             normalizeTimeStamp,
+
+            count, setCount,
 
         }}>
             { children }
