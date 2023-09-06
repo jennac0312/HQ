@@ -21,7 +21,7 @@ export const getAllPosts = async() => {
 }
 
 
-
+// delete with body
 // export const deletePost = async (post) => {
 //     try {
 //         console.log(post)

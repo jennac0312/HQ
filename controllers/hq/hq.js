@@ -62,7 +62,7 @@ const updatePost = async ( req, res ) => {
 // using params
 const deletePost = async ( req, res ) => {
     try {
-        console.log('REQ BODY',req.body) // empty
+        // console.log('REQ BODY',req.body) // empty
         const deletedPost = await Post.findByIdAndDelete(req.params.id)
         res.send(deletedPost)
     } catch (error) {
