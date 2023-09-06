@@ -29,7 +29,7 @@ const getAllPosts = async ( req, res ) => {
     // await res.send("getting all posts")
 
     try {
-        const allPosts = await Post.find({})
+        const allPosts = await Post.find({category: "headquarters"})
         res.send(allPosts)
     } catch (error) {
         res.status(500).send(error)

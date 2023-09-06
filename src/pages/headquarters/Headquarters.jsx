@@ -8,7 +8,8 @@ import EditPost from '../../components/editPost/EditPost'
 
 const Headquarters = () => {
   const { updateCurrentPage, hqSearch, setHqSearch, showPostEdit, currentPost } = useContext(AppContext)
-  updateCurrentPage("headquarters")
+
+  updateCurrentPage("headquarters") //dont know why i did it like this but okay... oh maybe to stop infinite loop.. but i could have just used a useffect
 
   const [ hqInput, setHqInput ] = useState("")
   const [ allPosts, setAllPosts ] = useState([])

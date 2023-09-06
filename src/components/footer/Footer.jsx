@@ -2,10 +2,11 @@ import React, { useContext } from 'react'
 import './footer.css'
 import { AppContext } from '../../contexts/app_context'
 import * as hq from '../../utilities/hq'
+import * as intel from '../../utilities/intelligence'
 
 const Footer = ({ input, setInput }) => {
 
-    const { user, setShowNav } = useContext( AppContext )
+    const { user, setShowNav, currentPage } = useContext( AppContext )
 
     const handleChange = (e) => {
       setInput(() => e.target.value)
@@ -18,7 +19,15 @@ const Footer = ({ input, setInput }) => {
       // send user to hq posts
       console.log( input )
       console.log( user )
-      const res = await hq.sendPost(input, user)
+
+      let res 
+      
+      if(currentPage === "headquarters"){
+        res = await hq.sendPost(input, user)
+      }
+      if(currentPage === "intelligence"){
+        res = await intel.sendPost(input, user)
+      }
       console.log(res)
 
       setInput('')

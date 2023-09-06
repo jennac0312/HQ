@@ -20,6 +20,7 @@ const AppContextProvider = ( { children } ) => {
     const [ editPostFormData, setEditPostFormData ] = useState({})
 
     const [ hqSearch, setHqSearch ] = useState("")
+    const [intelSearch, setIntelSearch] = useState("")
 
 
 
@@ -49,7 +50,9 @@ const AppContextProvider = ( { children } ) => {
             currentPost, setCurrentPost,
             editPostFormData, setEditPostFormData,
 
+
             hqSearch, setHqSearch,
+            intelSearch, setIntelSearch,
 
             pageCategories,
 
