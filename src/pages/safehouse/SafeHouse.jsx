@@ -7,7 +7,7 @@ import ShMessage from '../../components/shMessage/ShMessage'
 
 const SafeHouse = () => {
 
-  const { user, updateCurrentPage } = useContext(AppContext)
+  const { user, updateCurrentPage, count } = useContext(AppContext)
   updateCurrentPage("safehouse")
 
   const [ shInput, setShInput ] = useState("")
@@ -27,7 +27,7 @@ const SafeHouse = () => {
     }
 
     getAllMessages()
-  }, [])
+  }, [count])
 
   return (
     <div>
