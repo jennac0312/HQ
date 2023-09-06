@@ -32,7 +32,7 @@ const Quiz = ({ questions }) => {
             :
             <div className="results">
                 <h3>{questions[0]?.category} QUIZ RESULTS</h3>
-                <Results quizResults={quizResults}/>
+                <Results question={questions[count]} quizResults={quizResults}/>
             </div>
         }
       

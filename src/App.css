@@ -78,3 +78,15 @@ main {
 ::-webkit-scrollbar{
   /* display: none; */
 }
+
+.red {
+  color: crimson
+}
+
+.green {
+  color: green;
+}
+
+.bold {
+  font-weight: bold;
+}

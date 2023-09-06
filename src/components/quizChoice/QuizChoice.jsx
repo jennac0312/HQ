@@ -28,7 +28,8 @@ const QuizChoice = ({ question, choice, count, setCount, quizResults, setQuizRes
             setQuizResults({
                 ...quizResults,
                 correctQuestions : corrects,
-                correctNumber: quizResults.correctNumber++
+                correctNumber: quizResults.correctNumber++,
+                selected: question.choices[selected]
             })
             console.log('QUIZ RESULTS',quizResults)
         } else {
@@ -36,7 +37,9 @@ const QuizChoice = ({ question, choice, count, setCount, quizResults, setQuizRes
             incorrects.push(question)
             setQuizResults({
                 ...quizResults,
-                incorrectQuestions : incorrects
+                incorrectQuestions : incorrects,
+                selected: question.choices[selected]
+
             })
             console.log('QUIZ RESULTS',quizResults)
         }

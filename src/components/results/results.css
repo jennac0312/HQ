@@ -1,0 +1,23 @@
+.resultsContainer {
+    border: 1px solid lime;
+    display: flex;
+    justify-content: space-around;
+    height: 600px;
+}
+
+.resultsContainer > * {
+    border: 1px solid red;
+    width: 40%;
+    /* height: fit-content; */
+}
+
+.resultsContainer .right div{
+    border: 1px solid purple;
+    margin-top: 10px;
+    /* height: 150px; */
+}
+.resultsContainer .wrong div{
+    border: 1px solid purple;
+    margin-top: 10px;
+    /* height: 150px; */
+}
