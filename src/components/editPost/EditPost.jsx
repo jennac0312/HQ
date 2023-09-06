@@ -7,7 +7,7 @@ import * as hq from '../../utilities/hq'
 const EditPost = ({ setShowPostEdit, post, formData }) => {
     // console.log(setShowPostEdit)
     // console.log(post)
-    const { currentPost, editPostFormData } = useContext(AppContext)
+    const { currentPost, editPostFormData, setCount } = useContext(AppContext)
 
     // const {showPostEdit, setShowPostEdit} = useContext(AppContext)
     useEffect(() => {
@@ -20,6 +20,7 @@ const EditPost = ({ setShowPostEdit, post, formData }) => {
         const updatedPost = await hq.updatePost(editPostFormData)
         console.log(updatedPost)
         setShowPostEdit(false)
+        setCount(prev => prev + 1)
     }
 
     const handleExit = () => {
