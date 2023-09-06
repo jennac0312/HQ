@@ -10,6 +10,32 @@ const createNote = async (req, res) => {
         res.status(500).send(error)
     }
 }
+
+const getNotes = async (req, res) => {
+    try {
+        const { id } = req.params
+        console.log('ID', id)
+        const allNotes = await Note.find({})
+        console.log(allNotes)
+
+        const filtered = filterNotes(allNotes, id)
+        console.log(filtered)
+        res.send(filtered)
+
+    } catch (error) {
+        res.status(500).send(error)
+    }
+}
+
+const filterNotes = (what, id) => {
+    const filtered = what.filter((each) => {
+        return each.user._id === id
+    })
+
+    return filtered
+}
+
 module.exports = {
-    createNote
+    createNote,
+    getNotes,
 }

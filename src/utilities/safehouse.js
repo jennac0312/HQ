@@ -12,3 +12,12 @@ export const sendPost = async (note, user) => {
         console.error(error)
     }
 }
+
+export const getAllMessages = async (user) => {
+    try {
+        const res = await axios.get(`/safehouse/${user._id}`)
+        console.log(res.data)
+    } catch (error) {
+        console.error(error)
+    }
+}
