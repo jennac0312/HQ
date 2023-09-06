@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './quiz.css'
 import Question from '../question/Question'
 import { AppContext } from '../../contexts/app_context'
@@ -9,6 +9,19 @@ const Quiz = ({ questions }) => {
     console.log(questions)
 
     const [ count, setCount ] = useState(0)
+    const [ isEnd, setIsEnd ] = useState(false)
+    const [ quizResults, setQuizResults ] = useState({
+        correctQuestions: [],
+        incorrectQuestions: [],
+        correctNumber: 0
+    })
+
+    const checkForEnd = () => {
+        if( questions.length === count ) setIsEnd(true)
+        console.log('QUIZ IS END:', isEnd)
+    }
+
+    useEffect(() => { checkForEnd() }, [count])
 
   return (
     <div className='quiz'>
@@ -24,7 +37,7 @@ const Quiz = ({ questions }) => {
       </div> */}
       { // only show is questions exist
         questions &&
-        <Question question={questions[count]} count={count} setCount={setCount}/>
+        <Question question={questions[count]} count={count} setCount={setCount} isEnd={isEnd} quizResults={quizResults} setQuizResults={setQuizResults}/>
       }
     </div>
   )

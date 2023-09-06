@@ -2,15 +2,56 @@ import React, { useContext } from 'react'
 import './quizChoice.css'
 import { AppContext } from '../../contexts/app_context'
 
-const QuizChoice = ({ choice, count, setCount }) => {
+const QuizChoice = ({ question, choice, count, setCount, quizResults, setQuizResults}) => {
 
     // const { quizCount, setQuizCount } = useContext(AppContext)
+    
+    const handleClick = (e) => {
+        const clickedAnswer = e.target.innerText
+        console.log(clickedAnswer)
+        const indexOfClickedAnswer = question.choices.indexOf(e.target.innerText)
+        console.log(indexOfClickedAnswer)
+        console.log(question.correctIndex)
+
+        checkAnswer(indexOfClickedAnswer, question.correctIndex)
+        goToNextQuestion()
+    }
+    // correctQuestions: [],
+    // incorrectQuestions: [],
+    // correctNumber: 0
+    const corrects = [...quizResults.correctQuestions] // shallow copy
+    const incorrects = [...quizResults.incorrectQuestions] // shallow copy
+    const checkAnswer = (selected, correct) => {
+        if( selected === correct ){
+            console.log('correct!', question)
+            corrects.push(question)
+            setQuizResults({
+                ...quizResults,
+                correctQuestions : corrects,
+                correctNumber: quizResults.correctNumber++
+            })
+            console.log('QUIZ RESULTS',quizResults)
+        } else {
+            console.log('wrong!')
+            incorrects.push(question)
+            setQuizResults({
+                ...quizResults,
+                incorrectQuestions : incorrects
+            })
+            console.log('QUIZ RESULTS',quizResults)
+        }
+    }
+
+    const goToNextQuestion = () => {
+        setCount(prev => prev + 1)
+    }
 
   return (
-    <div className='choice' onClick={() => setCount((prev) => prev + 1)}>
-        <p>{choice}</p>
-      {/* answers: {choice} */}
+    <div className='choice' >
+        <p onClick={(e) => handleClick(e)}>{choice}</p>
+        {/* answers: {choice} */}
     </div>
+
   )
 }
 
