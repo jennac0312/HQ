@@ -1,7 +1,10 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { signUp } from '../../utilities/users-service';
+import { AppContext } from '../../contexts/app_context';
 
 export default function SignUpForm({ setUser }) {
+
+  const { navigate } = useContext(AppContext)
   const [formData, setFormData] = useState({
     name: '',
     username: '',
@@ -33,6 +36,7 @@ export default function SignUpForm({ setUser }) {
 
       const user = await signUp(newFormData);
       setUser(user);
+      navigate('/')
     } catch (err) {
       // An error occurred
       setFormData({ ...formData, error: 'Sign Up Failed - Try Again' });
