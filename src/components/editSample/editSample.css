@@ -15,6 +15,7 @@
 .sampleEdit > * {
     border: 1px solid pink;
     margin: 10px;
+    padding: 5px;
 }
 
 .sampleEdit .avi {

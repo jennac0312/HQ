@@ -13,6 +13,8 @@ const Post = ({ edit, post }, props) => {
     const isMyPost = post.user._id === user._id
 
     const [ showPostEdit, setShowPostEdit  ] = useState(false)
+    const time = normalizeTimeStamp(post.user.createdAt)
+    console.log(time)
     // setCurrentPost(useRef(post))
     // console.log(currentPost)
 
@@ -78,7 +80,7 @@ const handleChange = (e) => {
             <div className="right">
                 <div className="top">
                     <p className='username'><span className="italic">agent</span> @{post.user.username}</p>
-                    <p className="time">{post.user.createdAt}</p>
+                    <p className="time">{time.hours}:{time.minutes}{time.suffix}</p>
                     { isMyPost && 
                         <div style={{ display: "flex" }}>
                             <p className="delete hover" onClick={() => handleDeleteClick()}>🗑️</p> 

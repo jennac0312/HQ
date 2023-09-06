@@ -41,7 +41,8 @@ const AppContextProvider = ( { children } ) => {
         const norm = new Date(time)
 
         const hours = norm.getHours(norm)
-        const minutes = norm.getMinutes(norm)
+        let minutes = norm.getMinutes(norm)
+        minutes = minutes >= 10 ? minutes : '0'.concat(minutes)
         const suffix = hours >= 11 ? "am" : "pm"
 
         const day = norm.getDate()

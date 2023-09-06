@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../../contexts/app_context'
 import Header from '../../components/header/Header'
 import * as usersApi from '../../utilities/users-api'
@@ -10,7 +10,7 @@ const Edit = () => {
     const { user, setUser, navigate } = useContext(AppContext)
     // console.log(user)
 
-    const [ formData, setFormData ] = useState({})
+    const [ formData, setFormData ] = useState({...user}) // to keep previous if input left empty
     const handleChange = (e) => {
         setFormData({
             ...formData,
