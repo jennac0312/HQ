@@ -3,6 +3,7 @@ import './footer.css'
 import { AppContext } from '../../contexts/app_context'
 import * as hq from '../../utilities/hq'
 import * as intel from '../../utilities/intelligence'
+import * as sh from '../../utilities/safehouse'
 
 const Footer = ({ input, setInput }) => {
 
@@ -27,6 +28,9 @@ const Footer = ({ input, setInput }) => {
       }
       if(currentPage === "intelligence"){
         res = await intel.sendPost(input, user)
+      }
+      if(currentPage === "safehouse"){
+        res = await sh.sendPost(input, user)
       }
       console.log(res)
 

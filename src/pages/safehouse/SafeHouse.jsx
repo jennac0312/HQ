@@ -5,7 +5,9 @@ import { AppContext } from '../../contexts/app_context'
 
 const SafeHouse = () => {
 
-  const { user } = useContext(AppContext)
+  const { user, updateCurrentPage } = useContext(AppContext)
+  updateCurrentPage("safehouse")
+
   const [ shInput, setShInput ] = useState("")
 
   console.log('SAFE HOUSE USER',user)
