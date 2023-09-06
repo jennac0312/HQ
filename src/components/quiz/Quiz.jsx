@@ -7,7 +7,7 @@ import Results from '../results/Results'
 const Quiz = ({ questions }) => {
 
     // const [ quizCount, setQuizCount ] = useContext(AppContext)
-    console.log(questions)
+    console.log('QUIZ QUESTIONS',questions)
 
     const [ count, setCount ] = useState(0)
     const [ isEnd, setIsEnd ] = useState(false)

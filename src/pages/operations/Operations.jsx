@@ -8,10 +8,11 @@ import Quiz from '../../components/quiz/Quiz'
 
 const Operations = () => {
 
-  const { updateCurrentPage, quizQuestions, setQuizQuestions } = useContext(AppContext)
+  const { updateCurrentPage, quizQuestions, setQuizQuestions, quizCategory, setQuizCategory } = useContext(AppContext)
   updateCurrentPage("operations")
   
-  const [ currentCategory, setCurrentCategory ] = useState("")
+  // const [ currentCategory, setCurrentCategory ] = useState(null)
+  const [ filteredQuestions, setFilteredQuestions ] = useState([])
 
   useEffect(() => {
     // setCurrentCategory("")
@@ -25,12 +26,13 @@ const Operations = () => {
     getAllQuestions()
 
     return() => {
-      setCurrentCategory("")
+      // setCurrentCategory("")
     }
-  }, [])
+  }, [quizCategory])
 
   const filterAllQuestions = (by) => {
-    if(!currentCategory) return 
+    console.log('FILTER BY',by)
+    if(!quizCategory) return 
     const filtered = quizQuestions.filter((question) => { 
       // question.category.includes(by) 
       // console.log(question.category.includes(by))
@@ -39,11 +41,15 @@ const Operations = () => {
 
     console.log(filtered)
     setQuizQuestions(filtered)
+    console.log('QUIZ QUESTIONS',filtered)
+    console.log('QUIZ QUESTIONS',quizQuestions)
+
+    setFilteredQuestions(filtered)
   }
 
   useEffect(() => {
-    filterAllQuestions(currentCategory)
-  }, [currentCategory])
+    filterAllQuestions(quizCategory)
+  }, [quizCategory])
 
 
   return (
@@ -53,14 +59,14 @@ const Operations = () => {
         <h1>operation get a job</h1>
         <h4>choose a topic, answer some questions</h4>
         <div className="tabs">
-          <p className="hover" onClick={() => setCurrentCategory("HTML")}>HTML</p>
-          <p className="hover" onClick={() => setCurrentCategory("CSS")}>CSS</p>
-          <p className="hover" onClick={() => setCurrentCategory("JS")}>JS</p>
-          <p className="hover" onClick={() => setCurrentCategory("REACT")}>REACT</p>
+          <p className="hover" onClick={() => setQuizCategory("HTML")}>HTML</p>
+          <p className="hover" onClick={() => setQuizCategory("CSS")}>CSS</p>
+          <p className="hover" onClick={() => setQuizCategory("JavaScript")}>JS</p>
+          <p className="hover" onClick={() => setQuizCategory("React")}>REACT</p>
         </div>
         {
-          currentCategory &&
-          <Quiz questions={quizQuestions}/>
+          quizCategory &&
+          <Quiz questions={filteredQuestions}/>
         }
       </main>
       {/* <Footer /> */}

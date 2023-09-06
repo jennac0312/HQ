@@ -27,6 +27,7 @@ const AppContextProvider = ( { children } ) => {
     // quiz
     const [ quizQuestions, setQuizQuestions ] = useState([])
     const [ quizCount, setQuizCount ] = useState(0)
+    const [ quizCategory, setQuizCategory ] = useState("")
 
     const updateCurrentPage = (page) => {
         setCurrentPage(page)
@@ -69,6 +70,7 @@ const AppContextProvider = ( { children } ) => {
 
             quizQuestions, setQuizQuestions,
             quizCount, setQuizCount,
+            quizCategory, setQuizCategory,
 
             normalizeTimeStamp,
 

@@ -53,7 +53,7 @@ const QuizChoice = ({ question, choice, count, setCount, quizResults, setQuizRes
     }
 
   return (
-    <div className='choice' >
+    <div className='choice hover' >
         <p onClick={(e) => handleClick(e)}>{choice}</p>
         {/* answers: {choice} */}
     </div>
