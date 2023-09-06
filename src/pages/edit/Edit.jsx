@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom'
 
 const Edit = () => {
 
-    const { user, navigate } = useContext(AppContext)
+    const { user, setUser, navigate } = useContext(AppContext)
     // console.log(user)
 
     const [ formData, setFormData ] = useState({})
@@ -24,6 +24,8 @@ const Edit = () => {
         const previousUser = user
         const updatedUser = await usersApi.updateUser(previousUser, formData)
         console.log(updatedUser)
+        setUser(updatedUser)
+        console.log('UPDATED IN EDIT',user)
         // console.log(URL)
     }
     

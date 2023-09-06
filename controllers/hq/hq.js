@@ -14,6 +14,7 @@ const createPost = async ( req, res ) => {
         // const userObject = await User.findById(user)
         const newPost = await Post.create({
             user, 
+            // user: user._id, // trying to ref...
             content: post,
             category: 'headquarters'
         })

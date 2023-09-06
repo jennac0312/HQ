@@ -10,9 +10,7 @@ export const sendPost = async (post, user) => {
 
 export const getAllPosts = async() => {
     try {
-        const allPosts = await axios.get('/intelligence', {
-            headers: "application/json"
-        })
+        const allPosts = await axios.get('/intelligence')
         console.log('ALL INTELLIGENCE POSTS', allPosts.data)
         return allPosts.data
     } catch (error) {

@@ -22,6 +22,8 @@ const Search = () => {
         console.log('exit search')
         setShowSearch(false) // hide
         // do i want to clear previous search ?
+        setHqSearch("")
+        setIntelSearch("")
     }
 
     useEffect(() => {
