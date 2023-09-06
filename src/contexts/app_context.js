@@ -45,7 +45,7 @@ const AppContextProvider = ( { children } ) => {
         const suffix = hours >= 11 ? "am" : "pm"
 
         const day = norm.getDate()
-        const month = norm.getMonth() // um behind by 1?
+        const month = norm.getMonth() + 1 // um behind by 1?
         const year = norm.getFullYear()
 
         return {hours, minutes, suffix, day, month, year}
