@@ -1,7 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './results.css'
 import { AppContext } from '../../contexts/app_context'
-import { Link } from 'react-router-dom'
+import { Link, useSearchParams } from 'react-router-dom'
+import * as quiz from '../../utilities/quiz'
 
 const Results = ({ question, quizResults }) => {
     const { user } = useContext(AppContext)
@@ -13,6 +14,28 @@ const Results = ({ question, quizResults }) => {
     const score = correct/totalQuestions
     console.log(score)
     console.log(totalQuestions)
+
+    const [ adjustment, setAdjustment ] = useState(0)
+
+    const checkScore = () => {
+        if(score === 1) setAdjustment(20)
+        if(score < 1 && score > .49) setAdjustment(2)
+        if(score < .5) setAdjustment(-10)
+    }
+
+    useEffect(() => {
+        checkScore()
+        const adjustRankPoints = async () => {
+            try {
+                await quiz.updatePoints(user, adjustment)
+            } catch (error) {
+                console.error(error)
+            }
+        }
+
+        adjustRankPoints()
+    }, [adjustment])
+
     return (
         <>
         <div className='resultsContainer'>

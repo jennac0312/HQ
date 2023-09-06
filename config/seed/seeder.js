@@ -12,7 +12,7 @@ const htmlQuestions = require("./quiz/html");
 (
     async function() {
         // USERS
-        await User.deleteMany({}) //delete all users
+        // await User.deleteMany({}) //delete all users
         const allUsers = await User.create(users)
 
         // User.insertMany(users)

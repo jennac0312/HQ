@@ -10,3 +10,11 @@ export const getAllQuestions = async() => {
         console.error(error)
     }
 }
+
+export const updatePoints = async (user, adjustment) => {
+    try {
+        await axios.put('/quiz', {user, adjustment})
+    } catch (error) {
+        console.error(error)
+    }
+}
