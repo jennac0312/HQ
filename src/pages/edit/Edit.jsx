@@ -3,6 +3,7 @@ import { AppContext } from '../../contexts/app_context'
 import Header from '../../components/header/Header'
 import * as usersApi from '../../utilities/users-api'
 import { useLocation } from 'react-router-dom'
+import EditSample from '../../components/editSample/EditSample'
 
 const Edit = () => {
 
@@ -55,6 +56,8 @@ const Edit = () => {
             </div>
 
         </form>
+
+        <EditSample formData={formData}/>
 
     </div>
   )

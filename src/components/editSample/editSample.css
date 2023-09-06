@@ -1,0 +1,30 @@
+.title {
+    margin-top: 200px;
+}
+
+.sampleEdit {
+    border: 1px solid orange;
+    /* width: 450px; */
+    width: fit-content;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sampleEdit > * {
+    border: 1px solid pink;
+    margin: 10px;
+}
+
+.sampleEdit .avi {
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 200px;
+}
+
+.sampleEdit .right p{
+    display: flex;
+    align-items: center;
+    max-width: 200px;
+}
