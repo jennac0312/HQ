@@ -26,6 +26,7 @@ const AppContextProvider = ( { children } ) => {
 
     // quiz
     const [ quizQuestions, setQuizQuestions ] = useState([])
+    const [ quizCount, setQuizCount ] = useState(0)
 
     const updateCurrentPage = (page) => {
         setCurrentPage(page)
@@ -58,6 +59,7 @@ const AppContextProvider = ( { children } ) => {
             pageCategories,
 
             quizQuestions, setQuizQuestions,
+            quizCount, setQuizCount,
 
         }}>
             { children }

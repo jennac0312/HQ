@@ -1,0 +1,9 @@
+.quiz {
+    margin: 50px;
+    border: 1px solid yellow;
+}
+
+.questionsContainer {
+    border: 1px solid lime;
+    display: flex;
+}

@@ -1,0 +1,14 @@
+.choice {
+    border: 1px solid lime;
+    width: 250px;
+    height: 250px;
+
+    background-color: gray;
+}
+
+.choice p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+}

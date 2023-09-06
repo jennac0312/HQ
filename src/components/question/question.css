@@ -1,0 +1,9 @@
+.choices {
+    border: 1px solid hotpink;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    align-content: space-around;
+}
