@@ -7,7 +7,7 @@ import Post from '../../components/post/Post'
 import EditPost from '../../components/editPost/EditPost'
 
 const Headquarters = () => {
-  const { updateCurrentPage, hqSearch, setHqSearch, showPostEdit, currentPost, count } = useContext(AppContext)
+  const { updateCurrentPage, hqSearch, setHqSearch, showPostEdit, currentPost, count, normalizeTimeStamp } = useContext(AppContext)
 
   updateCurrentPage("headquarters") //dont know why i did it like this but okay... oh maybe to stop infinite loop.. but i could have just used a useffect
 
@@ -74,11 +74,11 @@ const Headquarters = () => {
             {
               hqSearch !== "" ? // if search not empty
               filteredPosts?.map((post, index) => {
-                return <Post key={index} post={post}/>
+                return <Post key={index} post={post} time={normalizeTimeStamp(post.user.createdAt)}/>
               })
               :
               allPosts?.map((post, index) => {
-                return <Post key={index} post={post}/>
+                return <Post key={index} post={post} time={normalizeTimeStamp(post.user.createdAt)}/>
               })
             }
         </main>

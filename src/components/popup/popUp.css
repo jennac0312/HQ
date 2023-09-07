@@ -18,9 +18,9 @@
     background-color: #12130F;
     z-index: 20;
     /*  offset x, y, blur, spread */
-    box-shadow: -2px 3px 10px 10px rgba(255, 0, 0, 0.171);
+    /* box-shadow: -2px 3px 10px 10px rgba(255, 0, 0, 0.171); */
     /* box-shadow: -2px 3px 10px 10px #190933; */
-    box-shadow: -2px 3px 20px 10px whitesmoke;
+    /* box-shadow: -2px 3px 20px 10px whitesmoke; */
     box-shadow: -2px 3px 30px 15px rgba(255, 0, 0, 0.171);
 }
 
@@ -64,5 +64,5 @@
     letter-spacing: 1.5px;
 }
 .popUp button:hover {
-    background-color: rgba(0, 0, 0, 0.507);
+    background-color: rgb(56, 55, 55);
 }

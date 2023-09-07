@@ -7,7 +7,7 @@ import Post from '../../components/post/Post'
 
 const Intelligence = () => {
 
-  const { updateCurrentPage, intelSearch, count } = useContext(AppContext)
+  const { updateCurrentPage, intelSearch, count, normalizeTimeStamp } = useContext(AppContext)
   updateCurrentPage("intelligence")
 
   const [ intelInput, setIntelInput ] = useState("")
@@ -57,11 +57,11 @@ const Intelligence = () => {
             {
               intelSearch !== "" ?
               filteredPosts.map((post, index) => {
-                return <Post key={index} post={post}/>
+                return <Post key={index} post={post} time={normalizeTimeStamp(post.user.createdAt)}/>
               })
               :
               allPosts?.map((post, index) => {
-                return <Post key={index} post={post}/>
+                return <Post key={index} post={post} time={normalizeTimeStamp(post.user.createdAt)}/>
               })
             }
         </main>

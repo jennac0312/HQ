@@ -7,7 +7,7 @@ import * as hq from '../../utilities/hq'
 const EditPost = ({ setShowPostEdit, post, formData }) => {
     // console.log(setShowPostEdit)
     // console.log(post)
-    const { currentPost, editPostFormData, setCount } = useContext(AppContext)
+    const { currentPost, editPostFormData, setCount, normalizeTimeStamp } = useContext(AppContext)
 
     // const {showPostEdit, setShowPostEdit} = useContext(AppContext)
     useEffect(() => {
@@ -32,19 +32,11 @@ const EditPost = ({ setShowPostEdit, post, formData }) => {
 
   return (
     <div className='editPopUp'>
-        <p onClick={() => setShowPostEdit(false)}>TEST</p>
-        <div className="">
-            <p className='exitEdit hover icon-30' onClick={() => handleExit()}>back ❌</p>
-            <p className="confirm hover icon-30" onClick={handleSubmit}>save ✅</p>
+        <Post edit={true} post={post} time={normalizeTimeStamp(post.user.createdAt)}/>
+        <div className="buttons">
+            <button className="yes" onClick={() => handleExit()}>SAVE</button>
+            <button className="no" onClick={handleSubmit}>CANCEL</button>
         </div>
-      {/* <form action="">
-        <div>
-            <label htmlFor=""></label>
-            <input type="text" value={post.content || ""}/>
-        </div>
-      </form> */}
-        <Post edit={true} post={post}/>
-
     </div>
   )
 }

@@ -6,15 +6,15 @@ import EditPost from '../editPost/EditPost'
 // import Reaction from '../reaction/Reaction'
 import * as hq from '../../utilities/hq'
 
-const Post = ({ edit, post }, props) => {
+const Post = ({ edit, post, time }, props) => {
     // only show trash can if post belongs to user
     const { user, showPopUp, setShowPopUp, currentPost, setCurrentPost, editPostFormData, setEditPostFormData, normalizeTimeStamp } = useContext(AppContext)
     const [ isHover, setIsHover ] = useState(false)
     const isMyPost = post.user._id === user._id
 
     const [ showPostEdit, setShowPostEdit  ] = useState(false)
-    const time = normalizeTimeStamp(post.user.createdAt)
-    console.log(time)
+    // const time = normalizeTimeStamp(post.user.createdAt)
+    // console.log(time)
     // setCurrentPost(useRef(post))
     // console.log(currentPost)
 

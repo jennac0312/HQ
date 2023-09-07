@@ -1,14 +1,27 @@
 .editPopUp {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: absolute;
-    background-color: rgb(12, 177, 149);
+    /* background-color: rgb(12, 177, 149); */
+    background-color: #12130F;
+    width: fit-content;
+    height: fit-content;
     z-index: 20;
-    top: 0;
-    left: 20px;
+    top: 50%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 700px;
+    border: 5px solid #7C162E;
+    /*  offset x, y, blur, spread */
+    box-shadow: -2px 5px 20px 15px rgba(255, 0, 0, 0.438);
+    /* box-shadow: -2px 3px 30px 15px rgba(255, 0, 0, 0.171); */
+
+    z-index: 20;
 }
 
 .editPost {
-
+    width: 600px !important;
 }
 
 .editPost input {
@@ -19,4 +32,18 @@
 .editPost textarea {
     width: 90%;
     margin: 0 10px;
+}
+
+.editPopUp button {
+    cursor: pointer;
+    width: 100px;
+    background-color: #66412d;
+    background-color: black;
+    border: 2px solid rgba(245, 245, 245, 0.781);
+    color: whitesmoke;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+.editPopUp button:hover {
+    background-color: rgb(56, 55, 55);
 }
