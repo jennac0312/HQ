@@ -34,6 +34,8 @@ const Edit = () => {
         // setUser(getUser()) // user not updating hmm
         setUser(updatedUser)
         console.log('UPDATED USER', user)
+
+        navigate('/headquarters')
     }
     
   return (

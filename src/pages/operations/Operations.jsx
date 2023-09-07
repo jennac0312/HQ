@@ -60,7 +60,7 @@ const Operations = () => {
       <Header title="operations"/>
       <main>
         <div className="explanation" style={{ display: isCategoryClicked ? "none" : null }}>
-          <h1>operation get a job</h1>
+          <h1>operation <span className='italic'>get a job</span></h1>
           <h4>choose a topic, answer some questions</h4>
         </div>
         <div className="tabs">
