@@ -29,9 +29,10 @@ const Edit = () => {
         const updatedUser = await usersApi.updateUser(previousUser, formData)
         console.log(updatedUser)
         setUser(updatedUser)
-        console.log('UPDATED IN EDIT',user)
+        console.log('UPDATED IN EDIT',updatedUser)
         // console.log(URL)
-        setUser(getUser()) // user not updating hmm
+        // setUser(getUser()) // user not updating hmm
+        setUser(updatedUser)
         console.log('UPDATED USER', user)
     }
     
@@ -58,9 +59,9 @@ const Edit = () => {
                     <textarea type="text" name="rankMessage" onChange={handleChange} autoComplete="off"/>
                 </div>
                 <input className='submit' type="submit" value="Save" placeholder={user.rankMessage || ""}/>
+            </form>
 				<input type="submit" className="cancel" value="Cancel" onClick={() => navigate(-1)} />
 
-            </form>
 
         <EditSample formData={formData}/>
         </main>
