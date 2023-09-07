@@ -1,8 +1,9 @@
 import { useContext, useState } from 'react';
 import { signUp } from '../../utilities/users-service';
 import { AppContext } from '../../contexts/app_context';
+import './signUpForm.css'
 
-export default function SignUpForm({ setUser }) {
+export default function SignUpForm({ setUser, showLogin, setShowLogin }) {
 
   const { navigate } = useContext(AppContext)
   const [formData, setFormData] = useState({
@@ -44,11 +45,12 @@ export default function SignUpForm({ setUser }) {
   };
 
   return (
-    <div>
+    <div className='signUpForm'>
       {console.log(formData)}
       <div className='form-container'>
         <form autoComplete='off' onSubmit={handleSubmit}>
-          <label>Name</label>
+          <div>
+          <label>Name:</label>
           <input
             type='text'
             name='name'
@@ -56,7 +58,9 @@ export default function SignUpForm({ setUser }) {
             onChange={handleChange}
             required
           />
-          <label>Username</label>
+          </div>
+          <div>
+          <label>Username:</label>
           <input
             type='username'
             name='username'
@@ -64,7 +68,9 @@ export default function SignUpForm({ setUser }) {
             onChange={handleChange}
             required
           />
-          <label>Password</label>
+          </div>
+          <div>
+          <label>Password:</label>
           <input
             type='password'
             name='password'
@@ -72,7 +78,9 @@ export default function SignUpForm({ setUser }) {
             onChange={handleChange}
             required
           />
-          <label>Confirm</label>
+          </div>
+          <div>
+          <label>Confirm:</label>
           <input
             type='password'
             name='confirm'
@@ -80,9 +88,23 @@ export default function SignUpForm({ setUser }) {
             onChange={handleChange}
             required
           />
-          <button type='submit' disabled={disable}>
-            SIGN UP
-          </button>
+          </div>
+          <section>
+            <div className="left">
+            <span>Already have an account?</span>
+            <button className='submit'
+          onClick={() => {
+            setShowLogin(!showLogin);
+          }}
+          >
+          {showLogin ? 'Log In' : 'Sign Up'}
+        </button>
+            </div>
+            <div className="right">
+            <button type='submit' className='submit'>SIGN UP</button>
+
+            </div>
+          </section>
         </form>
       </div>
       <p className='error-message'>&nbsp;{formData.error}</p>

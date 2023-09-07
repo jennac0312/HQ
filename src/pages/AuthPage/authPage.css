@@ -1,0 +1,9 @@
+div.main {
+    color: rgba(245, 245, 245, 0.658);
+}
+
+.main main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

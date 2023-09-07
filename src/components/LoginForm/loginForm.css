@@ -1,0 +1,77 @@
+.loginForm{
+    border: 2px solid rgba(240, 248, 255, 0.37);
+    border-radius: 10px;
+    background-color: #1E2824;
+    width: 750px;
+    /* margin: 100px auto; */
+    /* padding: 15px 10px; */
+    position: relative;
+    height: 280px;
+    margin-top: -100px;
+}
+.loginForm form {
+    /* border: 1px solid yellow; */
+    width: 550px;
+    margin: auto;
+    padding: 20px;
+}
+
+.loginForm form div {
+    /* border: 1px solid red; */
+    border-bottom: 2px solid rgba(240, 248, 255, 0.37);
+    padding-bottom: 5px;
+    /* width: fit-content; */
+    margin: 10px auto;
+    height: 50px;
+    display: flex;
+}
+.loginForm form div > * {
+    width: 50%;
+}
+
+.loginForm .submit {
+    /* border: 1px solid yellow; */
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100px;
+    background-color: black;
+    border: 2px solid rgba(245, 245, 245, 0.781);
+    color: whitesmoke;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-top: 0;
+}
+
+.loginForm section {
+    position: absolute;
+    left: 0;
+    top: 170px;
+    /* border: 1px solid rgba(240, 248, 255, 0.37); */
+    width: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-content: center; */
+    height: 100px;
+}
+.loginForm section > * {
+    /* border: 1px solid red; */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none !important;
+}
+.loginForm section .left {
+    border-right: 2px solid rgba(240, 248, 255, 0.37) !important;
+
+}
+
+.loginForm section span {
+    /* margin-right: 10px; */
+}
+
+.submit:hover {
+    cursor: pointer;
+    background-color: rgb(51, 49, 49);
+}
