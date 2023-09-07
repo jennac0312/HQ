@@ -24,10 +24,11 @@ import Edit from './pages/edit/Edit';
 function App() {
   // array destructuring
   // const [user, setUser] = useState(getUser());
-  const { user, setUser, showNav, showPopUp } = useContext(AppContext)
+  const { user, setUser, showNav, showPopUp, setQuizCategory } = useContext(AppContext)
 
   useEffect(() => {
     setUser( getUser() )
+    setQuizCategory("")
   }, [])
 
   console.log('CURRENT USER', user)

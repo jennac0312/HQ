@@ -25,3 +25,7 @@ h3.quizTitle,  div.results h3.quizTitle{
     border: 5px solid lime;
     display: flex;
 }
+
+.quiz, .results {
+    z-index: 20;
+}

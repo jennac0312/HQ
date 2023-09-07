@@ -10,6 +10,8 @@ const Operations = () => {
 
   const { updateCurrentPage, quizQuestions, setQuizQuestions, quizCategory, setQuizCategory } = useContext(AppContext)
   updateCurrentPage("operations")
+
+  const [ isCategoryClicked, setIsCategoryClicked ] = useState(false)
   
   // const [ currentCategory, setCurrentCategory ] = useState(null)
   const [ filteredQuestions, setFilteredQuestions ] = useState([])
@@ -49,6 +51,7 @@ const Operations = () => {
 
   useEffect(() => {
     filterAllQuestions(quizCategory)
+    setIsCategoryClicked( quizCategory !== "" )
   }, [quizCategory])
 
 
@@ -56,8 +59,10 @@ const Operations = () => {
     <div className='operations'>
       <Header title="operations"/>
       <main>
-        <h1>operation get a job</h1>
-        <h4>choose a topic, answer some questions</h4>
+        <div className="explanation" style={{ display: isCategoryClicked ? "none" : null }}>
+          <h1>operation get a job</h1>
+          <h4>choose a topic, answer some questions</h4>
+        </div>
         <div className="tabs">
           <p className="hover" onClick={() => setQuizCategory("HTML")}>HTML</p>
           <p className="hover" onClick={() => setQuizCategory("CSS")}>CSS</p>
