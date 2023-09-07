@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import './quizChoice.css'
 import { AppContext } from '../../contexts/app_context'
 
-const QuizChoice = ({ question, choice, count, setCount, quizResults, setQuizResults}) => {
+const QuizChoice = ({ question, choice, quizCount, setQuizCount, quizResults, setQuizResults}) => {
 
     // const { quizCount, setQuizCount } = useContext(AppContext)
     
@@ -49,7 +49,7 @@ const QuizChoice = ({ question, choice, count, setCount, quizResults, setQuizRes
     }
 
     const goToNextQuestion = () => {
-        setCount(prev => prev + 1)
+        setQuizCount(prev => prev + 1)
     }
 
   return (

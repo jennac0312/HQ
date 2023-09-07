@@ -4,9 +4,9 @@ import QuizChoice from '../quizChoice/QuizChoice'
 import { AppContext } from '../../contexts/app_context'
 import Results from '../results/Results'
 
-const Question = ({ question, count, setCount, isEnd, quizResults, setQuizResults}) => {
+const Question = ({ question, quizCount, setQuizCount, isEnd, quizResults, setQuizResults}) => {
     console.log(question)
-    console.log(count)
+    console.log(quizCount)
 
     // const { quizCount, setQuizCount } = useContext(AppContext)
 
@@ -23,7 +23,7 @@ const Question = ({ question, count, setCount, isEnd, quizResults, setQuizResult
             <div className="choices">
         {
             question?.choices?.map((choice) => {
-                return <QuizChoice question={question} choice={choice} count={count} setCount={setCount} isEnd={isEnd} quizResults={quizResults} setQuizResults={setQuizResults}/>
+                return <QuizChoice question={question} choice={choice} quizCount={quizCount} setQuizCount={setQuizCount} isEnd={isEnd} quizResults={quizResults} setQuizResults={setQuizResults}/>
             })
         }
         </div>
