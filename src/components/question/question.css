@@ -1,9 +1,26 @@
+.questionBox {
+    /* border: 1px solid red; */
+}
+
 .choices {
-    border: 1px solid hotpink;
+    /* border: 1px solid hotpink; */
     height: 600px;
+    /* padding: 40px; */
     display: flex;
     flex-wrap: wrap;
 
     justify-content: space-around;
     align-content: space-around;
+}
+
+h3.question {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgba(240, 248, 255, 0.37);
+    padding-bottom: 10px;
+    min-height: 50px;
+    letter-spacing: 1px;
+    font-size: 1.3em;
 }

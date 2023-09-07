@@ -57,31 +57,24 @@ const Quiz = ({ questions }) => {
     }, [quizCategory]) // reset
 
   return (
-    <div className='quiz'>
-      {/* { isEnd ? <p>END TRUE</p> : <p>end false</p> } */}
-        {
+    <>
+    {
             !isEnd ?
-            <h3>{questions[0]?.category} QUIZ</h3>
+            <h3 className='quizTitle'>{questions[0]?.category.toUpperCase()} QUIZ</h3>
             :
             <div className="results">
-                <h3>{questions[0]?.category} QUIZ RESULTS</h3>
+                <h3>{questions[0]?.category.toUpperCase()} QUIZ RESULTS</h3>
                 <Results question={questions[quizCount]} quizResults={quizResults}/>
             </div>
         }
-      
-      {/* questions container */}
-      {/* <div className='questionsContainer'>
-        {
-            questions.map((question) => {
-                return <Question question={question}/>
-            })
-        }
-      </div> */}
-      { // only show is questions exist
-        questions &&
+      { 
+      // only show is questions exist
+        !isEnd &&
+    <div className='quiz'>
         <Question question={questions[quizCount]} quizCount={quizCount} setQuizCount={setQuizCount} isEnd={isEnd} quizResults={quizResults} setQuizResults={setQuizResults}/>
-      }
     </div>
+      }
+    </>
   )
 }
 
