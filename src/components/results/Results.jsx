@@ -53,7 +53,7 @@ const Results = ({ question, quizResults }) => {
             }
         </div>
       <div className="wrong">
-        <h3 className="div">INCORRECT:</h3>
+        <h3 className="resultTitle">INCORRECT:</h3>
         {
             quizResults.incorrectQuestions?.map((question, index) => {
                 const correctAnswer = question.choices[question.correctIndex]
