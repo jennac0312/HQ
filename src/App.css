@@ -17,8 +17,10 @@ a {
 .App {
   margin: -65px 20px;
   text-align: center;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   /* border-radius: 40px; */
+  /* border: 2px solid rgba(240, 248, 255, 0.37); */
+
   
   max-height: 1180px;
   height: 1180px;

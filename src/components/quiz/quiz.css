@@ -11,7 +11,7 @@
     margin: 10px auto;
 }
 
-h3.quizTitle {
+h3.quizTitle,  div.results h3.quizTitle{
     /* border: 1px solid rebeccapurple; */
     border-bottom: 1px solid rgba(240, 248, 255, 0.37);
     width: fit-content;

@@ -1,18 +1,30 @@
 .resultsContainer {
-    border: 1px solid lime;
+    border: 2px solid rgba(240, 248, 255, 0.37);
+    border-radius: 20px;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     height: 600px;
+    background-color: #1E2824;
+    padding: 20px 0;
+    width: 720px;
+
+    padding: 20px 0;
+    margin: 10px auto;
 }
 
 .resultsContainer > * {
-    border: 1px solid red;
-    width: 40%;
+    /* border: 1px solid red; */
+    width: 50%;
     /* height: fit-content; */
     overflow-y: scroll;
+    padding: 0 20px;
 }
 ::-webkit-scrollbar{
     display: none;
+}
+
+.resultsContainer .right {
+    border-right: 2px solid rgba(240, 248, 255, 0.37);
 }
 
 .resultsContainer .right div{

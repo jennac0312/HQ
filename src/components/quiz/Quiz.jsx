@@ -63,7 +63,7 @@ const Quiz = ({ questions }) => {
             <h3 className='quizTitle'>{questions[0]?.category.toUpperCase()} QUIZ</h3>
             :
             <div className="results">
-                <h3>{questions[0]?.category.toUpperCase()} QUIZ RESULTS</h3>
+                <h3 className='quizTitle'>{questions[0]?.category.toUpperCase()} QUIZ RESULTS</h3>
                 <Results question={questions[quizCount]} quizResults={quizResults}/>
             </div>
         }
