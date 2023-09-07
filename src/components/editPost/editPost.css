@@ -20,8 +20,17 @@
     z-index: 20;
 }
 
+.editPopUp .confirm {
+    color: red;
+}
+
 .editPost {
     width: 600px !important;
+    background-color: #5d3c18a8 !important;
+}
+
+.editPopUp .editPost:hover{
+    background-color: #5d3c18a9 !important;
 }
 
 .editPost input {

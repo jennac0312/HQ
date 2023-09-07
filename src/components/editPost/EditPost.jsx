@@ -33,9 +33,10 @@ const EditPost = ({ setShowPostEdit, post, formData }) => {
   return (
     <div className='editPopUp'>
         <Post edit={true} post={post} time={normalizeTimeStamp(post.user.createdAt)}/>
+        <h3 className='confirm'>Click to Confirm</h3>
         <div className="buttons">
-            <button className="yes" onClick={() => handleExit()}>SAVE</button>
-            <button className="no" onClick={handleSubmit}>CANCEL</button>
+            <button className="yes" onClick={handleSubmit}>SAVE</button>
+            <button className="no" onClick={() => handleExit()}>CANCEL</button>
         </div>
     </div>
   )
