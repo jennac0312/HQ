@@ -22,24 +22,51 @@
 ::-webkit-scrollbar{
     display: none;
 }
-
+.resultTitle {
+    border-bottom: 2px solid rgba(240, 248, 255, 0.37);
+    font-size: 1.6em;
+}
 .resultsContainer .right {
     border-right: 2px solid rgba(240, 248, 255, 0.37);
 }
 
 .resultsContainer .right div{
-    border: 1px solid purple;
-    margin-top: 10px;
+    border-bottom: 1px solid black;
+    /* margin-top: 20px; */
+    margin-top: 5px;
+    padding: 20px 0;
     /* height: 150px; */
+    border-radius: 10px;
 }
 .resultsContainer .wrong div{
-    border: 1px solid purple;
-    margin-top: 10px;
+    border-bottom: 1px solid black;
+    /* margin-top: 20px; */
+    margin-top: 5px;
+    padding: 20px 0;
     /* height: 150px; */
+    border-radius: 10px;
+}
+.right div:hover, .wrong div:hover {
+    background-color: #344055;
+    cursor: pointer;
 }
 
 button {
     margin-top: 20px;
     padding: 10px;
     border-radius: 10px;
+}
+
+.scoreContainer {
+    /* border: 1px solid red; */
+    margin: 60px auto 0 auto;
+    width: 720px;
+}
+
+.viewRank {
+    font-weight: bold;
+}
+
+.viewRank:hover{
+    background-color: rgb(175, 174, 174);
 }

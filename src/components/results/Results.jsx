@@ -40,7 +40,7 @@ const Results = ({ question, quizResults }) => {
         <>
         <div className='resultsContainer'>
         <div className="right">
-            <h3>CORRECT:</h3>
+            <h3 className="resultTitle">CORRECT:</h3>
             {
                 quizResults.correctQuestions?.map((question, index) => {
                     return (
@@ -53,7 +53,7 @@ const Results = ({ question, quizResults }) => {
             }
         </div>
       <div className="wrong">
-        <h3>INCORRECT:</h3>
+        <h3 className="div">INCORRECT:</h3>
         {
             quizResults.incorrectQuestions?.map((question, index) => {
                 const correctAnswer = question.choices[question.correctIndex]
@@ -70,28 +70,30 @@ const Results = ({ question, quizResults }) => {
         </div>
 
         <div>
+            <div className="scoreContainer">
             { 
                 score === 1 && 
-                <>
+                    <>
                     <h1 className=''>A PERFECT SCORE!</h1>
-                    <h3>Enjoy 10 additional rank points for your hard work agent {user.name.toUpperCase()}!</h3>
-                </>
+                    <h3>Enjoy <span className="green">10</span> additional rank points for your hard work agent {user.name.toUpperCase()}!</h3>
+                    </>
             }
             {
                 score < 1 && score > .49  && 
-                <>
+                    <>
                     <h1>You scored {score * 100}%</h1>
-                    <h3>Enjoy 2 additional rank points for participation agent {user.name.toUpperCase()}</h3>
-                </>
+                    <h3>Enjoy <span className="green">2</span> additional rank points for participation agent {user.name.toUpperCase()}</h3>
+                    </>
             }
             {
                 score < .5 && 
-                <>
+                    <>
                     <h1>You scored {score * 100}%</h1>
-                    <h3>Do better agent {user.name.toUpperCase()}. Deducting 10 rank points!</h3>
-                </>
+                    <h3>Do better agent {user.name.toUpperCase()}. Deducting <span className="red">10</span> rank points!</h3>
+                    </>
             }
-            <button>
+                </div>
+            <button className='viewRank'>
                 <Link to='/ranks'>
                     view rank
                 </Link>
