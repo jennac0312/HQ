@@ -92,6 +92,8 @@ const handleChange = (e) => {
                     </p>
                     {/* <p className="time">{post.user.createdAt}</p> */}
                     <p className="time">{time.hours}:{time.minutes}</p>
+                    <p className="date">{time.day}/{time.month}/{time.year}</p>
+
                     {/* doesnt work either.. repeats prev post */}
                     {/* <p className="time">{normalizeTimeStamp(post.user.createdAt).hours}:{normalizeTimeStamp(post.user.createdAt).minutes}{normalizeTimeStamp(post.user.createdAt).suffix}</p> */}
                 </div>
@@ -134,7 +136,8 @@ const handleChange = (e) => {
             <div className="right">
                 <div className="top">
                     <p className='username'><span className="italic">agent</span> @{post.user.username}</p>
-                    <p className="date">{post.user.createdAt}</p>
+                    <p className="time">{time.hours}:{time.minutes}</p>
+                    <p className="date">{time.day}/{time.month}/{time.year}</p>
                     {/* <p className='exitEdit hover' onClick={() => setShowPostEdit(false)}>❌</p> */}
                 </div>
 
@@ -151,7 +154,7 @@ const handleChange = (e) => {
                     <p>
                         <span className="icon-20 hover">👎</span> <span className='number'>0</span>
                     </p>
-                    <p>link to comments:
+                    <p className='comment'>
                         <span className="icon-20 hover">🗨️</span>
                         <span>0</span>
                     </p>
