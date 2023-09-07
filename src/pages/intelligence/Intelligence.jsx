@@ -57,11 +57,11 @@ const Intelligence = () => {
             {
               intelSearch !== "" ?
               filteredPosts.map((post, index) => {
-                return <Post key={index} post={post} time={normalizeTimeStamp(post.user.createdAt)}/>
+                return <Post key={index} post={post} time={normalizeTimeStamp(post.createdAt)}/>
               })
               :
               allPosts?.map((post, index) => {
-                return <Post key={index} post={post} time={normalizeTimeStamp(post.user.createdAt)}/>
+                return <Post key={index} post={post} time={normalizeTimeStamp(post.createdAt)}/>
               })
             }
         </main>

@@ -74,11 +74,13 @@ const Headquarters = () => {
             {
               hqSearch !== "" ? // if search not empty
               filteredPosts?.map((post, index) => {
-                return <Post key={index} post={post} time={normalizeTimeStamp(post.user.createdAt)}/>
+                const time = normalizeTimeStamp(post.createdAt)
+                return <Post key={index} post={post} time={time}/>
               })
               :
               allPosts?.map((post, index) => {
-                return <Post key={index} post={post} time={normalizeTimeStamp(post.user.createdAt)}/>
+                const time = normalizeTimeStamp(post.createdAt)
+                return <Post key={index} post={post} time={time}/>
               })
             }
         </main>
