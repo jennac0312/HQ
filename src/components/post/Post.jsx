@@ -68,7 +68,7 @@ const handleChange = (e) => {
     const main = () => {
         return (
             <>
-        { isMyPost && showPopUp && <PopUp post={currentPost} message={`"${currentPost.content}"`}/> }
+        { isMyPost && showPopUp && <PopUp post={currentPost} message={currentPost.content}/> }
         {/* { isMyPost && showPostEdit && <EditPost setShowPostEdit={setShowPostEdit} post={currentPost}/> } */}
       { showPostEdit && <EditPost post={currentPost} setShowPostEdit={setShowPostEdit}/>}
 

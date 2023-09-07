@@ -23,7 +23,7 @@ const PopUp = ({ message, post }) => {
   return (
     <div className='popUp'>
         <h2 className='delete'>DELETE</h2>
-        <p className='content'>{message}</p>
+        <p className='content'>" {message} "</p>
         <h3 className='confirm'>Click to Confirm</h3>
         <div className="buttons">
             <button className="yes" onClick={() => handleDelete()}>OKAY</button>
