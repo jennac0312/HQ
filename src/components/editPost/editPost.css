@@ -17,7 +17,8 @@
     box-shadow: -2px 5px 20px 15px rgba(255, 0, 0, 0.438);
     /* box-shadow: -2px 3px 30px 15px rgba(255, 0, 0, 0.171); */
 
-    z-index: 20;
+    /* z-index: 20; */
+    padding: 20px 0;
 }
 
 .editPopUp .confirm {
@@ -41,6 +42,14 @@
 .editPost textarea {
     width: 90%;
     margin: 0 10px;
+}
+.editPopUp .buttons {
+    /* border: 1px solid lime; */
+    margin: auto;
+    width: 220px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
 }
 
 .editPopUp button {

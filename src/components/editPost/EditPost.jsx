@@ -32,6 +32,7 @@ const EditPost = ({ setShowPostEdit, post, formData }) => {
 
   return (
     <div className='editPopUp'>
+        <h3 className='confirm'>Edit Post</h3>
         <Post edit={true} post={post} time={normalizeTimeStamp(post.user.createdAt)}/>
         <h3 className='confirm'>Click to Confirm</h3>
         <div className="buttons">
