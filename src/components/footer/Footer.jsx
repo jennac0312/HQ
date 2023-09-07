@@ -16,6 +16,7 @@ const Footer = ({ input, setInput }) => {
 
     const handleSubmit = async (e) => {
       e.preventDefault()
+      if(input.trim() === "") return // dont send if empty
       // send input to hq posts
       // send user to hq posts
       console.log( input )
