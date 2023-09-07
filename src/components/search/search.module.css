@@ -1,9 +1,11 @@
 .search {
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     /* background-color: aquamarine; */
-    background-color: #AF1B3F;
+    /* background-color: #AF1B3F; */
     /* background-color: #DF9B6D ; */
     /* background-color: #31081F; */
+    background-color: #1E2824;
+
     height: 70px;
     width: 100%;
     display: flex;
@@ -19,7 +21,7 @@
     align-items: center;
     height: fit-content;
     width: fit-content;
-    margin: 0 10px;
+    /* margin: 0 10px; */
 }
 
 .search p {
@@ -33,12 +35,17 @@
 }
 
 .search textarea {
-    width: 100%;
+    width: 650px;
+    max-width: 650px;
     height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-stretch: expanded;
+    margin: auto;
+    max-height: 30px;
+    min-height: 40px;
+    background-color: rgba(240, 248, 255, 0.37);
 }
 
 .search textarea::placeholder{
