@@ -83,7 +83,7 @@ const Header = ({ page, title }) => {
 				<p className="hover icon-30 back" onClick={() => navigate(-1)}>
 					🔙
 				</p>
-				<h3 className="titleSafe">editing agent {user.name.toUpperCase()}</h3>
+				<h3 className="titleSafeEdit">editing agent {user.name.toUpperCase()}</h3>
 				{/* edit user profile */}
 				<p className="hover icon-30" onClick={() => navigate('/safehouse/edit') }>☑️✅✔️</p>
 			</header>

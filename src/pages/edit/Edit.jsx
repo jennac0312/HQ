@@ -63,7 +63,8 @@ const Edit = () => {
 
         <EditSample formData={formData}/>
         </main>
-
+        {/* empty footer to get styling border and nothing else */}
+    <footer></footer> 
     </div>
   )
 }

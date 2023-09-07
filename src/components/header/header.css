@@ -56,11 +56,24 @@ header input {
 }
 
 .titleSafe {
-    border: 1px solid rebeccapurple;
+    /* border: 1px solid rebeccapurple; */
     /* position: absolute; */
     /* left: 50%;
     right: 50%; */
     /* width: 100%; */
+    font-weight: normal;
+}
+
+.titleSafeEdit {
+    /* border: 1px solid yellow; */
+    /* width: 100%; */
+    position: absolute;
+    top: 38%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    letter-spacing: 1px;
 }
 
 .back {
