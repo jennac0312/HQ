@@ -72,36 +72,18 @@ const Nav = () => {
 				{/* <span className="arrow">{toggleList === 1 ? "⬇️" : "➡️"}</span> */}
 				<span>intelligence</span>
 			</p>
-			{/* <div className="list">
-				{toggleList === 1 &&
-					pageCategories.map((category) => {
-						return <p className="hover">{category}</p>;
-					})}
-			</div> */}
 
 			<p className="hover showNav" onClick={() => handleClick( 'operations', 2 )}>
 				{/* <span className="arrow">{toggleList === 2 ? "⬇️" : "➡️"}</span> */}
 				<span>operations</span>
 			</p>
-			{/* <div className="list">
-				{toggleList === 2 &&
-					pageCategories.map((category) => {
-						return <p className="hover">{category}</p>;
-					})}
-			</div> */}
 
 			<p className="hover showNav" onClick={() => handleClick( 'missions',3 )}>
 				{/* <span className="arrow">{toggleList === 3 ? "⬇️" : "➡️"}</span> */}
 				<span>missions</span>
 			</p>
-			{/* <div className="list">
-				{toggleList === 3 &&
-					pageCategories.map((category) => {
-						return <p className="hover">{category}</p>;
-					})}
-			</div> */}
 			<div className="logOut">
-				<p className="name">{user.name}</p>
+				<span className="name">User: {user.name.toUpperCase()}</span>
 				<Link to='/authorize' onClick={handleLogOut} className="auth">
 					Log Out
 				</Link>

@@ -58,7 +58,7 @@ div.post {
 }
 
 .post:hover .top {
-    color: white !important;
+    color: whitesmoke !important;
 }
 .post .right .top {
     /* border: 1px solid purple; */
@@ -75,6 +75,21 @@ div.post {
     /* border: 1px solid green; */
     font-size: 1.1em;
     width: fit-content;
+}
+
+.timeDetails{
+    /* border: 1px solid red; */
+    display: flex;
+}
+
+.timeDetails > * {
+    /* border: 1px solid white; */
+    margin-left: 10px;
+}
+
+.timeDetails .time {
+    border-right: 1px solid rgba(0, 0, 0, 0.308);
+    padding-right: 10px;
 }
 
 .post .content {
