@@ -18,11 +18,7 @@ const Burner = () => {
       <main onClick={() => setShowNav(false)}>
         <h1>burner phone coming soon</h1>
         <p>
-            battle among other agents for
-            <br /> 
-            <span className="bold">ALL OR NOTHING</span> 
-            <br />
-            rank points
+            chat with other agents <span className="italic">(and assets)</span> in private
         </p>
         {/* <Message />
         <Message />

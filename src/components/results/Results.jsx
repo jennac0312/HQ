@@ -4,7 +4,7 @@ import { AppContext } from '../../contexts/app_context'
 import { Link, useSearchParams } from 'react-router-dom'
 import * as quiz from '../../utilities/quiz'
 
-const Results = ({ question, quizResults }) => {
+const Results = ({ question, quizResults, setIsCategoryClicked }) => {
     const { user } = useContext(AppContext)
 
     console.log(quizResults)
@@ -35,6 +35,11 @@ const Results = ({ question, quizResults }) => {
 
         adjustRankPoints()
     }, [adjustment])
+
+    const handleViewRank = () => {
+        console.log("view rank")
+        setIsCategoryClicked(null)
+    }
 
     return (
         <>
@@ -94,7 +99,7 @@ const Results = ({ question, quizResults }) => {
             }
                 </div>
             <button className='viewRank'>
-                <Link to='/ranks'>
+                <Link to='/ranks' onClick={handleViewRank}>
                     view rank
                 </Link>
             </button>

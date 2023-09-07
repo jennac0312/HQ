@@ -4,7 +4,7 @@ import Question from '../question/Question'
 import { AppContext } from '../../contexts/app_context'
 import Results from '../results/Results'
 
-const Quiz = ({ questions }) => {
+const Quiz = ({ questions, setIsCategoryClicked }) => {
 
     // const [ quizCount, setQuizCount ] = useContext(AppContext)
     const { quizCategory } = useContext(AppContext)
@@ -64,7 +64,7 @@ const Quiz = ({ questions }) => {
             :
             <div className="results">
                 <h3 className='quizTitle'>{questions[0]?.category.toUpperCase()} QUIZ RESULTS</h3>
-                <Results question={questions[quizCount]} quizResults={quizResults}/>
+                <Results question={questions[quizCount]} quizResults={quizResults} setIsCategoryClicked={setIsCategoryClicked}/>
             </div>
         }
       { 

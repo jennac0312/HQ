@@ -1,5 +1,5 @@
 .burner {
-    border: 5px solid green;
+    /* border: 5px solid green; */
     width: 100%;
     overflow-y: scroll;
     color: rgba(245, 245, 245, 0.658);
@@ -9,8 +9,14 @@
 }
 
 .burner main {
+    /* border: 1px solid yellow; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* height: fit-content; */
+}
+
+.burner h1{
+    padding-top: 450px;
 }

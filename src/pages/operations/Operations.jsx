@@ -71,7 +71,7 @@ const Operations = () => {
         </div>
         {
           quizCategory &&
-          <Quiz questions={filteredQuestions}/>
+          <Quiz questions={filteredQuestions} setIsCategoryClicked={setIsCategoryClicked}/>
         }
       </main>
       {/* <Footer /> */}
