@@ -15,6 +15,12 @@ a {
 }
 textarea, input {
   background-color: rgba(240, 248, 255, 0.37);
+  border: none;
+  /* outline: 1px solid white; */
+  font-size: 1.3em;
+  text-align: center;
+  display: flex;
+  padding: 3px;
 }
 
 .App {
