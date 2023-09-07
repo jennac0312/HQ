@@ -177,7 +177,7 @@ const users = [
       password: "123",
       rankMessage: "That's what she said.",
       rank: 7,
-      image: "https://example.com/michael_scott.jpg"
+      image: "https://upload.wikimedia.org/wikipedia/en/d/dc/MichaelScott.png"
     },
     {
       name: "Jim Halpert",
@@ -185,7 +185,7 @@ const users = [
       password: "123",
       rankMessage: "Bears. Beets. Battlestar Galactica.",
       rank: 8,
-      image: "https://example.com/jim_halpert.jpg"
+      image: "https://i.pinimg.com/280x280_RS/17/ef/cd/17efcd111e628314a69d30218b2d6587.jpg"
     },
     {
       name: "Pam Beesly",
@@ -193,7 +193,7 @@ const users = [
       password: "123",
       rankMessage: "I'm going to be engaged to somebody for a very long time.",
       rank: 6,
-      image: "https://example.com/pam_beesly.jpg"
+      image: "https://i.pinimg.com/474x/b4/37/0b/b4370be92a23d01d414d94983c2fb925.jpg"
     },
     {
       name: "Dwight Schrute",
@@ -201,7 +201,7 @@ const users = [
       password: "123",
       rankMessage: "Bears do not... What is going on? Bears do not... What is going on?!",
       rank: 9,
-      image: "https://example.com/dwight_schrute.jpg"
+      image: "https://theofficeanalytics.files.wordpress.com/2017/11/dwight.jpeg?w=1200"
     },
     {
       name: "Ryan Howard",
@@ -209,7 +209,7 @@ const users = [
       password: "123",
       rankMessage: "I went to business school. I'm not an idiot.",
       rank: 4,
-      image: "https://example.com/ryan_howard.jpg"
+      image: "https://openpsychometrics.org/tests/characters/test-resources/pics/TO/5.jpg"
     },
     {
       name: "Andy Bernard",
@@ -217,7 +217,7 @@ const users = [
       password: "123",
       rankMessage: "I have a mess of paper on my desk. I don't even know where my desk is.",
       rank: 7,
-      image: "https://example.com/andy_bernard.jpg"
+      image: "https://media.licdn.com/dms/image/C4D03AQFUinvFG-UBPA/profile-displayphoto-shrink_800_800/0/1661522982142?e=2147483647&v=beta&t=r4KOJaLXlyBxGHDqMfCBG67d_dXPFK83RZ8k76RSZes"
     },
     {
       name: "Angela Martin",
@@ -225,7 +225,7 @@ const users = [
       password: "123",
       rankMessage: "I don't want to have a baby until I'm sure my baby will have someone who will be with him forever.",
       rank: 5,
-      image: "https://example.com/angela_martin.jpg"
+      image: "https://pbs.twimg.com/profile_images/2138784063/2DP6cfc3_400x400"
     },
     {
       name: "Kevin Malone",
@@ -233,7 +233,7 @@ const users = [
       password: "123",
       rankMessage: "Why waste time say lot word when few word do trick?",
       rank: 6,
-      image: "https://example.com/kevin_malone.jpg"
+      image: "https://pbs.twimg.com/profile_images/578770913509924864/vSPMPHgE_400x400.jpeg"
     }  
 ];
 
