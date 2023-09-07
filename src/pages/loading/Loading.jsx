@@ -8,8 +8,11 @@ const Loading = ({user, setUser }) => {
     // redirect to login/sign up || welcome after 5 secs based on user
     useEffect(() => {
       setTimeout(() => {
-        if( !user ) navigate('/authorize')
-        navigate('/welcome')
+        if( !user ){
+          navigate('/authorize')
+        } else {
+          navigate('/welcome')
+        }
       }, 2500);
     }, [])
   return (
