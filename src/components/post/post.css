@@ -16,8 +16,10 @@ div.post {
 
 .post:hover{
     /* background-color: rgb(160, 132, 132); */
-    background-color: #5d3c18a9;
-    background-color: #344055 !important;
+    /* background-color: #5d3c18a9; */
+    /* background-color: #344055 !important; */
+    /* background-color: wheat !important; */
+    background-color: #5d3c18a9 !important;
 }
 .post > * {
     /* border: 1px solid lime; */
@@ -39,6 +41,11 @@ div.post {
 .post .right {
     width: 100%;
 }
+.post .right *:hover {
+    /* width: 100%; */
+    background-color: transparent !important;
+
+}
 .post .right .options {
     /* border: 1px solid red; */
     display: flex;
@@ -53,9 +60,12 @@ div.post {
     padding: 5px;
     margin-top: -10px;
 }
-.post .options > *:hover {
+/* .post .options > *:hover {
     background-color: #1E2824;
-}
+    background-color: wheat;
+    background-color: #5d3c18a9 !important;
+
+} */
 
 .post:hover .top {
     color: whitesmoke !important;

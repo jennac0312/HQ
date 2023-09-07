@@ -20,6 +20,7 @@ import Intelligence from './pages/intelligence/Intelligence'
 import Missions from './pages/missions/Missions'
 import Safehouse from './pages/safehouse/SafeHouse'
 import Edit from './pages/edit/Edit';
+import Burner from './pages/burner/Burner'
 
 function App() {
   // array destructuring
@@ -43,6 +44,7 @@ function App() {
             <Route path='/' element={<Loading />} />
             <Route path='/welcome' element={<Welcome />} />
 
+            <Route path='/burner' element={<Burner />} />
             <Route path='/safehouse' element={<Safehouse />} />
             <Route path={`/safehouse/edit`} element={<Edit />} />
             {/* <Route path={`/safehouse/edit/${user._id}`} element={<Edit />} /> */}

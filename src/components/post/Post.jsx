@@ -72,7 +72,7 @@ const handleChange = (e) => {
         {/* { isMyPost && showPostEdit && <EditPost setShowPostEdit={setShowPostEdit} post={currentPost}/> } */}
       { showPostEdit && <EditPost post={currentPost} setShowPostEdit={setShowPostEdit}/>}
 
-        <div className='post hover' style={{ backgroundColor: isMyPost ? "#5d3c18a9" : null }}>
+        <div className='post hover' style={{ backgroundColor: isMyPost ? "#344055" : "" }}>
             {/* { isHover && <Reaction /> } */}
             <div className="left">
                 <img src={post.user.image} alt="" className='avi' />

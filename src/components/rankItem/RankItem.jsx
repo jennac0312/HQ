@@ -5,7 +5,7 @@ const RankItem = ({ person, isMe }) => {
 
     
   return (
-    <div className='rankItem' style={{ backgroundColor: isMe ? "#5d3c18a9" : null }}>
+    <div className='rankItem' style={{ backgroundColor: isMe ? "#344055" : "" }}>
 
       <div className="ranking">
           <span className="bold rank">RANK</span>

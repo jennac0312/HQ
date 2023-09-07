@@ -22,7 +22,7 @@
     bottom: 0;
     height: 70px;
     background-color: #1E2824;
-    
+    z-index: 100;
 }
 .operations .tabs > * {
     border: 1px solid lightblue;
@@ -41,8 +41,8 @@
 }
 .operations .tabs > *:hover {
     /* background-color: gainsboro; */
+    cursor: pointer;
     background-color: #26332e;
-
 }
 
 .operations .explanation {

@@ -22,8 +22,10 @@
 .rankItem:hover {
     cursor: pointer;
     /* background-color: rgb(160, 132, 132); */
-    background-color: #5d3c18a9;
-    background-color: #344055 !important;
+    /* background-color: #5d3c18a9; */
+    /* background-color: #344055 !important; */
+    background-color: #5d3c18a9 !important;
+
     color: white !important;
 
 }

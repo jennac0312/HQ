@@ -50,6 +50,7 @@ const Ranks = () => {
         }
       </main>
       {/* <Footer /> */}
+      <footer></footer>
     </div>
   )
 }

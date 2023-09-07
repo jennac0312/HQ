@@ -2,3 +2,10 @@
     color: whitesmoke;
     background-color: #1E2824;
 }
+
+.rankTitle {
+    /* border: 1px solid red; */
+    position: absolute;
+    bottom: 20px;
+    width: 820px;
+}
