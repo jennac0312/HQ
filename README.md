@@ -12,13 +12,13 @@
 
 #### Images
 <div style="display:flex">
-    <img height= 500px alt='project' src='./public/images/main.png'>
-    <img height= 500px alt='project' src='./public/images/edit.png'>
-    <img height= 500px alt='project' src='./public/images/quiz.png'>
-    <img height= 500px alt='project' src='./public/images/missions.png'>
+    <img height= 300px alt='project' src='./public/images/main.png'>
+    <img height= 300px alt='project' src='./public/images/edit.png'>
+    <img height= 300px alt='project' src='./public/images/quiz.png'>
+    <img height= 300px alt='project' src='./public/images/missions.png'>
 </div>
 
-##### echnologies Used
+##### Technologies Used
 <ul>
     <li>MongoDB</li>
     <li>Express</li>
