@@ -11,7 +11,7 @@
 
 .operations .tabs {
     /* border: 1px solid hotpink; */
-    border-top: 3px solid rgba(240, 248, 255, 0.644);
+    /* border-top: 3px solid rgba(240, 248, 255, 0.644); */
 
     display: flex;
     justify-content: space-around;

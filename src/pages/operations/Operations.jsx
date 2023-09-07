@@ -75,6 +75,7 @@ const Operations = () => {
         }
       </main>
       {/* <Footer /> */}
+      <footer></footer>
     </div>
   )
 }

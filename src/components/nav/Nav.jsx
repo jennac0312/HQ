@@ -8,26 +8,6 @@ const Nav = () => {
 	const { navigate, setShowNav, currentPage, setCurrentPage, pageCategories, setUser, user } = useContext(AppContext);
 	const [toggleList, setToggleList] = useState(0);
 
-	// click on anything nav disappear
-
-	const all = document.querySelectorAll("nav p");
-	const listItems = document.querySelectorAll(".list p");
-	console.log("NAV ALL Ps", all);
-
-	all.forEach(( element ) => {
-		element.addEventListener( 'click', () => {
-			console.log('clicked')
-			console.log( 'clicked class list',element.classList )
-			if( element.classList.value.includes("showNav") ) return
-			setShowNav(false)
-		})
-	})
-	listItems.forEach(( element ) => {
-		element.addEventListener( 'click', () => {
-			setShowNav(false)
-		})
-	})
-
 	const handleToggle = (toggleNumber) => {
 		if (toggleNumber === toggleList) {
 			//  if clicked when showing, hide
