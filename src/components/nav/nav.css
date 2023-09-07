@@ -1,5 +1,7 @@
 nav {
-    border: 1px solid green;
+    /* border: 1px solid green; */
+    border-right: 1px solid #3b0808;
+
     width: 350px;
     position: absolute;
     height: 1180px;

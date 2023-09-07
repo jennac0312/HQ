@@ -1,6 +1,8 @@
 footer {
-    border: 1px solid lime;
-    background-color: rgba(0, 255, 255, 0.192);
+    /* border: 1px solid lime; */
+    border-top: 1px solid #344055;
+
+    /* background-color: rgba(0, 255, 255, 0.192); */
     min-height: 70px;
     width: 820px;
     position: absolute;
@@ -8,8 +10,15 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
-
+footer form {
+    /* border: 1px solid red; */
+    margin: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 footer input {
@@ -25,5 +34,26 @@ footer textarea {
     width: 90%;
     height: fit-content;
     min-height: 40px;
-    font-size: 2em;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    max-height: 60px;
+    border: none;
+    border-radius: 10px;
+    outline: 1px solid #6583b6;
+}
+
+footer .submit {
+    border: 1px solid rgb(167, 164, 164);
+    border-radius: 7px;
+    width: 70px;
+    padding: 0 10px;
+    font-weight: bold;
+    background-color: black;
+    color: whitesmoke;
+
+}
+
+footer .submit:hover {
+    background-color: rgb(80, 79, 79);
 }

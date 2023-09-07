@@ -6,7 +6,7 @@ import * as hq from '../../utilities/hq'
 
 const PopUp = ({ message, post }) => {
 
-    const { setShowPopUp } = useContext(AppContext)
+    const { setShowPopUp, count, setCount } = useContext(AppContext)
 
     const handleDelete = async () => {
         console.log(post)
@@ -16,6 +16,8 @@ const PopUp = ({ message, post }) => {
         } catch (error) {
             console.error(error)
         }
+        setShowPopUp(false)
+        setCount(prev => prev + 1)
     }
 
   return (

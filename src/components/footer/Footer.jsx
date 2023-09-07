@@ -49,7 +49,7 @@ const Footer = ({ input, setInput }) => {
           value={input}
           onChange={handleChange}
         />
-        <input type='submit'></input>
+        <input type='submit' value='Send' className='submit hover'/>
       </form>
     </footer>
   )
