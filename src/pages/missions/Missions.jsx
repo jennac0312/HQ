@@ -23,6 +23,7 @@ const Missions = () => {
         </p>
       </main>
       {/* <Footer /> */}
+      <footer></footer>
     </div>
   )
 }

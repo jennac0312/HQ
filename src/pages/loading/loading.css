@@ -1,10 +1,23 @@
 .loading {
     /* border: 1px solid yellow; */
-    margin: auto;
+    /* margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: c;
+    align-items: center; */
+    /* justify-content: c; */
+    background-color: #0D060F;
+    color: rgba(245, 245, 245, 0.658);
+    width: 100%;
+    position: relative;
+}
+.loading .abs {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: -100px;
 }
 .loading h1 {
     font-family: 'VT323', monospace;
@@ -14,7 +27,7 @@
 
 .loading img {
     /* border: 1px solid pink; */
-    filter: invert(.8);
+    filter: invert(1);
     height: 60px;
-    margin-top: 50px;
+    margin-top: 30px;
 }

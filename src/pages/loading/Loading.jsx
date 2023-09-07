@@ -10,12 +10,14 @@ const Loading = ({user, setUser }) => {
       setTimeout(() => {
         if( !user ) navigate('/authorize')
         navigate('/welcome')
-      }, 3000);
+      }, 2500);
     }, [])
   return (
     <div className='loading'>
-      <h1>{'< HQ />'}</h1>
-      <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="" />
+      <div className="abs">
+        <h1>{'< HQ />'}</h1>
+        <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" alt="" />
+      </div>
     </div>
   )
 }

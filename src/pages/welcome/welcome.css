@@ -1,11 +1,19 @@
 .welcome {
-    border: 1px solid rebeccapurple;
-    margin: auto;
+    /* border: 10px solid rebeccapurple; */
+    /* margin: auto; */
+    background-color: #0D060F;
+    color: rgba(245, 245, 245, 0.658);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 .welcome h1{
+    /* border: 1px solid yellow; */
     font-family: 'VT323', monospace;
     letter-spacing: 5px;
     font-size: 160px;
+    margin-top: -50px;
 }
 
 @keyframes flash {
@@ -19,5 +27,5 @@
 
 .flash {
     animation: flash 700ms infinite;
-    animation: name duration timing-function delay iteration-count direction fill-mode;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
