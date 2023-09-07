@@ -7,6 +7,7 @@ import Results from '../results/Results'
 const Quiz = ({ questions }) => {
 
     // const [ quizCount, setQuizCount ] = useContext(AppContext)
+    const { quizCategory } = useContext(AppContext)
     console.log('QUIZ QUESTIONS',questions)
 
     const [ quizCount, setQuizCount ] = useState(0)
@@ -22,7 +23,7 @@ const Quiz = ({ questions }) => {
     })
 
     const checkForEnd = () => {
-      console.log(questions.length)
+      console.log(questions?.length)
       console.log(quizCount)
         // if( questions.length !== quizCount){
         //   setIsEnd(false)
@@ -30,12 +31,12 @@ const Quiz = ({ questions }) => {
         //   setIsEnd(true)
         // }
 
-        const questionsLeft = questions.length - quizCount
+        const questionsLeft = questions?.length - quizCount
         if( questionsLeft === 0){
-          console.log('QUESTIONS OVER', questions.length - quizCount)
+          console.log('QUESTIONS OVER', questions?.length - quizCount)
           setIsEnd(true)
         } else {
-          console.log('QUESTIONS LEFT', questions.length - quizCount)
+          console.log('QUESTIONS LEFT', questions?.length - quizCount)
           setIsEnd(false)
         }
 
@@ -43,10 +44,21 @@ const Quiz = ({ questions }) => {
     }
 
     useEffect(() => { checkForEnd() }, [quizCount, questions])
+    useEffect(() => { 
+      setQuizCount(0)
+      setQuizResults({
+        correctQuestions: [],
+        incorrectQuestions: [],
+        correctNumber: 0,
+        incorrectNumber: 0,
+        answers: [],
+        incorrectAnswers: []
+    }) 
+    }, [quizCategory]) // reset
 
   return (
     <div className='quiz'>
-      { isEnd ? <p>END TRUE</p> : <p>end false</p> }
+      {/* { isEnd ? <p>END TRUE</p> : <p>end false</p> } */}
         {
             !isEnd ?
             <h3>{questions[0]?.category} QUIZ</h3>

@@ -15,9 +15,9 @@ a {
 }
 
 .App {
-  margin: -65px auto;
+  margin: -65px 20px;
   text-align: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* border-radius: 40px; */
   
   max-height: 1180px;
@@ -45,7 +45,7 @@ a {
 
 /* for between header and footer on every page */
 main {
-  border: 1px solid orange;
+  /* border: 1px solid orange; */
   background-color: #0D060F;
   /* purple ish */
   /* background-color: #1F271B; */

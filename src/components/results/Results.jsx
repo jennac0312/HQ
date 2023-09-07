@@ -8,8 +8,8 @@ const Results = ({ question, quizResults }) => {
     const { user } = useContext(AppContext)
 
     console.log(quizResults)
-    const correct = quizResults.correctQuestions.length
-    const incorrect = quizResults.incorrectQuestions.length
+    const correct = quizResults.correctQuestions?.length
+    const incorrect = quizResults.incorrectQuestions?.length
     const totalQuestions = correct + incorrect
     const score = correct/totalQuestions
     console.log(score)
@@ -42,7 +42,7 @@ const Results = ({ question, quizResults }) => {
         <div className="right">
             <h3>CORRECT:</h3>
             {
-                quizResults.correctQuestions.map((question, index) => {
+                quizResults.correctQuestions?.map((question, index) => {
                     return (
                         <div key={index}>
                             <p className='italic bold'>{question.question}</p>
@@ -55,7 +55,7 @@ const Results = ({ question, quizResults }) => {
       <div className="wrong">
         <h3>INCORRECT:</h3>
         {
-            quizResults.incorrectQuestions.map((question, index) => {
+            quizResults.incorrectQuestions?.map((question, index) => {
                 const correctAnswer = question.choices[question.correctIndex]
                 return (
                     <div key={index}>

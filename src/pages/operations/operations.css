@@ -1,6 +1,10 @@
 .operations {
-    border: 5px solid yellow;
+    /* border: 5px solid yellow; */
     color: rgba(245, 245, 245, 0.911);
+}
+
+.operations header p.search {
+    visibility: hidden;
 }
 
 .operations .tabs {
