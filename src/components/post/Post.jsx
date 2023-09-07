@@ -75,7 +75,7 @@ const handleChange = (e) => {
         <div className='post hover' style={{ backgroundColor: isMyPost ? "#5d3c18a9" : null }}>
             {/* { isHover && <Reaction /> } */}
             <div className="left">
-                <img src={post.user.image} alt="" className='avi' style={{ marginTop: isMyPost ? "35px" : "" }}/>
+                <img src={post.user.image} alt="" className='avi' />
             </div>
             <div className="right">
                     { isMyPost && 
