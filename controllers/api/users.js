@@ -1,4 +1,5 @@
 const User = require('../../models/User');
+const Post = require('../../models/Post')
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
@@ -60,14 +61,24 @@ const getAllUsers = async( req, res ) => {
 const updateUser = async ( req, res ) => {
   try {
     const { previousUser, newUser } = req.body  
-    console.log('NEW USER', newUser)
+    // console.log('NEW USER', newUser)
     const updatedUser = await User.findByIdAndUpdate(previousUser._id, newUser, { new: true }) 
     
-    console.log(updatedUser)
+    // console.log(updatedUser)
+
+    // find and update user posts
+    updatePostUser( previousUser, newUser )
     res.send(updatedUser)
   } catch (error) {
     res.status(500).send(error)
   }
+}
+
+const updatePostUser = async ( oldUser, newUser ) => {
+  const oldUserPosts = await Post.find({ 'user.username': oldUser.username })
+  const updatedPosts = await Post.updateMany({ 'user.username': oldUser.username }, { $set : { user: newUser }} )
+  console.log('OLD POSTSSSSSSSSSSSSSSSSSSS')
+  console.log(oldUserPosts)
 }
 
 module.exports = {
