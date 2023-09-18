@@ -20,7 +20,7 @@ const Loading = () => {
         } else {
           navigate('/welcome')
         }
-      }, 2500);
+      }, 1500);
     }, [])
 
 

@@ -10,9 +10,9 @@ export default function AuthPage({ setUser }) {
       <header></header>
       <main>
       {showLogin ? (
-        <SignUpForm setUser={setUser} showLogin={showLogin} setShowLogin={setShowLogin}/>
+        <LoginForm setUser={setUser} showLogin={showLogin} setShowLogin={setShowLogin}/>
         ) : (
-          <LoginForm setUser={setUser} showLogin={showLogin} setShowLogin={setShowLogin}/>
+          <SignUpForm setUser={setUser} showLogin={showLogin} setShowLogin={setShowLogin}/>
           )}
       </main>
       <footer></footer>

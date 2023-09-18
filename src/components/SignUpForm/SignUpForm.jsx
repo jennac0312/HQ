@@ -97,11 +97,11 @@ export default function SignUpForm({ setUser, showLogin, setShowLogin }) {
             setShowLogin(!showLogin);
           }}
           >
-          {showLogin ? 'Log In' : 'Sign Up'}
+          {showLogin ? 'Sign Up' : 'Log In'}
         </button>
             </div>
             <div className="right">
-            <button type='submit' className='submit'>SIGN UP</button>
+            <button type='submit' className='submit'>JOIN HQ</button>
 
             </div>
           </section>
