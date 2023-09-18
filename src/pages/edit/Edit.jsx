@@ -58,9 +58,9 @@ const Edit = () => {
                 </div>
                 <div className="">
                     <label htmlFor="">Rank Message:</label>
-                    <textarea type="text" name="rankMessage" onChange={handleChange} autoComplete="off"/>
+                    <textarea type="text" name="rankMessage"  placeholder={user.rankMessage || ""} onChange={handleChange} autoComplete="off"/>
                 </div>
-                <input className='submit' type="submit" value="Save" placeholder={user.rankMessage || ""}/>
+                <input className='submit' type="submit" value="Save"/>
             </form>
 				<input type="submit" className="cancel" value="Cancel" onClick={() => navigate(-1)} />
 
