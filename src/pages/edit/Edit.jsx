@@ -54,7 +54,7 @@ const Edit = () => {
                 </div>
                 <div className="">
                     <label htmlFor="">Profile Picture:</label>
-                    <input type="text" name="image" onChange={handleChange}/>
+                    <input type="text" name="image" placeholder={user.image || ""} onChange={handleChange}/>
                 </div>
                 <div className="">
                     <label htmlFor="">Rank Message:</label>
