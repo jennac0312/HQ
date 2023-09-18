@@ -80,7 +80,7 @@ export default function SignUpForm({ setUser, showLogin, setShowLogin }) {
           />
           </div>
           <div>
-          <label>Confirm:</label>
+          <label>Confirm Password:</label>
           <input
             type='password'
             name='confirm'
