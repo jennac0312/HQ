@@ -80,7 +80,7 @@ const Header = ({ page, title }) => {
 	const edit = () => {
 		return (
 			<header>
-				<h3 className="titleSafeEdit">Edit {user.role} {user.name.toUpperCase()}</h3>
+				<h3 className="titleSafeEdit">Edit {user.role}: {user.name.toUpperCase()}</h3>
 				{/* edit user profile */}
 				{/* <p className="hover icon-30" onClick={() => navigate('/safehouse/edit') }>☑️✅✔️</p> */}
 			</header>
