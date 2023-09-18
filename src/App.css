@@ -21,6 +21,7 @@ textarea, input {
   text-align: center;
   display: flex;
   padding: 3px;
+  color: rgb(104, 217, 255);
 }
 
 .App {
