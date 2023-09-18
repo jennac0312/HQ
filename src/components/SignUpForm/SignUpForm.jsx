@@ -97,7 +97,7 @@ export default function SignUpForm({ setUser, showLogin, setShowLogin }) {
             setShowLogin(!showLogin);
           }}
           >
-          {showLogin ? 'Sign Up' : 'Log In'}
+          {showLogin ? 'SIGN UP' : 'LOG IN'}
         </button>
             </div>
             <div className="right">
