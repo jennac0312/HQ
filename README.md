@@ -3,7 +3,7 @@
 ## MERN PROJECT
 ###### Deployed App: [HeadQuarters](https://hq-q9zl.onrender.com)
 <p>
-    Headquarters is a social media app that allows users (read - "agents") to connect and converse. Users can have conversations in multiple locations. HQ offers a private dm for users to write notes to self. HQ also features a quiz game to test the user's tech knowledge.
+    Headquarters is a social media app that allows agents (read - "users") to connect and converse. Agents can have conversations in multiple locations. HQ offers a private dm for agents to write notes to self. HQ also features a quiz game to test the user's tech knowledge.
 </p>
 
 ##### ERD (Entity Relationship Diagram): [Draw.io](https://app.diagrams.net/#LHQ)
