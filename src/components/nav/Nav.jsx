@@ -63,7 +63,7 @@ const Nav = () => {
 				<span>missions</span>
 			</p>
 			<div className="logOut">
-				<span className="name">User: {user.name.toUpperCase()}</span>
+				<span className="name">Agent: {user.name.toUpperCase()}</span>
 				<Link to='/authorize' onClick={handleLogOut} className="auth">
 					Log Out
 				</Link>

@@ -28,7 +28,7 @@ const Welcome = () => {
         } else {
           clearInterval(typeWriter)
           flash.current.classList.add('flash') // add flash when done typing
-          console.log('TYPEWRITER', typeWriter)
+          // console.log('TYPEWRITER', typeWriter)
           setRunTime(typeWriter)
         }
       }, 100);
@@ -38,7 +38,7 @@ const Welcome = () => {
     }, [index, displayText])
 
 
-  console.log(flash)
+  // console.log(flash)
   
   return (
     <div className='welcome'>
