@@ -28,8 +28,18 @@ textarea, input {
   color: rgba(255, 255, 255, 0.281);
 }
 
+body {
+  background-color: rgba(0, 0, 0, 0.938);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 10px solid white; */
+}
+
 .App {
-  margin: -65px 40px;
+  /* margin: -65px 40px; */
+  margin-top: -65px;
+  margin-bottom: 70px;
   text-align: center;
   /* border: 1px solid red; */
   border: 1px solid lightblue;
@@ -54,6 +64,7 @@ textarea, input {
   /* gets rid of weird vertical shifting / scroll */
   
   position: absolute;
+  position: relative;
 }
 
 /* .App > * {

@@ -56,11 +56,11 @@ const Intelligence = () => {
             {/* <h1>intelligence</h1> */}
             {
               intelSearch !== "" ?
-              filteredPosts.map((post, index) => {
+              filteredPosts.toReversed().map((post, index) => {
                 return <Post key={index} post={post} time={normalizeTimeStamp(post.createdAt)}/>
               })
               :
-              allPosts?.map((post, index) => {
+              allPosts?.toReversed().map((post, index) => {
                 return <Post key={index} post={post} time={normalizeTimeStamp(post.createdAt)}/>
               })
             }

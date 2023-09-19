@@ -73,12 +73,12 @@ const Headquarters = () => {
             <p>general posts</p> */}
             {
               hqSearch !== "" ? // if search not empty
-              filteredPosts?.map((post, index) => {
+              filteredPosts?.toReversed().map((post, index) => {
                 const time = normalizeTimeStamp(post.createdAt)
                 return <Post key={index} post={post} time={time}/>
               })
               :
-              allPosts?.map((post, index) => {
+              allPosts?.toReversed().map((post, index) => {
                 const time = normalizeTimeStamp(post.createdAt)
                 return <Post key={index} post={post} time={time}/>
               })
