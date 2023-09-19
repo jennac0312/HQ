@@ -47,8 +47,12 @@ const AppContextProvider = ( { children } ) => {
         minutes = minutes >= 10 ? minutes : '0'.concat(minutes)
         const suffix = hours >= 11 ? "am" : "pm"
 
-        const day = norm.getDate()
-        const month = norm.getMonth() + 1 // um behind by 1?
+        let day = norm.getDate()
+        day = day >= 10 ? day : '0'.concat(day)
+
+        let month = norm.getMonth() + 1 // um behind by 1? for 0 based indexing i learned
+        month = month >= 10 ? month : '0'.concat(month)
+
         const year = norm.getFullYear()
 
         return {hours, minutes, suffix, day, month, year}
