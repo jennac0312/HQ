@@ -32,17 +32,20 @@ body {
   background-color: rgba(0, 0, 0, 0.938);
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: flex-start; */
   /* border: 10px solid white; */
 }
 
 .App {
   /* margin: -65px 40px; */
-  margin-top: -65px;
-  margin-bottom: 70px;
+  margin-top: -40px;
+  /* margin-bottom: 70px; */
   text-align: center;
   /* border: 1px solid red; */
   border: 1px solid lightblue;
+  /* box-shadow: -2px 5px 20px 15px gray; */
+  /* box-shadow: -2px 5px 20px 15px #11cebe; */
+
   /* border-radius: 40px; */
   /* border: 2px solid rgba(240, 248, 255, 0.37); */
 
