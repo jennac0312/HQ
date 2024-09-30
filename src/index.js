@@ -9,7 +9,7 @@ import AppContextProvider from './contexts/app_context';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+    <Router basename='/HQ'>
       <AppContextProvider>
         <App />
       </AppContextProvider>
