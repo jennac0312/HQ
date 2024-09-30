@@ -24,12 +24,18 @@ const login = async (req, res) => {
   try {
     // Find the user by their username
     const user = await User.findOne({ username: req.body.username });
+    if (!user) {
+      return res.status(404).json({ msg: 'User not found' });
+    }
 
     const isMatch = await bcrypt.compare(req.body.password, user.password);
-
-    if (!isMatch) throw new Error();
+    if (!isMatch) {
+      // throw new Error();
+      return res.status(400).json({ msg: 'Invalid credentials' });
+    }
 
     res.status(200).json(createJWT(user));
+    
   } catch (err) {
     res.status(400).json({ msg: err.message, reason: 'Bad Credentials' });
   }
