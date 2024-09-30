@@ -16,7 +16,7 @@ const create = async (req, res) => {
   } catch (err) {
     // Client will check for non-2xx status code
     // 400 = Bad Request
-    res.status(400).json(err);
+    res.status(100).json(err);
   }
 };
 
